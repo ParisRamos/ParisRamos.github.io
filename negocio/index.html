@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+
+  <!-- ==================== SEO ESPECÍFICO DE NEGOCIO ==================== -->
+  <title>Soluciones Negocio & Arquitectura E-Commerce | Paris Alejandro Ramos</title>
+  <meta name="description" content="Estrategia comercial D2C, pipelines de web scraping diario en Python y analítica predictiva de recompra (LTV). Caso de estudio en vivo floresyamores.mx.">
+  <meta name="author" content="Paris Alejandro Ramos de Cervantes">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://parisramos.github.io/negocio/">
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Estrategia de Negocio, E-Commerce y Automatización de Márgenes | Paris Ramos">
+  <meta property="og:description" content="Diseño de modelos D2C, monitoreo de precios con Selenium/Scrapy y modelado predictivo con $250k+ MXN mensuales comprobados.">
+  <meta property="og:url" content="https://parisramos.github.io/negocio/">
+  <meta property="og:image" content="https://parisramos.github.io/assets/preview.jpg">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="E-Commerce & Arbitraje de Datos | Paris Ramos">
+  <meta name="twitter:description" content="Pipelines automatizados de precios e infraestructura digital con monetización recurrente.">
+  <meta name="twitter:image" content="https://parisramos.github.io/assets/preview.jpg">
+
+  <!-- ==================== FUENTES Y ESTILOS ==================== -->
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    html { scroll-behavior: smooth; }
+  </style>
+
+  <!-- ==================== CONFIGURACIÓN DE TAILWIND ==================== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      "darkMode": "class",
+      "theme": {
+        "extend": {
+          "colors": {
+            "on-secondary-container": "#cdd7ff",
+            "secondary": "#b4c5ff",
+            "on-secondary": "#002a78",
+            "on-error": "#690005",
+            "tertiary-container": "#009ada",
+            "surface-container-high": "#222a3d",
+            "surface": "#0b1326",
+            "on-secondary-fixed-variant": "#003ea8",
+            "on-primary-fixed-variant": "#005137",
+            "tertiary-fixed-dim": "#89ceff",
+            "on-secondary-fixed": "#00174b",
+            "outline-variant": "#3d4a42",
+            "surface-tint": "#68dba9",
+            "outline": "#87948b",
+            "primary-fixed": "#85f8c4",
+            "primary-fixed-dim": "#68dba9",
+            "primary": "#68dba9",
+            "tertiary": "#89ceff",
+            "on-primary": "#003825",
+            "on-tertiary-fixed-variant": "#004c6e",
+            "on-surface-variant": "#bccac0",
+            "surface-container-highest": "#2d3449",
+            "inverse-on-surface": "#283044",
+            "secondary-fixed-dim": "#b4c5ff",
+            "background": "#0b1326",
+            "on-tertiary-container": "#002d43",
+            "surface-container-low": "#131b2e",
+            "secondary-fixed": "#dbe1ff",
+            "on-primary-container": "#00311f",
+            "surface-container-lowest": "#060e20",
+            "inverse-surface": "#dae2fd",
+            "on-tertiary": "#00344d",
+            "secondary-container": "#0053db",
+            "surface-bright": "#31394d",
+            "surface-container": "#171f33",
+            "primary-container": "#25a475",
+            "on-tertiary-fixed": "#001e2f",
+            "error": "#ffb4ab",
+            "on-surface": "#dae2fd",
+            "surface-variant": "#2d3449",
+            "on-primary-fixed": "#002114",
+            "inverse-primary": "#006c4a",
+            "surface-dim": "#0b1326",
+            "tertiary-fixed": "#c9e6ff",
+            "on-background": "#dae2fd",
+            "on-error-container": "#ffdad6",
+            "error-container": "#93000a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "body-md": ["Geist", "sans-serif"],
+            "headline-md": ["Space Grotesk", "sans-serif"],
+            "display": ["Space Grotesk", "sans-serif"],
+            "headline-lg": ["Space Grotesk", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- ==================== DATOS ESTRUCTURADOS (SCHEMA JSON-LD) ==================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Consultoría E-Commerce & Inteligencia de Precios",
+    "provider": {
+      "@type": "Person",
+      "name": "Paris Alejandro Ramos de Cervantes",
+      "jobTitle": "Líder de Soluciones Tecnológicas Adaptadas"
+    },
+    "serviceType": "Arquitectura E-Commerce, Web Scraping y Analítica Predictiva de Recompra",
+    "description": "Despliegue integral de canales D2C, monitoreo de precios mayoristas con Selenium y Scrapy, y optimización de márgenes unitarios."
+  }
+  </script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface min-h-screen">
+  <!-- ENCABEZADO CON PROTECCIÓN RESPONSIVA -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-xl border-b border-surface-container-high/50">
+    <div class="h-16 sm:h-20 w-full max-w-[1360px] mx-auto px-4 sm:px-6 flex items-center justify-between gap-3">
+      
+      <!-- Nombre con contención de texto -->
+      <div class="flex-1 min-w-0 pr-2">
+        <a class="flex flex-col text-left group" href="/">
+          <span class="font-bold text-xs sm:text-base md:text-lg text-on-surface tracking-tight truncate group-hover:text-primary transition-colors">
+            Paris Alejandro Ramos de Cervantes
+          </span>
+          <span class="text-[9px] sm:text-xs text-outline uppercase tracking-wider truncate">
+            Líder de Soluciones Tecnológicas Adaptadas
+          </span>
+        </a>
+      </div>
+
+      <!-- Navegación de escritorio -->
+      <nav class="hidden xl:flex items-center gap-4 flex-shrink-0">
+        <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/">Inicio</a>
+        <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/gobierno/">Soluciones Gobierno</a>
+        <a aria-current="page" class="text-primary font-medium text-sm bg-surface-container-high px-3 py-1.5 rounded-lg" href="/negocio/">Soluciones Negocio</a>
+        <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/#stack">Stack de Capacidades</a>
+        <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/#contacto">Trayectoria &amp; Contacto</a>
+      </nav>
+
+      <!-- Botón de acción: En celular solo ícono -->
+      <div class="flex items-center flex-shrink-0">
+        <a class="inline-flex items-center justify-center bg-primary text-on-primary text-xs sm:text-sm font-semibold p-2 sm:px-4 sm:py-2 rounded-lg hover:bg-primary-container transition-all shadow-[0_0_12px_rgba(104,219,169,0.25)]" href="/#contacto" title="Agendar Diagnóstico">
+          <span class="material-symbols-outlined text-[20px] sm:text-[18px] sm:mr-1.5">calendar_month</span>
+          <span class="hidden sm:inline">Agendar Diagnóstico</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-16 sm:pt-20 bg-surface min-h-[calc(100vh-20rem)]">
+    <div class="flex flex-col w-full">
+      <!-- HERO SECTION / COMANDO EJECUTIVO -->
+      <section class="w-full bg-surface-container-lowest py-10 sm:py-16 px-4 sm:px-6 relative overflow-hidden">
+        <div class="absolute -top-24 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-[1360px] mx-auto flex flex-col gap-8 relative z-10">
+          <!-- Título y Badge -->
+          <div class="flex flex-col gap-3 max-w-4xl">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-surface-container-high text-primary text-[10px] sm:text-xs tracking-wider uppercase font-bold">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                SECTOR PRIVADO · E-COMMERCE &amp; RENTABILIDAD OPERATIVA
+              </span>
+              <span class="text-outline text-xs hidden sm:inline">|</span>
+              <span class="text-outline text-xs hidden sm:inline uppercase tracking-wider">Despliegue CDMX &amp; Modelado Cuantitativo</span>
+            </div>
+
+            <!-- H1 Responsivo -->
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface tracking-tight leading-tight">
+              Estrategia de Negocio, Arquitectura E-Commerce y Automatización de Márgenes
+            </h1>
+            <p class="text-sm sm:text-base md:text-lg text-on-surface-variant max-w-3xl leading-relaxed">
+              Diseño integral de modelos comerciales directos al consumidor (D2C), pipelines automatizados de inteligencia de precios e infraestructura digital con monetización recurrente y comprobada.
+            </p>
+          </div>
+
+          <!-- 4 KPIs Estratégicos -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pt-2">
+            <!-- KPI 1 -->
+            <div class="bg-surface-container p-5 rounded-xl flex flex-col justify-between gap-4 shadow-md border border-surface-container-high/30">
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-outline uppercase tracking-wider">Facturación Promedio</span>
+                <span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+              </div>
+              <div>
+                <span class="text-2xl sm:text-3xl font-bold text-on-surface block tracking-tight">$250k+ <span class="text-xs font-normal text-on-surface-variant">MXN/mes</span></span>
+                <p class="text-xs text-primary flex items-center gap-1 mt-1">
+                  <span class="material-symbols-outlined text-[15px]">verified</span>
+                  Sostenida durante 3 años consecutivos
+                </p>
+              </div>
+              <div class="w-full pt-1">
+                <svg class="w-full h-7 text-primary overflow-visible" fill="none" preserveaspectratio="none" viewbox="0 0 100 24">
+                  <path d="M0,20 Q15,18 28,14 T55,10 T80,5 L100,2" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+                  <circle cx="100" cy="2" fill="currentColor" r="3"></circle>
+                </svg>
+              </div>
+            </div>
+
+            <!-- KPI 2 -->
+            <div class="bg-surface-container p-5 rounded-xl flex flex-col justify-between gap-4 shadow-md border border-surface-container-high/30">
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-outline uppercase tracking-wider">Costo de Insumos</span>
+                <span class="material-symbols-outlined text-tertiary text-[20px]">trending_down</span>
+              </div>
+              <div>
+                <span class="text-2xl sm:text-3xl font-bold text-tertiary block tracking-tight">-25% <span class="text-xs font-normal text-on-surface-variant">Neto</span></span>
+                <p class="text-xs text-on-surface-variant mt-1">
+                  Web Scraping &amp; monitoreo diario a subastas y mayoristas
+                </p>
+              </div>
+              <div class="w-full pt-1">
+                <svg class="w-full h-7 text-tertiary overflow-visible" fill="none" preserveaspectratio="none" viewbox="0 0 100 24">
+                  <path d="M0,3 Q20,6 40,11 T75,18 L100,22" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+                  <circle cx="100" cy="22" fill="currentColor" r="3"></circle>
+                </svg>
+              </div>
+            </div>
+
+            <!-- KPI 3 -->
+            <div class="bg-surface-container p-5 rounded-xl flex flex-col justify-between gap-4 shadow-md border border-surface-container-high/30">
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-outline uppercase tracking-wider">Margen Bruto</span>
+                <span class="material-symbols-outlined text-primary text-[20px]">donut_large</span>
+              </div>
+              <div>
+                <span class="text-2xl sm:text-3xl font-bold text-on-surface block tracking-tight">48.5%</span>
+                <p class="text-xs text-on-surface-variant mt-1">
+                  Costeo paramétrico unitario por flor y arreglo artesanal
+                </p>
+              </div>
+              <div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden mt-1">
+                <div class="bg-primary h-full rounded-full" style="width: 48.5%;"></div>
+              </div>
+            </div>
+
+            <!-- KPI 4 -->
+            <div class="bg-surface-container p-5 rounded-xl flex flex-col justify-between gap-4 shadow-md border border-surface-container-high/30">
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-outline uppercase tracking-wider">Modelado Recompra</span>
+                <span class="material-symbols-outlined text-secondary text-[20px]">auto_graph</span>
+              </div>
+              <div>
+                <span class="text-2xl sm:text-3xl font-bold text-on-surface block tracking-tight">88% <span class="text-xs font-normal text-on-surface-variant">Precisión</span></span>
+                <p class="text-xs text-on-surface-variant mt-1">
+                  Random Forest predictivo en churn &amp; fechas recurrentes
+                </p>
+              </div>
+              <div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden mt-1">
+                <div class="bg-secondary h-full rounded-full" style="width: 88%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CASO CENTRAL: FLORES Y AMORES -->
+      <section class="w-full py-12 sm:py-16 px-4 sm:px-6 bg-surface">
+        <div class="max-w-[1360px] mx-auto flex flex-col gap-10">
+          
+          <!-- Encabezado del Caso de Estudio -->
+          <div class="bg-surface-container-low p-6 sm:p-10 rounded-2xl shadow-xl flex flex-col lg:flex-row justify-between gap-8 border border-surface-container-high/40">
+            <div class="flex flex-col gap-4 max-w-3xl">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="bg-primary/10 text-primary px-3 py-1 rounded text-[11px] font-bold uppercase tracking-wider">Caso Emblemático D2C</span>
+                <span class="bg-surface-container-high text-on-surface px-3 py-1 rounded text-[11px] font-semibold">CDMX &amp; Área Metropolitana</span>
+                <span class="bg-secondary/15 text-secondary px-3 py-1 rounded text-[11px] uppercase font-bold">Ventas Reales $250k+ MXN</span>
+              </div>
+              <h2 class="text-xl sm:text-3xl font-bold text-on-surface tracking-tight">
+                floresyamores.mx — Creación, Operación y Rentabilidad de un E-Commerce de Alta Gama
+              </h2>
+              <p class="text-xs sm:text-base text-on-surface-variant leading-relaxed">
+                Caso de negocio diseñado e instrumentado de extremo a extremo para brindar autonomía financiera y operativa a un adulto mayor. La intervención integró diseño de marca, curaduría de producto artesanal (cerámica de Talavera y Tonalá), tienda omnicanal y automatización matemática del costeo y aprovisionamiento.
+              </p>
+              <div class="flex flex-wrap items-center gap-4 pt-2">
+                <a class="inline-flex items-center gap-2 bg-primary text-on-primary text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-primary-container shadow-md transition-all" href="https://www.floresyamores.mx" rel="noreferrer" target="_blank">
+                  <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                  Ver Tienda en Vivo: floresyamores.mx
+                </a>
+                <div class="flex items-center gap-2 text-on-surface-variant text-xs">
+                  <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                  Operación activa y despachos diarios en CDMX
+                </div>
+              </div>
+            </div>
+
+            <!-- Métrica Lateral -->
+            <div class="w-full lg:w-80 bg-surface-container p-5 rounded-xl flex flex-col justify-between gap-6 border border-surface-container-high/30">
+              <div>
+                <span class="text-xs text-outline uppercase tracking-wider block mb-1">Diagnóstico de Impacto</span>
+                <span class="text-base sm:text-lg font-bold text-on-surface block">Independencia Operativa</span>
+                <p class="text-xs text-on-surface-variant mt-1">Reducción del 90% en fricción manual para administración de inventario, ruteo y precios dinámicos.</p>
+              </div>
+              <div class="grid grid-cols-2 gap-4 pt-2 border-t border-surface-variant/40">
+                <div>
+                  <span class="text-xs text-outline block">Ticket Medio</span>
+                  <span class="text-lg sm:text-xl font-bold text-primary">$2,100 MXN</span>
+                </div>
+                <div>
+                  <span class="text-xs text-outline block">Merma Global</span>
+                  <span class="text-lg sm:text-xl font-bold text-tertiary">&lt; 8.0%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tríada de Pilares de Solución -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-surface-container p-6 rounded-xl flex flex-col justify-between gap-6 border border-surface-container-high/30">
+              <div class="flex flex-col gap-3">
+                <div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-[24px]">storefront</span>
+                </div>
+                <div>
+                  <span class="text-xs text-primary uppercase font-bold tracking-wider">Pilar 01</span>
+                  <h3 class="text-base sm:text-lg font-bold text-on-surface mt-0.5">Arquitectura Comercial &amp; UX</h3>
+                </div>
+                <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  Plataforma optimizada en Wix con pasarelas transaccionales seguras (Stripe / Mercado Pago). Ruteo logístico por cuadrantes en CDMX y segmentación por ocasión.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pt-2 border-t border-surface-variant/30">
+                <span class="text-[11px] text-outline px-2 py-0.5 bg-surface-container-lowest rounded">Stripe API</span>
+                <span class="text-[11px] text-outline px-2 py-0.5 bg-surface-container-lowest rounded">Mercado Pago</span>
+                <span class="text-[11px] text-outline px-2 py-0.5 bg-surface-container-lowest rounded">Logística CDMX</span>
+              </div>
+            </div>
+
+            <div class="bg-surface-container p-6 rounded-xl flex flex-col justify-between gap-6 border border-surface-container-high/30">
+              <div class="flex flex-col gap-3">
+                <div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+                  <span class="material-symbols-outlined text-[24px]">terminal</span>
+                </div>
+                <div>
+                  <span class="text-xs text-tertiary uppercase font-bold tracking-wider">Pilar 02</span>
+                  <h3 class="text-base sm:text-lg font-bold text-on-surface mt-0.5">ETL &amp; Scraping de Subastas</h3>
+                </div>
+                <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  Bot en Python (Selenium + Scrapy) programado a las 04:00 AM para extraer cotizaciones de subastas en Central de Abasto e invernaderos. 25% de ahorro neto en compras.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pt-2 border-t border-surface-variant/30">
+                <span class="text-[11px] text-outline px-2 py-0.5 bg-surface-container-lowest rounded">Python 3.11</span>
+                <span class="text-[11px] text-outline px-2 py-0.5 bg-surface-container-lowest rounded">Selenium</span>
+                <span class="text-[11px] text-outline px-2 py-0.5 bg-surface-container-lowest rounded">Cron Jobs</span>
+              </div>
+            </div>
+
+            <div class="bg-surface-container p-6 rounded-xl flex flex-col justify-between gap-6 border border-surface-container-high/30">
+              <div class="flex flex-col gap-3">
+                <div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+                  <span class="material-symbols-outlined text-[24px]">query_stats</span>
+                </div>
+                <div>
+                  <span class="text-xs text-secondary uppercase font-bold tracking-wider">Pilar 03</span>
+                  <h3 class="text-base sm:text-lg font-bold text-on-surface mt-0.5">Costeo Paramétrico Unitario</h3>
+                </div>
+                <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  Fórmula paramétrica de margen: absorción de merma biológica, follaje, flor base, empaque de lujo y transporte. Blindaje de rentabilidad en picos hiper-estacionales.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pt-2 border-t border-surface-variant/30">
+                <span class="text-[11px] text-outline px-2 py-0.5 bg-surface-container-lowest rounded">Margen 48.5%</span>
+                <span class="text-[11px] text-outline px-2 py-0.5 bg-surface-container-lowest rounded">Precios Dinámicos</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Showcase de Catálogo de Productos Reales -->
+          <div class="flex flex-col gap-6 pt-4">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+              <div>
+                <span class="text-xs text-primary uppercase font-bold tracking-wider">Catálogo Activo en Producción</span>
+                <h3 class="text-xl sm:text-2xl font-bold text-on-surface mt-0.5">Portafolio de Productos &amp; Precios Validados</h3>
+              </div>
+              <span class="text-xs text-on-surface-variant">Sincronizado con catálogo en vivo floresyamores.mx</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Producto 1 -->
+              <div class="bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col group border border-surface-container-high/30">
+                <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-surface-container-lowest">
+                  <img alt="Roseyra - 50 Rosas en Florero de Talavera" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1VAhlayOHuQDcU4AxMxY3QCbNCmhoATR11YwlbyOBoZ_Ra_fJOUSkFW41XcHFeSV6HX8x-odiEzs1tQkUsgl_oRU1z5mkBh5VyLASXm8JAZjD6jLWLsltFazGbLsHf2E1ZPEOAbA1Jvh0iApPiHImUVNRtqvLM4mZeE2dOfJeVJXI5E9bbizqyvOUgVLTl1efetkxi5wfQNSw57XQsaG0FltJP4MEeq16TY3PTDqiKkkNkJJ5JliQAHyM8"/>
+                  <div class="absolute top-3 left-3 bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded text-primary text-[10px] font-bold uppercase">
+                    Cerámica &amp; Talavera
+                  </div>
+                </div>
+                <div class="p-5 flex flex-col justify-between flex-1 gap-3">
+                  <div>
+                    <h4 class="text-base font-bold text-on-surface">Roseyra</h4>
+                    <p class="text-xs text-on-surface-variant mt-1">50 Rosas Premium montadas en Florero de Talavera original poblana.</p>
+                  </div>
+                  <div class="flex items-center justify-between pt-2 border-t border-surface-variant/30">
+                    <span class="text-base sm:text-lg font-bold text-primary">$4,000.00 <span class="text-[10px] text-outline font-normal">MXN</span></span>
+                    <span class="text-[10px] text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded font-semibold">Top Seller</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Producto 2 -->
+              <div class="bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col group border border-surface-container-high/30">
+                <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-surface-container-lowest">
+                  <img alt="Valentina - Caja Artesanal de Rosas Red Velvet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1VjL7AIGb6AuuyquVmA-7AWFVfCQbo7rXO23SQL9fBwUurLVxfKzw18S5Mi3zJYYj_TL8sNrDtDxCqPeYTRVk2zSWKZ_I7sBqx3Ugqodko5ZDbgwp4wZH5UGFlhmgjK1rCuKIcph2iCMeyMz6-x3TvTLqMKubA4fS5a3NsLy2zWbpJ5FdECixlKavN1etW3w5CMZpqT6DQmJtUqGP3f73K2NsiXKIs_iWzPiZLOxVpPQplrvoDZn1UO6B8"/>
+                  <div class="absolute top-3 left-3 bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded text-secondary text-[10px] font-bold uppercase">
+                    Arte Floral
+                  </div>
+                </div>
+                <div class="p-5 flex flex-col justify-between flex-1 gap-3">
+                  <div>
+                    <h4 class="text-base font-bold text-on-surface">Valentina</h4>
+                    <p class="text-xs text-on-surface-variant mt-1">Caja artesanal de Rosas Red Velvet, Lisianthus selectos y Delphinium azul.</p>
+                  </div>
+                  <div class="flex items-center justify-between pt-2 border-t border-surface-variant/30">
+                    <span class="text-base sm:text-lg font-bold text-primary">$2,600.00 <span class="text-[10px] text-outline font-normal">MXN</span></span>
+                    <span class="text-[10px] text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded font-semibold">Diseño Exclusivo</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Producto 3 -->
+              <div class="bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col group border border-surface-container-high/30">
+                <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-surface-container-lowest">
+                  <img alt="Big Heart - Caja de Rosas y Chocolates" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1WJ-4kcoc_5QM4iKR5C8Dn8MGIqndTyKPdBSkeL1YQn1Vd2A1igtGquYaxWNSDG26WqjlhZR80V77Yl5eEp68rv-b9P2Y415iM4uZuHqOhxxycszGiPCvdeSdIs2YsiDuiPhikKxCvLBrK7agzWUXBUO7OQCG4HHWbx5pvvpR095r2xiI9b3brEssXkvcaiBN2o9q8bTMFX-QdRa5Lnb8KnCPPUCZgsxWdh7ynNr1cnr_qgrojnlVln53o"/>
+                  <div class="absolute top-3 left-3 bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded text-tertiary text-[10px] font-bold uppercase">
+                    Aniversarios
+                  </div>
+                </div>
+                <div class="p-5 flex flex-col justify-between flex-1 gap-3">
+                  <div>
+                    <h4 class="text-base font-bold text-on-surface">Big Heart</h4>
+                    <p class="text-xs text-on-surface-variant mt-1">Caja de silueta con rosas rojas seleccionadas y chocolates Ferrero Rocher.</p>
+                  </div>
+                  <div class="flex items-center justify-between pt-2 border-t border-surface-variant/30">
+                    <span class="text-base sm:text-lg font-bold text-primary">$1,900.00 <span class="text-[10px] text-outline font-normal">MXN</span></span>
+                    <span class="text-[10px] text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded font-semibold">Alta Demanda</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Producto 4 -->
+              <div class="bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col group border border-surface-container-high/30">
+                <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-surface-container-lowest">
+                  <img alt="Colección Reserva - 12 Rosas y Vino Tinto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1UZ5gzWG9Www8u9-23_8_I4wN8XuFNKJImzS0VxldFoLBId4_GLIAYKyGOwSzYy-Razxfr5yL2DLBhoiwaOVQLZR_fCQZ7iW-wQi-Y9lwzrb3w0L15VDTby7VAY1TnbTtl2Al_nbtf0R2qNJ1UKE8w3FPoIRQuFWSYL5w1WIgJO3ryUK988nW4QaLEa0lymno5bcofFlvN6DQG9Z-xTqtvQ72LaTtiTcy0a042typEiXvibfeX3sj8vcS8"/>
+                  <div class="absolute top-3 left-3 bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded text-secondary text-[10px] font-bold uppercase">
+                    Gourmet &amp; Vinos
+                  </div>
+                </div>
+                <div class="p-5 flex flex-col justify-between flex-1 gap-3">
+                  <div>
+                    <h4 class="text-base font-bold text-on-surface">Colección Reserva</h4>
+                    <p class="text-xs text-on-surface-variant mt-1">12 Rosas de corte holandés y maridaje con Vino Tinto Reserva.</p>
+                  </div>
+                  <div class="flex items-center justify-between pt-2 border-t border-surface-variant/30">
+                    <span class="text-base sm:text-lg font-bold text-primary">$1,700.00 <span class="text-[10px] text-outline font-normal">MXN</span></span>
+                    <span class="text-[10px] text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded font-semibold">Maridaje D2C</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Producto 5 -->
+              <div class="bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col group border border-surface-container-high/30">
+                <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-surface-container-lowest">
+                  <img alt="Golden Metztli - Canasta con Rosas Tequila" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1UkhXCDC32caF5sOfsTlKgecfR-iXqjlNEcqbkqn9neTkdAaKyglqiFi3qabkMuoUpbSOIreTjEevvJPZHk-Ibz0WslIdcdoKjzWA5KFpNMTmm2fJUboKh6AxkI_UGcjp5Jj5XoQjnm1YGkTxLWdcRqtUPPyz_ig4l9JA2xTdRI18BhYJ3qMZdja6QDzONfdDzyUdj1GPtlHE4h3u4o058uxv0RVciuO5fMZ2t721bEwXRxB-hXBI08lBg"/>
+                  <div class="absolute top-3 left-3 bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded text-primary text-[10px] font-bold uppercase">
+                    Línea Premium
+                  </div>
+                </div>
+                <div class="p-5 flex flex-col justify-between flex-1 gap-3">
+                  <div>
+                    <h4 class="text-base font-bold text-on-surface">Golden Metztli</h4>
+                    <p class="text-xs text-on-surface-variant mt-1">Canasta artesanal con Rosas "Tequila" de exportación en tonos dorados cálidos.</p>
+                  </div>
+                  <div class="flex items-center justify-between pt-2 border-t border-surface-variant/30">
+                    <span class="text-base sm:text-lg font-bold text-primary">$3,600.00 <span class="text-[10px] text-outline font-normal">MXN</span></span>
+                    <span class="text-[10px] text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded font-semibold">Gran Formato</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Producto 6 -->
+              <div class="bg-surface-container-low rounded-xl overflow-hidden shadow-md flex flex-col group border border-surface-container-high/30">
+                <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-surface-container-lowest">
+                  <img alt="Cartas para Emily - Ranúnculos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1XBLiHd6YZJgWVRJdm166VcUnEuYT9LIng6Wffomr9FFbsSbE1khIABHURxvrEsv8twX43X8ew9zMxEaPlMAIUr4NKGNQOzkU5_PJ_SYYRgF8bvK1tXiLV3jMfDkivoLP5MBnNqXuGfgAOpdPLw_gzc1ezBUaeK6VxKmgaL75ZDV16ofH0gFlXUGZusZxZ6X_YpLjsuTR_v7BI761CWxr8AQH2Zlau8S_larzd9TJVzlqEPALvKyEvDtlw"/>
+                  <div class="absolute top-3 left-3 bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded text-tertiary text-[10px] font-bold uppercase">
+                    Temporada
+                  </div>
+                </div>
+                <div class="p-5 flex flex-col justify-between flex-1 gap-3">
+                  <div>
+                    <h4 class="text-base font-bold text-on-surface">Cartas para Emily</h4>
+                    <p class="text-xs text-on-surface-variant mt-1">Ranúnculos amarillos y naranjas en base de madera rústica texturizada.</p>
+                  </div>
+                  <div class="flex items-center justify-between pt-2 border-t border-surface-variant/30">
+                    <span class="text-base sm:text-lg font-bold text-primary">$2,400.00 <span class="text-[10px] text-outline font-normal">MXN</span></span>
+                    <span class="text-[10px] text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded font-semibold">Exclusivo</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Banner panorámico de temporada -->
+            <div class="w-full rounded-2xl overflow-hidden relative shadow-lg bg-surface-container-lowest mt-4 border border-surface-container-high/30">
+              <div class="relative h-48 sm:h-64 w-full">
+                <img alt="Colección de Flores Amarillas floresyamores.mx" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida/AEtjO1U0ya6FCg5myir5uu6-mQmcYogGEoO1vCl86esAbvRXEWY5j8AkJ_kH36DX9Y3j-GVQuc1oYA8JyEVq3geLnJYCa_ev4iFBNCqvRkt3CynErV6D9vD438N1MzCLjKh5U9y2y5NIYrMj7GCenyVIp843sQ1iugCJeO6yuAl8c7yAIV2ARBgazk_4V0OpQ8igEmiLcPC7TsNJc2y1D0i3obqzg5zQC0qJe6BZ4N7aUxi1pZaXt2FU_7zxTA"/>
+                <div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/80 to-transparent flex items-center p-6 sm:p-10">
+                  <div class="flex flex-col gap-2 max-w-xl">
+                    <span class="text-primary text-[10px] sm:text-xs uppercase tracking-widest font-bold">Campaña Estacional 21 de Septiembre</span>
+                    <h4 class="text-lg sm:text-2xl font-bold text-on-surface">Optimización de Inventario en Fechas Pico</h4>
+                    <p class="text-xs sm:text-sm text-on-surface-variant">
+                      El motor predictivo anticipa la compra de tallos amarillos con 18 días de anticipación, blindando márgenes del 52% previo a la inflación especulativa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PIPELINE DE WEB SCRAPING -->
+      <section class="w-full py-12 sm:py-16 px-4 sm:px-6 bg-surface-container-lowest border-t border-surface-container-high/40">
+        <div class="max-w-[1360px] mx-auto flex flex-col gap-8">
+          <div class="flex flex-col gap-2 max-w-3xl">
+            <span class="text-tertiary text-xs uppercase font-bold tracking-wider">Infraestructura de Datos Aplicada</span>
+            <h2 class="text-xl sm:text-3xl font-bold text-on-surface tracking-tight">
+              Pipeline de Web Scraping &amp; Arbitraje de Costos de Insumos
+            </h2>
+            <p class="text-xs sm:text-base text-on-surface-variant">
+              Agente automatizado de extracción en Python para capturar precios en subastas mayoristas de México, habilitando compras óptimas y amortiguando shocks de oferta.
+            </p>
+          </div>
+
+          <div class="bg-surface-container p-6 sm:p-10 rounded-2xl shadow-xl flex flex-col gap-8 border border-surface-container-high/30">
+            <div>
+              <span class="text-xs text-outline uppercase tracking-wider block">Flujo de Ejecución y Arbitraje</span>
+              <h3 class="text-base sm:text-lg font-bold text-on-surface mt-1">Arquitectura del Ciclo Diario de Extracción a Catálogo</h3>
+            </div>
+
+            <!-- Pasos del Pipeline -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="bg-surface-container-high p-4 rounded-xl flex flex-col gap-2 border border-surface-container-highest/50">
+                <div class="flex items-center justify-between">
+                  <span class="w-7 h-7 rounded-full bg-tertiary/20 text-tertiary text-xs font-bold flex items-center justify-center">1</span>
+                  <span class="material-symbols-outlined text-tertiary text-[18px]">alarm</span>
+                </div>
+                <span class="text-sm font-bold text-on-surface">Extracción (04:00 AM)</span>
+                <p class="text-xs text-on-surface-variant">
+                  Selenium y Scrapy ejecutan cron jobs sobre 6 subastas mayoristas (Central de Abasto y Villa Guerrero).
+                </p>
+              </div>
+
+              <div class="bg-surface-container-high p-4 rounded-xl flex flex-col gap-2 border border-surface-container-highest/50">
+                <div class="flex items-center justify-between">
+                  <span class="w-7 h-7 rounded-full bg-primary/20 text-primary text-xs font-bold flex items-center justify-center">2</span>
+                  <span class="material-symbols-outlined text-primary text-[18px]">table_chart</span>
+                </div>
+                <span class="text-sm font-bold text-on-surface">Normalización Pandas</span>
+                <p class="text-xs text-on-surface-variant">
+                  Limpieza tabular, conversión de bonches a tallos individuales y mapeo de variedades de alta rotación.
+                </p>
+              </div>
+
+              <div class="bg-surface-container-high p-4 rounded-xl flex flex-col gap-2 border border-surface-container-highest/50">
+                <div class="flex items-center justify-between">
+                  <span class="w-7 h-7 rounded-full bg-secondary/20 text-secondary text-xs font-bold flex items-center justify-center">3</span>
+                  <span class="material-symbols-outlined text-secondary text-[18px]">calculate</span>
+                </div>
+                <span class="text-sm font-bold text-on-surface">Margen Sugerido</span>
+                <p class="text-xs text-on-surface-variant">
+                  Evaluación paramétrica de margen objetivo (48.5%) y cálculo de desvío frente a la media móvil de 30 días.
+                </p>
+              </div>
+
+              <div class="bg-surface-container-high p-4 rounded-xl flex flex-col gap-2 border border-surface-container-highest/50">
+                <div class="flex items-center justify-between">
+                  <span class="w-7 h-7 rounded-full bg-primary/20 text-primary text-xs font-bold flex items-center justify-center">4</span>
+                  <span class="material-symbols-outlined text-primary text-[18px]">notifications_active</span>
+                </div>
+                <span class="text-sm font-bold text-on-surface">Alerta en Telegram</span>
+                <p class="text-xs text-on-surface-variant">
+                  Notificación móvil con reporte consolidado de compra y sincronización de precios finales mediante API.
+                </p>
+              </div>
+            </div>
+
+            <!-- Log Terminal -->
+            <div class="bg-surface-container-lowest p-4 rounded-xl text-xs text-on-surface-variant flex flex-col gap-1.5 overflow-x-auto shadow-inner border border-surface-container-high/40 font-mono">
+              <div class="flex items-center justify-between pb-1 border-b border-surface-variant/30 text-[10px] text-outline">
+                <span>PIPELINE LOG MONITOR — STALL_ID: MX-CDMX-0400</span>
+                <span class="text-primary flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>ACTIVE · CRON SCHEDULED</span>
+              </div>
+              <div class="text-on-surface">[04:00:02] Initiating selenium webdriver headless mode... 6 wholesale endpoints queued.</div>
+              <div class="text-tertiary">[04:00:15] Scraped: Rose Red Velvet / 24 stems pkg -&gt; $180.00 MXN (delta -18.2% vs 7d avg).</div>
+              <div class="text-tertiary">[04:00:22] Scraped: Tulipa Dutch Yellow / 10 stems -&gt; $195.00 MXN (delta +4.1% vs 7d avg).</div>
+              <div class="text-primary">[04:00:30] Cost engine: Recalibrated gross margin. Savings generated: $4,280 MXN this run.</div>
+              <div class="text-secondary">[04:00:31] Telegram Dispatcher: Digest payload transmitted. Exit code: 0.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANALÍTICA PREDICTIVA DE RECOMPRA -->
+      <section class="w-full py-12 sm:py-16 px-4 sm:px-6 bg-surface">
+        <div class="max-w-[1360px] mx-auto flex flex-col gap-8">
+          <div class="flex flex-col gap-2 max-w-3xl">
+            <span class="text-secondary text-xs uppercase font-bold tracking-wider">Ingeniería Financiera &amp; Modelado</span>
+            <h2 class="text-xl sm:text-3xl font-bold text-on-surface tracking-tight">
+              Ciencia de Datos &amp; Analítica Predictiva de Recompra (LTV)
+            </h2>
+            <p class="text-xs sm:text-base text-on-surface-variant">
+              Sustitución de la intuición comercial por modelos matemáticos supervisados para maximizar el valor del ciclo de vida del cliente.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            <!-- Machine Learning Box -->
+            <div class="lg:col-span-7 bg-surface-container p-6 sm:p-8 rounded-2xl shadow-xl flex flex-col justify-between gap-6 border border-surface-container-high/30">
+              <div class="flex flex-col gap-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-primary uppercase font-bold tracking-wider">Algoritmo Supervisado</span>
+                  <span class="bg-surface-container-high text-primary text-[10px] px-2.5 py-1 rounded font-mono">Scikit-Learn · XGBoost</span>
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold text-on-surface">Predicción de Recurrencia Anual y Churn</h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  Entrenamiento de modelos con variables temporales, ticket histórico, tipología de destinatario y recurrencia de hitos personales. El clasificador anticipa la intención de compra con 14 días de holgura.
+                </p>
+                <div class="grid grid-cols-3 gap-3 pt-2">
+                  <div class="bg-surface-container-high p-3 rounded-lg flex flex-col text-center sm:text-left">
+                    <span class="text-[10px] text-outline">Precisión</span>
+                    <span class="text-base sm:text-xl font-bold text-primary">88.2%</span>
+                  </div>
+                  <div class="bg-surface-container-high p-3 rounded-lg flex flex-col text-center sm:text-left">
+                    <span class="text-[10px] text-outline">AUC-ROC</span>
+                    <span class="text-base sm:text-xl font-bold text-tertiary">0.91</span>
+                  </div>
+                  <div class="bg-surface-container-high p-3 rounded-lg flex flex-col text-center sm:text-left">
+                    <span class="text-[10px] text-outline">Lead Time</span>
+                    <span class="text-base sm:text-xl font-bold text-on-surface">14 días</span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-3 bg-surface-container-lowest rounded-lg flex items-center gap-3 border border-surface-container-high/40">
+                <span class="material-symbols-outlined text-primary text-[22px] flex-shrink-0">psychology</span>
+                <p class="text-xs text-on-surface-variant">
+                  Dispara flujos automáticos vía WhatsApp Business API, incrementando la conversión sobre clientes recurrentes al 31.4%.
+                </p>
+              </div>
+            </div>
+
+            <!-- RFM Matrix Box -->
+            <div class="lg:col-span-5 bg-surface-container p-6 sm:p-8 rounded-2xl shadow-xl flex flex-col justify-between gap-6 border border-surface-container-high/30">
+              <div class="flex flex-col gap-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-secondary uppercase font-bold tracking-wider">Segmentación RFM</span>
+                  <span class="bg-surface-container-high text-secondary text-[10px] px-2.5 py-1 rounded font-bold">ROI 4.2x</span>
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold text-on-surface">Campañas de Retención &amp; LTV</h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  Clustering de usuarios en cuadrantes de Recencia, Frecuencia y Valor Monetario para erradicar el gasto en pauta publicitaria no dirigida.
+                </p>
+                <div class="flex flex-col gap-2 pt-1 text-xs">
+                  <div>
+                    <div class="flex justify-between text-on-surface pb-1">
+                      <span>Champions (Ticket &gt; $3k)</span>
+                      <span class="text-primary font-bold">24% Base</span>
+                    </div>
+                    <div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+                      <div class="bg-primary h-full rounded-full" style="width: 24%;"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-on-surface pb-1">
+                      <span>Loyal Recurring (Aniversarios)</span>
+                      <span class="text-secondary font-bold">46% Base</span>
+                    </div>
+                    <div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+                      <div class="bg-secondary h-full rounded-full" style="width: 46%;"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-on-surface pb-1">
+                      <span>At Risk / Win-back</span>
+                      <span class="text-tertiary font-bold">30% Base</span>
+                    </div>
+                    <div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+                      <div class="bg-tertiary h-full rounded-full" style="width: 30%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-3 bg-surface-container-lowest rounded-lg flex items-center justify-between text-xs text-on-surface border border-surface-container-high/40">
+                <span class="text-outline">Costo Adquisición (CAC)</span>
+                <span class="text-primary font-bold">-64% vs Google Ads</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TABLA COMPARATIVA -->
+      <section class="w-full py-12 sm:py-16 px-4 sm:px-6 bg-surface-container-lowest border-t border-surface-container-high/40">
+        <div class="max-w-[1360px] mx-auto flex flex-col gap-8">
+          <div>
+            <span class="text-xs text-primary uppercase font-bold tracking-wider">Transformación del Modelo Operativo</span>
+            <h2 class="text-xl sm:text-3xl font-bold text-on-surface mt-1 tracking-tight">
+              Comparativa de Desempeño: Retail Tradicional vs. Arquitectura Adaptada
+            </h2>
+          </div>
+
+          <div class="w-full overflow-x-auto bg-surface-container rounded-2xl shadow-xl border border-surface-container-high/30">
+            <table class="w-full text-left min-w-[650px] text-xs sm:text-sm">
+              <thead>
+                <tr class="bg-surface-container-high text-on-surface">
+                  <th class="p-4 font-bold">Dimensión Estratégica</th>
+                  <th class="p-4 text-outline font-medium">Retail Tradicional</th>
+                  <th class="p-4 text-primary font-bold">Solución Adaptada (Paris Ramos)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-outline-variant/10">
+                <tr>
+                  <td class="p-4 font-semibold text-on-surface">Aprovisionamiento</td>
+                  <td class="p-4 text-on-surface-variant">Compras presenciales a ciegas y precios variables sujetos a intermediarios.</td>
+                  <td class="p-4 text-primary bg-primary/5">Web scraping diario (04:00 AM) sobre subastas. Ahorro verificado del 25%.</td>
+                </tr>
+                <tr>
+                  <td class="p-4 font-semibold text-on-surface">Mermas Biológicas</td>
+                  <td class="p-4 text-error font-medium">30% - 35% de producto perecedero desechado por inventario estático.</td>
+                  <td class="p-4 text-primary bg-primary/5">Merma &lt; 8.0% por ventas directas sobre pedido y lotes balanceados en tiempo real.</td>
+                </tr>
+                <tr>
+                  <td class="p-4 font-semibold text-on-surface">Estructura de Precios</td>
+                  <td class="p-4 text-on-surface-variant">Precios fijos; absorción total de la inflación en fechas pico (14 Feb / 10 Mayo).</td>
+                  <td class="p-4 text-primary bg-primary/5">Costeo paramétrico unitario por flor y arreglo, garantizando margen del 48.5%.</td>
+                </tr>
+                <tr>
+                  <td class="p-4 font-semibold text-on-surface">Alcance &amp; Logística</td>
+                  <td class="p-4 text-on-surface-variant">Dependencia de tráfico peatonal local en local físico fijo (radio de 2 km).</td>
+                  <td class="p-4 text-primary bg-primary/5">E-commerce transaccional con cobertura logística metropolitana total (CDMX).</td>
+                </tr>
+                <tr>
+                  <td class="p-4 font-semibold text-on-surface">Retención</td>
+                  <td class="p-4 text-on-surface-variant">Reactiva, sin registro de historial de compras ni fechas clave de clientes.</td>
+                  <td class="p-4 text-primary bg-primary/5">Modelado predictivo (XGBoost) con 88% de precisión en recurrencia anual.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- LLAMADA A LA ACCIÓN FINAL -->
+      <section class="w-full py-12 sm:py-20 px-4 sm:px-6 bg-surface">
+        <div class="max-w-[1360px] mx-auto">
+          <div class="bg-surface-container-low rounded-3xl p-6 sm:p-12 shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 border border-surface-container-high/40">
+            <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="flex flex-col gap-3 max-w-2xl text-left relative z-10">
+              <span class="text-primary text-xs uppercase tracking-widest font-bold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                DIAGNÓSTICO ESTRATÉGICO DIRECTO
+              </span>
+              <h2 class="text-xl sm:text-3xl font-bold text-on-surface tracking-tight">
+                ¿Busca escalar un canal digital o blindar márgenes con datos y automatización?
+              </h2>
+              <p class="text-xs sm:text-base text-on-surface-variant leading-relaxed">
+                Sesión de consultoría de 45 minutos para auditar la arquitectura de costos, fuentes de datos y viabilidad de automatización operativa en su negocio.
+              </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row lg:flex-col gap-3 w-full lg:w-auto relative z-10 flex-shrink-0">
+              <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-on-primary text-xs sm:text-sm font-semibold px-6 py-3 rounded-lg hover:bg-primary-container shadow-md transition-all text-center" href="/#contacto">
+                <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                Agendar Sesión de Diagnóstico
+              </a>
+              <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-surface-container-high text-on-surface text-xs sm:text-sm font-medium px-6 py-3 rounded-lg hover:bg-surface-bright transition-all text-center" href="/#contacto">
+                <span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+                Descargar Resumen Ejecutivo (PDF)
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="w-full bg-surface-container-low border-t border-surface-container-high/40 py-8 px-4 sm:px-6">
+    <div class="w-full max-w-[1360px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant text-center sm:text-left">
+      <p>© 2026 Paris Alejandro Ramos de Cervantes. Todos los derechos reservados.</p>
+      <div class="flex items-center gap-4">
+        <span>Seguridad Operativa</span>
+        <span>Cifrado de Datos</span>
+        <span>Protocolo Estratégico</span>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
