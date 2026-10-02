@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+
+  <!-- ==================== SEO ESPECÍFICO DE GOBIERNO ==================== -->
+  <title>Soluciones Gobierno & Auditoría Forense | Paris Alejandro Ramos</title>
+  <meta name="description" content="Ingeniería de software de misión crítica, regularización de nómina masiva, conciliación CFDI SAT y solvencia de auditorías federales en México.">
+  <meta name="author" content="Paris Alejandro Ramos de Cervantes">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://parisramos.github.io/gobierno/">
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Ingeniería de Sistemas y Auditoría Forense Gubernamental | Paris Ramos">
+  <meta property="og:description" content="Casos de éxito federales: SICA V3.0 (Procuraduría Agraria), conciliación masiva de 469k+ CFDI ante el SAT y LMS institucional.">
+  <meta property="og:url" content="https://parisramos.github.io/gobierno/">
+  <meta property="og:image" content="https://parisramos.github.io/assets/preview.jpg">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Soluciones Tecnológicas Gubernamentales | Paris Ramos">
+  <meta name="twitter:description" content="Arquitectura de software de misión crítica y solvencia normativa ante OIC y ASF.">
+  <meta name="twitter:image" content="https://parisramos.github.io/assets/preview.jpg">
+
+  <!-- ==================== FUENTES Y ESTILOS ==================== -->
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    html { scroll-behavior: smooth; }
+  </style>
+
+  <!-- ==================== CONFIGURACIÓN DE TAILWIND ==================== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      "darkMode": "class",
+      "theme": {
+        "extend": {
+          "colors": {
+            "primary-fixed": "#85f8c4",
+            "on-error": "#690005",
+            "on-primary": "#003825",
+            "on-secondary-fixed-variant": "#003ea8",
+            "surface": "#0b1326",
+            "surface-dim": "#0b1326",
+            "on-secondary": "#002a78",
+            "primary": "#68dba9",
+            "on-surface": "#dae2fd",
+            "on-primary-fixed-variant": "#005137",
+            "tertiary": "#89ceff",
+            "on-background": "#dae2fd",
+            "on-error-container": "#ffdad6",
+            "on-primary-container": "#00311f",
+            "error": "#ffb4ab",
+            "on-secondary-fixed": "#00174b",
+            "on-surface-variant": "#bccac0",
+            "inverse-surface": "#dae2fd",
+            "surface-container-lowest": "#060e20",
+            "outline": "#87948b",
+            "surface-bright": "#31394d",
+            "surface-tint": "#68dba9",
+            "outline-variant": "#3d4a42",
+            "inverse-on-surface": "#283044",
+            "on-tertiary": "#00344d",
+            "tertiary-container": "#009ada",
+            "secondary-fixed-dim": "#b4c5ff",
+            "primary-container": "#25a475",
+            "error-container": "#93000a",
+            "surface-variant": "#2d3449",
+            "secondary-container": "#0053db",
+            "on-tertiary-fixed-variant": "#004c6e",
+            "background": "#0b1326",
+            "on-secondary-container": "#cdd7ff",
+            "surface-container-low": "#131b2e",
+            "surface-container-highest": "#2d3449",
+            "on-primary-fixed": "#002114",
+            "secondary": "#b4c5ff",
+            "primary-fixed-dim": "#68dba9",
+            "secondary-fixed": "#dbe1ff",
+            "tertiary-fixed-dim": "#89ceff",
+            "inverse-primary": "#006c4a",
+            "surface-container": "#171f33",
+            "on-tertiary-container": "#002d43",
+            "tertiary-fixed": "#c9e6ff",
+            "on-tertiary-fixed": "#001e2f",
+            "surface-container-high": "#222a3d"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "margin-md": "3rem",
+            "gutter-lg": "2rem",
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "gutter-sm": "1rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin": "1.5rem",
+            "margin-lg": "5rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "body-md": ["Geist", "sans-serif"],
+            "headline-md": ["Space Grotesk", "sans-serif"],
+            "display": ["Space Grotesk", "sans-serif"],
+            "headline-lg": ["Space Grotesk", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- ==================== DATOS ESTRUCTURADOS (SCHEMA JSON-LD) ==================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GovernmentService",
+    "name": "Consultoría y Soluciones Gubernamentales",
+    "provider": {
+      "@type": "Person",
+      "name": "Paris Alejandro Ramos de Cervantes",
+      "jobTitle": "Líder de Soluciones Tecnológicas Adaptadas"
+    },
+    "serviceType": "Auditoría Forense, Nómina Masiva y Regularización de Sistemas Públicos",
+    "description": "Arquitectura de software de misión crítica y regularización técnica bajo el marco normativo de la Administración Pública Federal."
+  }
+  </script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface min-h-screen">
+  <!-- ENCABEZADO CON PROTECCIÓN MÓVIL -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-xl border-b border-surface-container-high/50">
+    <div class="h-16 sm:h-20 w-full max-w-[1360px] mx-auto px-4 sm:px-6 flex items-center justify-between gap-3">
+      
+      <!-- Nombre con espacio flexible -->
+      <div class="flex-1 min-w-0 pr-2">
+        <a class="flex flex-col text-left group" href="/">
+          <span class="font-bold text-xs sm:text-base md:text-lg text-on-surface tracking-tight truncate group-hover:text-primary transition-colors">
+            Paris Alejandro Ramos de Cervantes
+          </span>
+          <span class="text-[9px] sm:text-xs text-outline uppercase tracking-wider truncate">
+            Líder de Soluciones Tecnológicas Adaptadas
+          </span>
+        </a>
+      </div>
+
+      <!-- Navegación de escritorio -->
+      <nav class="hidden xl:flex items-center gap-4 flex-shrink-0">
+        <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/">Inicio</a>
+        <a aria-current="page" class="text-primary font-medium text-sm bg-surface-container-high px-3 py-1.5 rounded-lg" href="/gobierno/">Soluciones Gobierno</a>
+        <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/#soluciones">Soluciones Negocio</a>
+        <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/#stack">Stack de Capacidades</a>
+        <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/#contacto">Trayectoria &amp; Contacto</a>
+      </nav>
+
+      <!-- Botón de acción: En celular solo muestra el icono -->
+      <div class="flex items-center flex-shrink-0">
+        <a class="inline-flex items-center justify-center bg-primary text-on-primary text-xs sm:text-sm font-semibold p-2 sm:px-4 sm:py-2 rounded-lg hover:bg-primary-container transition-all shadow-[0_0_12px_rgba(104,219,169,0.25)]" href="/#contacto" title="Agendar Diagnóstico">
+          <span class="material-symbols-outlined text-[20px] sm:text-[18px] sm:mr-1.5">calendar_month</span>
+          <span class="hidden sm:inline">Agendar Diagnóstico</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-16 sm:pt-20 bg-surface min-h-[calc(100vh-20rem)]">
+    <div class="flex flex-col w-full">
+      <!-- Glow superior -->
+      <div class="relative w-full max-w-[1360px] mx-auto px-4 sm:px-6 pt-6 sm:pt-10 pb-12 overflow-hidden">
+        <div class="absolute -top-32 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+        <div class="absolute top-1/3 -right-24 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+        <!-- Breadcrumbs y Encabezado de la página -->
+        <section class="flex flex-col gap-4 mb-8 sm:mb-12">
+          <nav class="flex items-center gap-2 text-xs text-outline uppercase tracking-wider">
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="/">Inicio</a>
+            <span class="text-outline-variant">/</span>
+            <span class="text-primary font-semibold truncate">Soluciones Gobierno &amp; Sector Público</span>
+          </nav>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
+            <div class="lg:col-span-8 flex flex-col gap-3">
+              <div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded-full w-fit">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span class="text-[10px] sm:text-xs text-primary font-bold uppercase tracking-widest">Sector Público Federal • Auditoría &amp; Misión Crítica</span>
+              </div>
+              <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-on-surface tracking-tight leading-tight">
+                Ingeniería de Sistemas, Auditoría Forense y Escala Institucional
+              </h1>
+              <p class="text-sm sm:text-base text-on-surface-variant max-w-3xl leading-relaxed">
+                Arquitectura de software de misión crítica, regularización de procesos normativos y plataformas de alto rendimiento diseñadas para las exigencias de fiscalización, recursos humanos y soberanía de datos del Estado Mexicano.
+              </p>
+            </div>
+            <div class="lg:col-span-4 flex flex-col justify-end">
+              <div class="p-4 bg-surface-container-low rounded-xl flex items-center justify-between shadow-sm border border-surface-container-high/40">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs font-bold text-on-surface">Procuraduría Agraria</span>
+                    <span class="text-xs text-on-surface-variant">Sede Central &amp; 32 Representaciones</span>
+                  </div>
+                </div>
+                <span class="text-[10px] font-semibold bg-primary/10 text-primary px-2 py-0.5 rounded">En Producción</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Franja de Métricas / KPIs -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+            <div class="bg-surface-container-low p-4 rounded-xl flex flex-col justify-between shadow-sm border border-surface-container-high/30">
+              <div class="flex items-center justify-between text-outline mb-1">
+                <span class="text-[11px] uppercase tracking-wider">Censo de Servidores</span>
+                <span class="material-symbols-outlined text-[18px] text-primary">groups</span>
+              </div>
+              <div class="flex items-baseline gap-2">
+                <span class="text-2xl sm:text-3xl font-bold text-on-surface">2,800+</span>
+                <span class="text-xs text-primary font-semibold">PA Federal</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Gestión en tiempo real en 32 representaciones territoriales.</p>
+            </div>
+
+            <div class="bg-surface-container-low p-4 rounded-xl flex flex-col justify-between shadow-sm border border-surface-container-high/30">
+              <div class="flex items-center justify-between text-outline mb-1">
+                <span class="text-[11px] uppercase tracking-wider">Comprobantes Fiscales</span>
+                <span class="material-symbols-outlined text-[18px] text-tertiary">receipt_long</span>
+              </div>
+              <div class="flex items-baseline gap-2">
+                <span class="text-2xl sm:text-3xl font-bold text-on-surface">469,000+</span>
+                <span class="text-xs text-tertiary font-semibold">CFDI 3.3/4.0</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Conciliación tributaria sin discrepancias ante SAT (2019-2026).</p>
+            </div>
+
+            <div class="bg-surface-container-low p-4 rounded-xl flex flex-col justify-between shadow-sm border border-surface-container-high/30">
+              <div class="flex items-center justify-between text-outline mb-1">
+                <span class="text-[11px] uppercase tracking-wider">Cumplimiento Legal</span>
+                <span class="material-symbols-outlined text-[18px] text-primary">gavel</span>
+              </div>
+              <div class="flex items-baseline gap-2">
+                <span class="text-2xl sm:text-3xl font-bold text-on-surface">100%</span>
+                <span class="text-xs text-primary font-semibold">Debido Proceso</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">48h hábiles normativas con motor calendárico DOF automatizado.</p>
+            </div>
+
+            <div class="bg-surface-container-low p-4 rounded-xl flex flex-col justify-between shadow-sm border border-surface-container-high/30">
+              <div class="flex items-center justify-between text-outline mb-1">
+                <span class="text-[11px] uppercase tracking-wider">Latencia Analítica</span>
+                <span class="material-symbols-outlined text-[18px] text-secondary">speed</span>
+              </div>
+              <div class="flex items-baseline gap-2">
+                <span class="text-2xl sm:text-3xl font-bold text-on-surface">19.88 ms</span>
+                <span class="text-xs text-secondary font-semibold">7,569× Aceleración</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-1">Búsqueda Two-Stage sobre 195k+ recibos con B-Tree relacional.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Filtros interactivos -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-3 mb-8">
+          <button class="filter-tab px-4 py-2 bg-primary text-on-primary text-xs sm:text-sm font-semibold rounded-lg shadow-sm whitespace-nowrap" id="btn-all" onclick="filterDossier('all')">
+            Todos los Proyectos (3)
+          </button>
+          <button class="filter-tab px-4 py-2 bg-surface-container text-on-surface-variant hover:text-on-surface text-xs sm:text-sm rounded-lg transition-colors whitespace-nowrap" id="btn-sica" onclick="filterDossier('sica')">
+            Gobernanza &amp; Nómina (SICA V3)
+          </button>
+          <button class="filter-tab px-4 py-2 bg-surface-container text-on-surface-variant hover:text-on-surface text-xs sm:text-sm rounded-lg transition-colors whitespace-nowrap" id="btn-cfdi" onclick="filterDossier('cfdi')">
+            Auditoría Fiscal &amp; CFDI SAT
+          </button>
+          <button class="filter-tab px-4 py-2 bg-surface-container text-on-surface-variant hover:text-on-surface text-xs sm:text-sm rounded-lg transition-colors whitespace-nowrap" id="btn-lms" onclick="filterDossier('lms')">
+            Capacitación &amp; LMS PA
+          </button>
+        </div>
+
+        <!-- DOSSIER DE PROYECTOS -->
+        <div class="flex flex-col gap-8 sm:gap-12">
+          
+          <!-- PROYECTO 1: SICA -->
+          <article class="project-card bg-surface-container-low rounded-xl p-5 sm:p-8 shadow-md border border-surface-container-high/30 transition-all" id="project-sica">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-4">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-1 bg-primary/10 text-primary text-[10px] sm:text-xs uppercase rounded font-bold tracking-wider">
+                  GOBERNANZA LABORAL &amp; NÓMINA | SICA V3.0
+                </span>
+                <span class="text-outline text-xs">•</span>
+                <span class="text-on-surface-variant text-xs font-medium">Procuraduría Agraria Federal</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-outline text-xs">
+                <span class="material-symbols-outlined text-[16px] text-primary">security</span>
+                <span>Cifrado AES-256 • RBAC / RLS</span>
+              </div>
+            </div>
+
+            <h2 class="text-lg sm:text-2xl font-bold text-on-surface tracking-tight mt-1">
+              SICA — Sistema Integral de Control de Asistencia, Incidencias y Descuentos de Nómina
+            </h2>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-2 max-w-4xl leading-relaxed">
+              Ecosistema institucional descentralizado para la administración de personal, validación de tolerancias, dictamen automatizado de incidencias y timbrado de descuentos quincenales bajo las Condiciones Generales de Trabajo del Sector Público.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6 items-start">
+              <div class="lg:col-span-7 flex flex-col gap-4">
+                <div class="bg-surface-container p-4 rounded-lg shadow-sm">
+                  <div class="flex items-center gap-1.5 text-error mb-2">
+                    <span class="material-symbols-outlined text-[18px]">warning</span>
+                    <span class="text-xs font-bold uppercase tracking-wider">Desafío Institucional</span>
+                  </div>
+                  <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                    Más de 2,800 trabajadores distribuidos en 32 representaciones y residencias a nivel nacional operando con dispersión documental en papel, falta de trazabilidad forense, discrecionalidad en justificantes y demoras de hasta 3 semanas para computar penalizaciones y descuentos quincenales, provocando inconsistencias ante el Órgano Interno de Control (OIC).
+                  </p>
+                </div>
+
+                <div class="bg-surface-container p-4 rounded-lg shadow-sm">
+                  <div class="flex items-center gap-1.5 text-primary mb-2">
+                    <span class="material-symbols-outlined text-[18px]">terminal</span>
+                    <span class="text-xs font-bold uppercase tracking-wider">Solución Arquitectónica Adaptada</span>
+                  </div>
+                  <div class="flex flex-col gap-2 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                    <p><strong class="text-on-surface">MotorReglas con Caché O(1):</strong> Pipeline optimizado que computa retardos mayores, menores y faltas injustificadas en memoria sin consultas N+1 sobre bases distribuidas.</p>
+                    <p><strong class="text-on-surface">Garantía Normativa de 48 Horas:</strong> Subsistema <code class="text-tertiary font-mono text-xs">BusinessCalendar</code> que calcula dinámicamente ventanas de aclaración de 48 horas hábiles exactas excluyendo fines de semana y festivos oficiales del DOF.</p>
+                    <p><strong class="text-on-surface">Dictamen Automatizado &amp; Firma Re-Auth:</strong> Modos AUTO, N y J con firma administrativa protegida por re-autenticación y emisión de constancias PDF landscape oficiales.</p>
+                    <p><strong class="text-on-surface">Trazabilidad Inmutable:</strong> Tablas <code class="text-tertiary font-mono text-xs">BitacoraCambioAsistencia</code> y <code class="text-tertiary font-mono text-xs">HistoricoEstatusEmpleado</code> con registro de IP, User-Agent, delta de valores y sellos inalterables.</p>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">Django Enterprise</span>
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">PostgreSQL / MariaDB</span>
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">BusinessCalendar Engine</span>
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">WeasyPrint PDF Core</span>
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">Redis Cache O(1)</span>
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">RBAC / RLS</span>
+                </div>
+              </div>
+
+              <div class="lg:col-span-5 flex flex-col gap-4">
+                <div class="bg-surface-container p-4 rounded-lg shadow-sm">
+                  <span class="text-xs text-outline uppercase tracking-wider block mb-3 font-semibold">Impacto Cuantificable</span>
+                  <div class="grid grid-cols-2 gap-3">
+                    <div class="p-3 bg-surface-container-low rounded">
+                      <span class="text-xl sm:text-2xl font-bold text-primary">85%</span>
+                      <span class="text-xs text-on-surface-variant block mt-1">Reducción en tiempo de sábana quincenal</span>
+                    </div>
+                    <div class="p-3 bg-surface-container-low rounded">
+                      <span class="text-xl sm:text-2xl font-bold text-secondary">48h</span>
+                      <span class="text-xs text-on-surface-variant block mt-1">Ventana legal garantizada por DOF</span>
+                    </div>
+                    <div class="p-3 bg-surface-container-low rounded">
+                      <span class="text-xl sm:text-2xl font-bold text-tertiary">292</span>
+                      <span class="text-xs text-on-surface-variant block mt-1">Pruebas unitarias/regresión (100%)</span>
+                    </div>
+                    <div class="p-3 bg-surface-container-low rounded">
+                      <span class="text-xl sm:text-2xl font-bold text-primary">0</span>
+                      <span class="text-xs text-on-surface-variant block mt-1">Vulnerabilidades IDOR registradas</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between pt-2">
+                  <button class="inline-flex items-center text-primary text-xs sm:text-sm font-semibold hover:underline gap-1.5" onclick="toggleModal('modal-sica')">
+                    <span>Ver Ficha Técnica de Arquitectura</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  </button>
+                  <span class="text-[11px] text-outline font-mono">Ref: ayd_attendance.md</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 2: CFDI SAT -->
+          <article class="project-card bg-surface-container-low rounded-xl p-5 sm:p-8 shadow-md border border-surface-container-high/30 transition-all" id="project-cfdi">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-4">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-1 bg-tertiary/10 text-tertiary text-[10px] sm:text-xs uppercase rounded font-bold tracking-wider">
+                  AUDITORÍA FISCAL FORENSE &amp; CONCILIACIÓN SAT | CFDI
+                </span>
+                <span class="text-outline text-xs">•</span>
+                <span class="text-on-surface-variant text-xs font-medium">Procuraduría Agraria Federal</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-outline text-xs">
+                <span class="material-symbols-outlined text-[16px] text-tertiary">data_thresholding</span>
+                <span>Deduplicación SHA-256 • Anexo 20</span>
+              </div>
+            </div>
+
+            <h2 class="text-lg sm:text-2xl font-bold text-on-surface tracking-tight mt-1">
+              Plataforma de Auditoría Forense Fiscal, Ingesta Masiva y Conciliación CFDI / SAT
+            </h2>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-2 max-w-4xl leading-relaxed">
+              Arquitectura Data Warehousing relacional de alta velocidad con motor de análisis de sintaxis abstracta (AST) para verificación de retenciones del Art. 96 LISR y conciliación contra Visor Patronal del SAT.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6 items-start">
+              <div class="lg:col-span-7 flex flex-col gap-4">
+                <div class="bg-surface-container p-4 rounded-lg shadow-sm">
+                  <div class="flex items-center gap-1.5 text-error mb-2">
+                    <span class="material-symbols-outlined text-[18px]">crisis_alert</span>
+                    <span class="text-xs font-bold uppercase tracking-wider">Desafío Institucional</span>
+                  </div>
+                  <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                    Asimetría fiscal crítica ante el SAT. Urgencia de auditar y confrontar más de 469,000 CFDI de Nómina acumulados en 7 ejercicios fiscales (2019-2026). Las consultas OLTP tradicionales tardaban más de 150 segundos o colapsaban la base de datos, impidiendo fiscalizar discrepancias en retenciones de ISR y topes UMA.
+                  </p>
+                </div>
+
+                <div class="bg-surface-container p-4 rounded-lg shadow-sm">
+                  <div class="flex items-center gap-1.5 text-tertiary mb-2">
+                    <span class="material-symbols-outlined text-[18px]">memory</span>
+                    <span class="text-xs font-bold uppercase tracking-wider">Solución Arquitectónica Adaptada</span>
+                  </div>
+                  <div class="flex flex-col gap-2 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                    <p><strong class="text-on-surface">Ingesta Masiva Criptográfica:</strong> Algoritmo SHA-256 para idempotencia exacta, con Strategy Pattern multi-versión (CFDI 3.3 y 4.0).</p>
+                    <p><strong class="text-on-surface">Rollup Tables &amp; B-Tree:</strong> Materialización en <code class="text-primary font-mono text-xs">ResumenMensualNomina</code> e índices cubrientes B-Tree que reducen la latencia de 150.48 s a 19.88 ms.</p>
+                    <p><strong class="text-on-surface">Motor de Reglas AST (Art. 96 LISR):</strong> Árbol de Sintaxis Abstracta para evaluar tarifas de retención, segregando ingresos gravados de exentos y aplicando límites UMA.</p>
+                    <p><strong class="text-on-surface">Buscador Two-Stage:</strong> Auto-enrutamiento de intención cruzado con el catálogo de cancelación oficial del SAT.</p>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">CFDI Nómina 1.2</span>
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">Anexo 20 SAT</span>
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">AST Rule Engine</span>
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">Covering B-Tree Indices</span>
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">Strategy Pattern</span>
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">SHA-256 Deduplication</span>
+                </div>
+              </div>
+
+              <div class="lg:col-span-5 flex flex-col gap-4">
+                <div class="bg-surface-container p-4 rounded-lg shadow-sm">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs text-outline uppercase tracking-wider font-semibold">Benchmark Analítico</span>
+                    <span class="text-tertiary text-xs font-bold">7,569× más veloz</span>
+                  </div>
+                  <div class="flex flex-col gap-1 mb-3">
+                    <div class="flex justify-between text-xs text-on-surface-variant">
+                      <span>Consulta Legacy OLTP</span>
+                      <span class="text-error font-mono">150.48 s</span>
+                    </div>
+                    <div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+                      <div class="bg-error h-full rounded-full" style="width: 100%"></div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <div class="flex justify-between text-xs text-on-surface-variant">
+                      <span>Data Warehouse + AST</span>
+                      <span class="text-primary font-mono font-bold">19.88 ms</span>
+                    </div>
+                    <div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+                      <div class="bg-primary h-full rounded-full" style="width: 2%"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between pt-2">
+                  <button class="inline-flex items-center text-tertiary text-xs sm:text-sm font-semibold hover:underline gap-1.5" onclick="toggleModal('modal-cfdi')">
+                    <span>Ver Algoritmo AST y Estrategia Fiscal</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  </button>
+                  <span class="text-[11px] text-outline font-mono">Ref: CFDI_GUIA_MAESTRA.md</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 3: LMS PA -->
+          <article class="project-card bg-surface-container-low rounded-xl p-5 sm:p-8 shadow-md border border-surface-container-high/30 transition-all" id="project-lms">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-4">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-1 bg-secondary/10 text-secondary text-[10px] sm:text-xs uppercase rounded font-bold tracking-wider">
+                  CAPACITACIÓN INSTITUCIONAL &amp; GAMIFICACIÓN | LMS PA
+                </span>
+                <span class="text-outline text-xs">•</span>
+                <span class="text-on-surface-variant text-xs font-medium">DGOA</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-outline text-xs">
+                <span class="material-symbols-outlined text-[16px] text-secondary">workspace_premium</span>
+                <span>Certificados Oficiales con Sello Hash</span>
+              </div>
+            </div>
+
+            <h2 class="text-lg sm:text-2xl font-bold text-on-surface tracking-tight mt-1">
+              LMS Procuraduría Agraria — Plataforma de Formación, Evaluación Dinámica y Certificación
+            </h2>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-2 max-w-4xl leading-relaxed">
+              Ecosistema integral de educación continua institucional con motor de evaluación polimórfica, calificador híbrido para reactivos abiertos y emisión asíncrona de constancias oficiales.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6 items-start">
+              <div class="lg:col-span-7 flex flex-col gap-4">
+                <div class="bg-surface-container p-4 rounded-lg shadow-sm">
+                  <div class="flex items-center gap-1.5 text-error mb-2">
+                    <span class="material-symbols-outlined text-[18px]">school</span>
+                    <span class="text-xs font-bold uppercase tracking-wider">Desafío Institucional</span>
+                  </div>
+                  <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                    Necesidad de homologar competencias jurídicas agrarias eliminando traslados presenciales onerosos. El sistema requería exámenes por bancos aleatorios (pools), calificación cualitativa por tutores y emisión de constancias con validez curricular inmediata.
+                  </p>
+                </div>
+
+                <div class="bg-surface-container p-4 rounded-lg shadow-sm">
+                  <div class="flex items-center gap-1.5 text-secondary mb-2">
+                    <span class="material-symbols-outlined text-[18px]">architecture</span>
+                    <span class="text-xs font-bold uppercase tracking-wider">Solución Arquitectónica Adaptada</span>
+                  </div>
+                  <div class="flex flex-col gap-2 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                    <p><strong class="text-on-surface">Arquitectura MVT Desacoplada:</strong> Capa de servicios (<code class="text-secondary font-mono text-xs">EvaluationFlowService</code>) sobre Django, Celery y Redis.</p>
+                    <p><strong class="text-on-surface">Aislamiento de Memoria:</strong> Serialización en Python con <code class="text-primary font-mono text-xs">deepcopy</code> en Redis evitando contaminación cruzada entre alumnos.</p>
+                    <p><strong class="text-on-surface">Gamificación Curricular:</strong> Motor autónomo de experiencia (XP), rachas de actividad diurna, niveles dinámicos e insignias.</p>
+                    <p><strong class="text-on-surface">Emisión Asíncrona:</strong> Generación en segundo plano vía Celery y WeasyPrint en menos de 3s con código QR de validación pública criptográfica.</p>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">Django &amp; DRF</span>
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">Celery Workers</span>
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">Redis In-Memory</span>
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">WeasyPrint PDF Engine</span>
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">Deepcopy Defensive Cache</span>
+                  <span class="px-2 py-0.5 bg-surface-container-high text-on-surface text-[11px] rounded">Vanilla JS</span>
+                </div>
+              </div>
+
+              <div class="lg:col-span-5 flex flex-col gap-4">
+                <div class="bg-surface-container p-4 rounded-lg shadow-sm">
+                  <span class="text-xs text-outline uppercase tracking-wider block mb-3 font-semibold">Indicadores Operativos</span>
+                  <div class="grid grid-cols-2 gap-3">
+                    <div class="p-3 bg-surface-container-low rounded">
+                      <span class="text-xl sm:text-2xl font-bold text-secondary">&lt; 3.0 s</span>
+                      <span class="text-xs text-on-surface-variant block mt-1">Generación y firmado de diploma</span>
+                    </div>
+                    <div class="p-3 bg-surface-container-low rounded">
+                      <span class="text-xl sm:text-2xl font-bold text-primary">0%</span>
+                      <span class="text-xs text-on-surface-variant block mt-1">Colisiones en Redis por concurrencia</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between pt-2">
+                  <button class="inline-flex items-center text-secondary text-xs sm:text-sm font-semibold hover:underline gap-1.5" onclick="toggleModal('modal-lms')">
+                    <span>Ver Ficha de Arquitectura LMS</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  </button>
+                  <span class="text-[11px] text-outline font-mono">Ref: architecture.md</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- TABLA COMPARATIVA -->
+        <section class="mt-12 sm:mt-16 bg-surface-container-low rounded-xl p-5 sm:p-8 shadow-md border border-surface-container-high/30">
+          <div class="flex flex-col gap-1 mb-6">
+            <span class="text-xs text-primary uppercase font-bold tracking-wider">Transformación del Modelo Operativo</span>
+            <h3 class="text-lg sm:text-2xl font-bold text-on-surface">De la Discrecionalidad a la Certeza Técnica y Forense</h3>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs sm:text-sm">
+              <thead>
+                <tr class="bg-surface-container text-outline uppercase text-[11px]">
+                  <th class="p-3 sm:p-4 rounded-l">Dimensión de Gobierno</th>
+                  <th class="p-3 sm:p-4">Operación Previa (Tradicional)</th>
+                  <th class="p-3 sm:p-4 rounded-r text-primary">Solución Adaptada (Paris Ramos)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-outline-variant/10">
+                <tr>
+                  <td class="p-3 sm:p-4 font-semibold text-on-surface">Cálculo de Nómina &amp; Sábana</td>
+                  <td class="p-3 sm:p-4 text-on-surface-variant">15 a 21 días de procesamiento manual, demoras y quejas sindicales.</td>
+                  <td class="p-3 sm:p-4 text-on-surface"><span class="text-primary font-bold">Menos de 48h.</span> Motor O(1) en memoria con trazabilidad inmutable.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 sm:p-4 font-semibold text-on-surface">Garantía de Debido Proceso</td>
+                  <td class="p-3 sm:p-4 text-on-surface-variant">Justificantes en papel y discrecionalidad de enlaces administrativos.</td>
+                  <td class="p-3 sm:p-4 text-on-surface"><span class="text-primary font-bold">Ventana exacta de 48h</span> calculadas vía calendario oficial DOF.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 sm:p-4 font-semibold text-on-surface">Auditoría Fiscal Nómina CFDI</td>
+                  <td class="p-3 sm:p-4 text-on-surface-variant">Consultas lentas (+150s) y asimetrías ante Visor del SAT.</td>
+                  <td class="p-3 sm:p-4 text-on-surface"><span class="text-tertiary font-bold">Respuesta en 19.88 ms.</span> AST y Rollup tables sobre 469k+ CFDIs.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- BANNER DE CONSULTORÍA -->
+        <section class="mt-12 sm:mt-16 bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-high rounded-xl p-6 sm:p-10 shadow-xl border border-surface-container-high/40">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            <div class="lg:col-span-8 flex flex-col gap-2">
+              <span class="text-xs text-primary uppercase font-bold tracking-wider">Gobernanza Institucional</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-on-surface">
+                ¿Su dependencia requiere regularizar sistemas críticos o mitigar riesgos de auditoría?
+              </h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant">
+                Disponible para diagnósticos de misión crítica, regularización de nómina masiva, auditoría fiscal SAT y despliegue de plataformas de alta disponibilidad.
+              </p>
+            </div>
+            <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
+              <a class="inline-flex items-center justify-center bg-primary text-on-primary text-xs sm:text-sm font-semibold px-4 py-3 rounded-lg hover:bg-primary-container transition-all shadow-md text-center" href="/#contacto">
+                <span class="material-symbols-outlined text-[18px] mr-1.5">contact_phone</span>
+                Solicitar Diagnóstico
+              </a>
+              <a class="inline-flex items-center justify-center bg-surface-container-highest text-on-surface text-xs sm:text-sm font-medium px-4 py-3 rounded-lg hover:bg-surface-bright transition-all text-center" href="/#contacto">
+                <span class="material-symbols-outlined text-[18px] mr-1.5">description</span>
+                Dossier de Proyectos (PDF)
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- MODALES DE ARQUITECTURA -->
+  <div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center p-4" id="modal-sica">
+    <div class="bg-surface-container-low max-w-2xl w-full max-h-[85vh] overflow-y-auto rounded-xl p-6 shadow-2xl flex flex-col gap-4 border border-surface-container-high/50">
+      <div class="flex items-center justify-between border-b border-surface-variant/40 pb-2">
+        <span class="text-base font-bold text-primary">Arquitectura Detallada: SICA V3.0</span>
+        <button class="text-on-surface-variant hover:text-on-surface" onclick="toggleModal('modal-sica')"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="text-xs sm:text-sm text-on-surface-variant flex flex-col gap-3 leading-relaxed">
+        <h4 class="font-bold text-on-surface">1. Motor de Reglas en Memoria (`MotorReglas`)</h4>
+        <p>Pre-carga las jornadas laborales y tolerancias en diccionarios indexados por clave de empleado con cómputo O(1), erradicando consultas N+1.</p>
+        <h4 class="font-bold text-on-surface">2. Calendario Institucional (`BusinessCalendar`)</h4>
+        <p>Calcula las 48 horas hábiles exactas a partir del reporte excluyendo fines de semana y festivos oficiales del DOF.</p>
+      </div>
+      <div class="flex justify-end pt-2">
+        <button class="bg-surface-container-high text-on-surface px-4 py-2 rounded-lg text-xs font-semibold hover:bg-surface-bright transition-colors" onclick="toggleModal('modal-sica')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center p-4" id="modal-cfdi">
+    <div class="bg-surface-container-low max-w-2xl w-full max-h-[85vh] overflow-y-auto rounded-xl p-6 shadow-2xl flex flex-col gap-4 border border-surface-container-high/50">
+      <div class="flex items-center justify-between border-b border-surface-variant/40 pb-2">
+        <span class="text-base font-bold text-tertiary">Arquitectura Detallada: Auditoría CFDI SAT</span>
+        <button class="text-on-surface-variant hover:text-on-surface" onclick="toggleModal('modal-cfdi')"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="text-xs sm:text-sm text-on-surface-variant flex flex-col gap-3 leading-relaxed">
+        <h4 class="font-bold text-on-surface">1. Ingesta Polimórfica (CFDI 3.3 y 4.0)</h4>
+        <p>Hasheo con SHA-256 para idempotencia previa al parsing, evitando saturación de CPU.</p>
+        <h4 class="font-bold text-on-surface">2. Índices Cubrientes B-Tree y Rollup Tables</h4>
+        <p>Resumen mensual precalculado para resolver consultas complejas en menos de 20 ms.</p>
+      </div>
+      <div class="flex justify-end pt-2">
+        <button class="bg-surface-container-high text-on-surface px-4 py-2 rounded-lg text-xs font-semibold hover:bg-surface-bright transition-colors" onclick="toggleModal('modal-cfdi')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center p-4" id="modal-lms">
+    <div class="bg-surface-container-low max-w-2xl w-full max-h-[85vh] overflow-y-auto rounded-xl p-6 shadow-2xl flex flex-col gap-4 border border-surface-container-high/50">
+      <div class="flex items-center justify-between border-b border-surface-variant/40 pb-2">
+        <span class="text-base font-bold text-secondary">Arquitectura Detallada: LMS PA</span>
+        <button class="text-on-surface-variant hover:text-on-surface" onclick="toggleModal('modal-lms')"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <div class="text-xs sm:text-sm text-on-surface-variant flex flex-col gap-3 leading-relaxed">
+        <h4 class="font-bold text-on-surface">1. Service Layer &amp; Aislamiento con Deepcopy</h4>
+        <p>Aislamiento de sesiones en Redis mediante copias profundas para garantizar consistencia entre concurrentes.</p>
+        <h4 class="font-bold text-on-surface">2. Emisión Asíncrona con WeasyPrint</h4>
+        <p>Tareas en background vía Celery para compilación de certificados con validez criptográfica inmediata.</p>
+      </div>
+      <div class="flex justify-end pt-2">
+        <button class="bg-surface-container-high text-on-surface px-4 py-2 rounded-lg text-xs font-semibold hover:bg-surface-bright transition-colors" onclick="toggleModal('modal-lms')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT DE FILTRADO Y MODALES -->
+  <script>
+    function filterDossier(category) {
+      const cards = {
+        sica: document.getElementById('project-sica'),
+        cfdi: document.getElementById('project-cfdi'),
+        lms: document.getElementById('project-lms')
+      };
+
+      const buttons = {
+        all: document.getElementById('btn-all'),
+        sica: document.getElementById('btn-sica'),
+        cfdi: document.getElementById('btn-cfdi'),
+        lms: document.getElementById('btn-lms')
+      };
+
+      Object.keys(buttons).forEach(key => {
+        buttons[key].className = 'filter-tab px-4 py-2 bg-surface-container text-on-surface-variant hover:text-on-surface text-xs sm:text-sm rounded-lg transition-colors whitespace-nowrap';
+      });
+
+      buttons[category].className = 'filter-tab px-4 py-2 bg-primary text-on-primary text-xs sm:text-sm font-semibold rounded-lg shadow-sm whitespace-nowrap';
+
+      if (category === 'all') {
+        cards.sica.style.display = 'block';
+        cards.cfdi.style.display = 'block';
+        cards.lms.style.display = 'block';
+      } else {
+        cards.sica.style.display = (category === 'sica') ? 'block' : 'none';
+        cards.cfdi.style.display = (category === 'cfdi') ? 'block' : 'none';
+        cards.lms.style.display = (category === 'lms') ? 'block' : 'none';
+      }
+    }
+
+    function toggleModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        if (modal.classList.contains('hidden')) {
+          modal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        } else {
+          modal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }
+      }
+    }
+  </script>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="w-full bg-surface-container-low border-t border-surface-container-high/40 py-8 px-4 sm:px-6">
+    <div class="w-full max-w-[1360px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant text-center sm:text-left">
+      <p>© 2026 Paris Alejandro Ramos de Cervantes. Todos los derechos reservados.</p>
+      <div class="flex items-center gap-4">
+        <span>Seguridad Operativa</span>
+        <span>Cifrado de Datos</span>
+        <span>Protocolo Estratégico</span>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
