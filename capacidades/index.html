@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+
+  <!-- ==================== SEO PRINCIPAL ==================== -->
+  <title>Stack de Capacidades Técnicas & Métodos | Paris Alejandro Ramos de Cervantes</title>
+  <meta name="description" content="Fusión de economía, maestría en administración, modelado algorítmico y arquitectura backend resiliente en Python y Django para misión crítica.">
+  <meta name="author" content="Paris Alejandro Ramos de Cervantes">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://parisramos.github.io/capacidades/">
+  <link rel="icon" type="image/svg+xml" href="https://parisramos.github.io/assets/favicon.svg">
+
+  <!-- Open Graph / Redes Sociales Específicos de Capacidades -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Stack de Capacidades Técnicas | Paris Alejandro Ramos de Cervantes">
+  <meta property="og:description" content="Economista con Maestría en Administración: Dirección cuantitativa, modelos algorítmicos y desarrollo de sistemas backend en producción orientados a rentabilidad y solvencia.">
+  <meta property="og:url" content="https://parisramos.github.io/capacidades/">
+  <meta property="og:image" content="https://parisramos.github.io/assets/og_capacidades.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Cards Específicos de Capacidades -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Stack de Capacidades | Paris Ramos">
+  <meta name="twitter:description" content="Fusión de economía, administración, analítica predictiva e ingeniería de software de grado defensivo.">
+  <meta name="twitter:image" content="https://parisramos.github.io/assets/og_capacidades.jpg">
+
+  <!-- ==================== FUENTES Y TIPOGRAFÍAS ==================== -->
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    html { scroll-behavior: smooth; }
+  </style>
+
+  <!-- ==================== TAILWIND CSS ==================== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-secondary-fixed-variant": "#003ea8",
+            "primary-fixed": "#85f8c4",
+            "tertiary": "#89ceff",
+            "tertiary-fixed-dim": "#89ceff",
+            "surface-bright": "#31394d",
+            "surface-container-low": "#131b2e",
+            "secondary-fixed-dim": "#b4c5ff",
+            "tertiary-container": "#009ada",
+            "outline-variant": "#3d4a42",
+            "secondary-container": "#0053db",
+            "on-tertiary-fixed": "#001e2f",
+            "secondary-fixed": "#dbe1ff",
+            "background": "#0b1326",
+            "secondary": "#b4c5ff",
+            "error-container": "#93000a",
+            "surface-container-highest": "#2d3449",
+            "outline": "#87948b",
+            "on-primary-container": "#00311f",
+            "primary": "#68dba9",
+            "primary-container": "#25a475",
+            "on-surface": "#dae2fd",
+            "on-secondary-fixed": "#00174b",
+            "on-tertiary-container": "#002d43",
+            "inverse-primary": "#006c4a",
+            "surface-container-high": "#222a3d",
+            "inverse-on-surface": "#283044",
+            "on-primary-fixed": "#002114",
+            "primary-fixed-dim": "#68dba9",
+            "on-error-container": "#ffdad6",
+            "surface-container": "#171f33",
+            "on-primary-fixed-variant": "#005137",
+            "on-tertiary": "#00344d",
+            "surface-dim": "#0b1326",
+            "on-secondary-container": "#cdd7ff",
+            "surface-tint": "#68dba9",
+            "surface": "#0b1326",
+            "on-background": "#dae2fd",
+            "surface-variant": "#2d3449",
+            "surface-container-lowest": "#060e20",
+            "on-tertiary-fixed-variant": "#004c6e",
+            "on-secondary": "#002a78",
+            "error": "#ffb4ab",
+            "tertiary-fixed": "#c9e6ff",
+            "on-surface-variant": "#bccac0",
+            "on-error": "#690005",
+            "on-primary": "#003825",
+            "inverse-surface": "#dae2fd"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          spacing: {
+            "margin-md": "3rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "gutter-sm": "1rem",
+            "gutter": "1.5rem",
+            "margin": "1.5rem",
+            "space-xl": "2.5rem",
+            "margin-lg": "5rem",
+            "gutter-lg": "2rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem"
+          },
+          fontFamily: {
+            "body-sm": ["Geist", "sans-serif"],
+            "body-md": ["Geist", "sans-serif"],
+            "body-lg": ["Geist", "sans-serif"],
+            "display": ["Space Grotesk", "sans-serif"],
+            "headline-sm": ["Space Grotesk", "sans-serif"],
+            "headline-md": ["Space Grotesk", "sans-serif"],
+            "headline-lg": ["Space Grotesk", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- ==================== SCHEMA JSON-LD ==================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Paris Alejandro Ramos de Cervantes",
+      "jobTitle": "Líder de Soluciones Tecnológicas Adaptadas",
+      "knowsAbout": [
+        "Finanzas Corporativas",
+        "Python",
+        "Django",
+        "Ciencia de Datos",
+        "Auditoría Forense",
+        "Machine Learning"
+      ]
+    }
+  }
+  </script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen">
+  <!-- ENCABEZADO CON PROTECCIÓN MÓVIL -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-xl border-b border-surface-container-high/50">
+    <div class="h-16 sm:h-20 w-full max-w-[1360px] mx-auto px-4 sm:px-6 flex items-center justify-between gap-3">
+      
+      <!-- Logo y Nombre protegido contra desbordes -->
+      <div class="flex items-center gap-3 min-w-0 flex-1 pr-2">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded bg-surface-container-high flex items-center justify-center flex-shrink-0">
+          <span class="material-symbols-outlined text-primary text-[20px] sm:text-[24px]">terminal</span>
+        </div>
+        <div class="flex flex-col min-w-0">
+          <a class="font-bold text-xs sm:text-base md:text-lg text-on-surface hover:text-primary transition-colors leading-tight truncate" href="https://parisramos.github.io/">
+            Paris Alejandro Ramos de Cervantes
+          </a>
+          <span class="text-[9px] sm:text-xs text-primary uppercase tracking-wider truncate">
+            Líder de Soluciones Tecnológicas Adaptadas
+          </span>
+        </div>
+      </div>
+
+      <!-- Navegación de Escritorio -->
+      <nav class="hidden xl:flex items-center gap-4 flex-shrink-0">
+        <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="https://parisramos.github.io/">Inicio</a>
+        <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="https://parisramos.github.io/gobierno/">Soluciones Gobierno</a>
+        <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="https://parisramos.github.io/negocio/">Soluciones Negocio</a>
+        <a aria-current="page" class="text-primary font-medium text-sm bg-surface-container-high px-3 py-1.5 rounded-lg" href="https://parisramos.github.io/capacidades/">Stack de Capacidades</a>
+        <a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors" href="https://parisramos.github.io/#contacto">Trayectoria &amp; Contacto</a>
+      </nav>
+
+      <!-- Botón de Acción y Menú Móvil -->
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <a class="inline-flex items-center justify-center bg-primary hover:bg-primary-container text-on-primary text-xs sm:text-sm font-semibold p-2 sm:px-4 sm:py-2 rounded transition-all shadow-[0_0_12px_rgba(104,219,169,0.2)]" href="https://calendar.app.google/v783oTm6qiuVw1sg7" target="_blank" rel="noreferrer" title="Agendar Diagnóstico (30 min)">
+          <span class="material-symbols-outlined text-[18px] sm:mr-1.5">calendar_month</span>
+          <span class="hidden sm:inline">Agendar Diagnóstico</span>
+        </a>
+        <button id="mobile-menu-btn" aria-label="Abrir menú de navegación" class="xl:hidden flex items-center justify-center p-2 rounded-lg bg-surface-container-high text-on-surface hover:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
+          <span class="material-symbols-outlined text-[22px]">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MENÚ MÓVIL DESPLEGABLE -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 hidden bg-surface-container-lowest/80 backdrop-blur-md transition-opacity">
+    <div class="fixed inset-y-0 right-0 w-full max-w-xs bg-surface-container-low border-l border-surface-container-high/60 p-6 flex flex-col justify-between shadow-2xl">
+      <div class="flex flex-col gap-6">
+        <div class="flex items-center justify-between pb-4 border-b border-surface-variant/40">
+          <span class="font-bold text-sm text-on-surface tracking-tight">Navegación</span>
+          <button id="mobile-menu-close" aria-label="Cerrar menú" class="p-1 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-2">
+          <a class="text-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-3.5 py-2.5 rounded-lg transition-colors flex items-center gap-2.5 mobile-link" href="https://parisramos.github.io/">
+            <span class="material-symbols-outlined text-[20px]">home</span> Inicio
+          </a>
+          <a class="text-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-3.5 py-2.5 rounded-lg transition-colors flex items-center gap-2.5 mobile-link" href="https://parisramos.github.io/gobierno/">
+            <span class="material-symbols-outlined text-[20px]">account_balance</span> Soluciones Gobierno
+          </a>
+          <a class="text-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-3.5 py-2.5 rounded-lg transition-colors flex items-center gap-2.5 mobile-link" href="https://parisramos.github.io/negocio/">
+            <span class="material-symbols-outlined text-[20px]">trending_up</span> Soluciones Negocio
+          </a>
+          <a class="text-primary font-medium text-sm bg-surface-container-high px-3.5 py-2.5 rounded-lg flex items-center gap-2.5 mobile-link" href="https://parisramos.github.io/capacidades/">
+            <span class="material-symbols-outlined text-[20px]">terminal</span> Stack de Capacidades
+          </a>
+          <a class="text-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-3.5 py-2.5 rounded-lg transition-colors flex items-center gap-2.5 mobile-link" href="https://parisramos.github.io/#contacto">
+            <span class="material-symbols-outlined text-[20px]">mail</span> Trayectoria &amp; Contacto
+          </a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-surface-variant/40 flex flex-col gap-3">
+        <a class="w-full inline-flex items-center justify-center bg-primary text-on-primary text-sm font-semibold py-3 rounded-lg hover:bg-primary-container transition-all shadow-md text-center mobile-link" href="https://calendar.app.google/v783oTm6qiuVw1sg7" target="_blank" rel="noreferrer">
+          <span class="material-symbols-outlined text-[18px] mr-1.5">calendar_month</span> Agendar Diagnóstico (30 min)
+        </a>
+        <span class="text-[11px] text-center text-outline">Paris Alejandro Ramos de Cervantes</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="w-full pt-16 sm:pt-20 bg-surface min-h-[calc(100vh-20rem)]">
+    <div class="flex flex-col w-full">
+      <!-- Barra de Telemetría Superior & Migas de Pan -->
+      <section class="w-full bg-surface-container-lowest py-3 border-b border-surface-container-high/30">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+          <div class="flex items-center gap-2 text-xs tracking-wider uppercase text-on-surface-variant">
+            <a class="hover:text-primary transition-colors cursor-pointer" href="https://parisramos.github.io/">INICIO</a>
+            <span class="text-outline-variant">/</span>
+            <span class="text-primary font-semibold truncate">STACK DE CAPACIDADES ESTRATÉGICAS</span>
+          </div>
+          <div class="flex items-center gap-3 text-xs">
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-surface-container-high text-tertiary">
+              <span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+              <span>SISTEMA AUDITADO V4.8</span>
+            </div>
+            <div class="hidden sm:flex items-center gap-1 text-on-surface-variant">
+              <span class="material-symbols-outlined text-[14px]">shield</span>
+              <span>CRIPTO-VERIFICADO</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hero Briefing Estratégico -->
+      <section class="w-full bg-surface py-10 sm:py-16 relative overflow-hidden">
+        <div class="absolute -top-32 right-1/4 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 -left-20 w-80 h-80 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6 relative z-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-surface-container-high text-primary text-xs font-semibold mb-4 max-w-full">
+            <span class="w-2 h-2 rounded-full bg-primary inline-block flex-shrink-0"></span>
+            <span class="tracking-wide uppercase truncate">ARQUITECTURA &amp; RIGOR CUANTITATIVO | ECONOMISTA · MAESTRÍA EN ADMINISTRACIÓN · PYTHON/DJANGO</span>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+            <div class="lg:col-span-8 flex flex-col gap-4">
+              <!-- H1 Responsivo -->
+              <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-display text-on-surface tracking-tight leading-tight">
+                Conciliación Financiera, Ciencia de Datos y Desarrollo Backend en Producción
+              </h1>
+              <p class="text-sm sm:text-base md:text-lg text-on-surface-variant max-w-3xl leading-relaxed">
+                En lugar de listar librerías aisladas, mi enfoque integra dirección cuantitativa, gobernanza normativa y desarrollo de sistemas resilientes orientados a rentabilidad y solvencia institucional.
+              </p>
+            </div>
+
+            <!-- Telemetría Resumen -->
+            <div class="lg:col-span-4 w-full">
+              <div class="p-5 rounded-xl bg-surface-container-low flex flex-col gap-4 shadow-xl border border-surface-container-high/40">
+                <div class="flex items-center justify-between pb-2 border-b border-surface-variant/40">
+                  <span class="text-xs font-mono uppercase tracking-wider text-primary font-bold">TELEMETRÍA EJECUTIVA</span>
+                  <span class="material-symbols-outlined text-primary text-[18px]">query_stats</span>
+                </div>
+                <div class="grid grid-cols-1 gap-3">
+                  <div class="flex items-center justify-between p-3 rounded bg-surface-container-high/60">
+                    <div class="flex flex-col">
+                      <span class="text-2xl font-bold text-on-surface leading-none">3</span>
+                      <span class="text-xs text-on-surface-variant mt-1">Dominios Core Integrados</span>
+                    </div>
+                    <span class="material-symbols-outlined text-secondary text-[24px]">account_tree</span>
+                  </div>
+                  <div class="flex items-center justify-between p-3 rounded bg-surface-container-high/60">
+                    <div class="flex flex-col">
+                      <span class="text-2xl font-bold text-primary leading-none">100%</span>
+                      <span class="text-xs text-on-surface-variant mt-1">Código en Producción Real</span>
+                    </div>
+                    <span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+                  </div>
+                  <div class="flex items-center justify-between p-3 rounded bg-surface-container-high/60">
+                    <div class="flex flex-col">
+                      <span class="text-2xl font-bold text-tertiary leading-none">12+</span>
+                      <span class="text-xs text-on-surface-variant mt-1">Años Liderando Soluciones</span>
+                    </div>
+                    <span class="material-symbols-outlined text-tertiary text-[24px]">history_edu</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Matriz de 3 Pilares -->
+      <section class="w-full bg-surface-container-lowest py-12 sm:py-20">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
+            <div>
+              <span class="text-xs text-primary tracking-widest uppercase font-bold">ARQUITECTURA OPERATIVA INTEGRAL</span>
+              <h2 class="text-xl sm:text-3xl font-bold font-display text-on-surface tracking-tight mt-1">
+                Matriz de Competencias de Grado Defensivo
+              </h2>
+            </div>
+            <p class="text-xs sm:text-sm text-on-surface-variant max-w-md leading-relaxed">
+              Estructura tridimensional diseñada para eliminar la fragmentación entre análisis directivo, algoritmos computacionales e infraestructura transaccional.
+            </p>
+          </div>
+
+          <!-- Cuadrícula de 3 Columnas -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+            
+            <!-- Columna 1: Dirección Financiera -->
+            <div class="flex flex-col h-full bg-surface-container rounded-xl p-5 sm:p-6 shadow-xl border border-surface-container-high/30 group transition-all duration-300 hover:bg-surface-container-high">
+              <div class="h-1.5 w-full bg-secondary-container rounded-full mb-4"></div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[11px] px-2.5 py-1 rounded bg-secondary-container/20 text-secondary font-bold uppercase tracking-wider">
+                  Finanzas &amp; Sector Público
+                </span>
+                <span class="material-symbols-outlined text-secondary text-[24px]">account_balance</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold font-display text-on-surface mb-2">
+                1. Dirección Financiera &amp; Gobernanza
+              </h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant mb-6 leading-relaxed">
+                Modelado financiero, estructuración de pasivos y solvencia en marcos normativos de alta fiscalización con control de riesgos patrimoniales.
+              </p>
+              
+              <div class="flex flex-col gap-2.5 mb-6 flex-grow">
+                <div class="p-3 rounded bg-surface-container-low flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm text-on-surface font-semibold">Evaluación Bursátil y Deuda Pública</span>
+                    <span class="text-xs text-on-surface-variant">Emisiones, fondeo bancario y proyecciones dinámicas de tesorería multianual.</span>
+                  </div>
+                </div>
+                <div class="p-3 rounded bg-surface-container-low flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm text-on-surface font-semibold">Modelado Financiero y Flujos DCF</span>
+                    <span class="text-xs text-on-surface-variant">Técnicas de valuación DCF, análisis de sensibilidad y control presupuestal estricto.</span>
+                  </div>
+                </div>
+                <div class="p-3 rounded bg-surface-container-low flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm text-on-surface font-semibold">Auditoría Forense Gubernamental</span>
+                    <span class="text-xs text-on-surface-variant">Solvencia 100% ante la ASF y el OIC en auditorías federales.</span>
+                  </div>
+                </div>
+                <div class="p-3 rounded bg-surface-container-low flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm text-on-surface font-semibold">Reingeniería de Trámites Federales</span>
+                    <span class="text-xs text-on-surface-variant">Estandarización y digitalización de 67 trámites SAGARPA/SIAP.</span>
+                  </div>
+                </div>
+                <div class="p-3 rounded bg-surface-container-low flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm text-on-surface font-semibold">Cooperación Técnica Internacional</span>
+                    <span class="text-xs text-on-surface-variant">Gestión bilateral con 12 países del Caribe bajo protocolos oficiales.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-4 rounded bg-surface-container-lowest mt-auto flex flex-col gap-1 border border-surface-container-high/40">
+                <span class="text-[10px] uppercase tracking-wider text-secondary font-bold">ENTREGABLES CLAVE</span>
+                <span class="text-xs text-on-surface-variant">Dictámenes financieros, libros blancos de auditoría y proyecciones multianuales.</span>
+              </div>
+            </div>
+
+            <!-- Columna 2: Ciencia de Datos -->
+            <div class="flex flex-col h-full bg-surface-container rounded-xl p-5 sm:p-6 shadow-xl border border-surface-container-high/30 group transition-all duration-300 hover:bg-surface-container-high">
+              <div class="h-1.5 w-full bg-primary-container rounded-full mb-4"></div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[11px] px-2.5 py-1 rounded bg-primary-container/20 text-primary font-bold uppercase tracking-wider">
+                  Machine Learning &amp; Analítica
+                </span>
+                <span class="material-symbols-outlined text-primary text-[24px]">insights</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold font-display text-on-surface mb-2">
+                2. Ciencia de Datos &amp; Analítica
+              </h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant mb-6 leading-relaxed">
+                Extracción de patrones, pronóstico de comportamiento y visualización ejecutiva para decisiones C-Level respaldadas por evidencia empírica.
+              </p>
+
+              <div class="flex flex-col gap-2.5 mb-6 flex-grow">
+                <div class="p-3 rounded bg-surface-container-low flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm text-on-surface font-semibold">Modelado Predictivo de Churn</span>
+                    <span class="text-xs text-on-surface-variant">Algoritmos supervisados XGBoost/Random Forest con 88% de precisión.</span>
+                  </div>
+                </div>
+                <div class="p-3 rounded bg-surface-container-low flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm text-on-surface font-semibold">Ingesta Masiva y Pipelines ETL</span>
+                    <span class="text-xs text-on-surface-variant">Pandas, NumPy, SQL estructurado sobre esquemas de más de 469k registros.</span>
+                  </div>
+                </div>
+                <div class="p-3 rounded bg-surface-container-low flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm text-on-surface font-semibold">Data Warehouse &amp; Tablas Rollup</span>
+                    <span class="text-xs text-on-surface-variant">Transformación de consultas de 150 s a lecturas analíticas menores a 20 ms.</span>
+                  </div>
+                </div>
+                <div class="p-3 rounded bg-surface-container-low flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm text-on-surface font-semibold">Dashboards Ejecutivos y KPIs</span>
+                    <span class="text-xs text-on-surface-variant">Looker Studio, Power BI y visualización reactiva con telemetría en vivo.</span>
+                  </div>
+                </div>
+                <div class="p-3 rounded bg-surface-container-low flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm text-on-surface font-semibold">Scoring Paramétrico de Riesgo</span>
+                    <span class="text-xs text-on-surface-variant">Matrices algorítmicas transparentes sin modelos de caja negra.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-4 rounded bg-surface-container-lowest mt-auto flex flex-col gap-1 border border-surface-container-high/40">
+                <span class="text-[10px] uppercase tracking-wider text-primary font-bold">ENTREGABLES CLAVE</span>
+                <span class="text-xs text-on-surface-variant">Pipelines ETL automatizados, modelos serializados y tableros en tiempo real.</span>
+              </div>
+            </div>
+
+            <!-- Columna 3: Plataformas & Automatización -->
+            <div class="flex flex-col h-full bg-surface-container rounded-xl p-5 sm:p-6 shadow-xl border border-surface-container-high/30 group transition-all duration-300 hover:bg-surface-container-high">
+              <div class="h-1.5 w-full bg-tertiary-container rounded-full mb-4"></div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[11px] px-2.5 py-1 rounded bg-tertiary-container/20 text-tertiary font-bold uppercase tracking-wider">
+                  Arquitectura Web &amp; Backend
+                </span>
+                <span class="material-symbols-outlined text-tertiary text-[24px]">terminal</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold font-display text-on-surface mb-2">
+                3. Plataformas &amp; Automatización
+              </h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant mb-6 leading-relaxed">
+                Sistemas transaccionales de misión crítica, motores de reglas de negocio y bots autónomos construidos para alta concurrencia.
+              </p>
+
+              <div class="flex flex-col gap-2.5 mb-6 flex-grow">
+                <div class="p-3 rounded bg-surface-container-low flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm text-on-surface font-semibold">Backend Defensivo en Django</span>
+                    <span class="text-xs text-on-surface-variant">Django 4.x/5.x, DRF, PostgreSQL y MariaDB con integridad relacional pura.</span>
+                  </div>
+                </div>
+                <div class="p-3 rounded bg-surface-container-low flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm text-on-surface font-semibold">Caché O(1) y Workers Celery</span>
+                    <span class="text-xs text-on-surface-variant">Redis In-Memory y colas asíncronas para reportes y cómputo intensivo.</span>
+                  </div>
+                </div>
+                <div class="p-3 rounded bg-surface-container-low flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm text-on-surface font-semibold">Web Scraping e Ingesta de Mercado</span>
+                    <span class="text-xs text-on-surface-variant">Selenium, Scrapy, tareas Cron automatizadas y alertas por Telegram.</span>
+                  </div>
+                </div>
+                <div class="p-3 rounded bg-surface-container-low flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm text-on-surface font-semibold">Seguridad RBAC / RLS y Cifrado</span>
+                    <span class="text-xs text-on-surface-variant">Cifrado de datos personales AES-256 y mitigación anti-vulnerabilidades IDOR.</span>
+                  </div>
+                </div>
+                <div class="p-3 rounded bg-surface-container-low flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm text-on-surface font-semibold">E-Commerce de Alto Flujo</span>
+                    <span class="text-xs text-on-surface-variant">Integración de pagos Stripe / Mercado Pago y logística georreferenciada.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-4 rounded bg-surface-container-lowest mt-auto flex flex-col gap-1 border border-surface-container-high/40">
+                <span class="text-[10px] uppercase tracking-wider text-tertiary font-bold">ENTREGABLES CLAVE</span>
+                <span class="text-xs text-on-surface-variant">Aplicaciones 24/7 en producción, APIs REST seguras y bots de arbitraje.</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Intersección Estratégica -->
+      <section class="w-full bg-surface py-12 sm:py-20 relative">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6">
+          <div class="flex flex-col mb-8 sm:mb-12">
+            <span class="text-xs text-primary tracking-widest uppercase font-bold">SINERGIA MULTIDISCIPLINARIA</span>
+            <h2 class="text-xl sm:text-3xl font-bold font-display text-on-surface tracking-tight mt-1">
+              Intersección Estratégica: Dónde se Genera el Valor Disruptivo
+            </h2>
+            <p class="text-xs sm:text-base text-on-surface-variant max-w-3xl mt-2 leading-relaxed">
+              La ventaja competitiva no reside en dominar áreas aisladas, sino en eliminar las pérdidas de traducción técnica entre el análisis financiero, la ciencia de datos y la ingeniería de software.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-5 sm:p-6 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors shadow-lg flex flex-col justify-between border border-surface-container-high/30">
+              <div>
+                <div class="w-12 h-12 rounded bg-secondary-container/20 flex items-center justify-center mb-4 text-secondary">
+                  <span class="material-symbols-outlined text-[28px]">currency_exchange</span>
+                </div>
+                <div class="inline-block px-2.5 py-0.5 rounded bg-surface-container-high text-secondary text-[11px] font-bold mb-3">
+                  SISTEMA TRIBUTARIO &amp; MOTOR DE CÁLCULO
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-on-surface mb-2">
+                  Finanzas + Python/Django
+                </h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  Sistemas que no solo renderizan interfaces, sino que calculan impuestos exactos (Art. 96 LISR), nóminas sin discrepancias y scoring crediticio sin cajas negras.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-surface-container-high/40 flex items-center gap-1.5 text-primary text-xs font-semibold">
+                <span class="material-symbols-outlined text-[16px]">verified_user</span>
+                <span>Rigor Contable Garantizado</span>
+              </div>
+            </div>
+
+            <div class="p-5 sm:p-6 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors shadow-lg flex flex-col justify-between border border-surface-container-high/30">
+              <div>
+                <div class="w-12 h-12 rounded bg-primary-container/20 flex items-center justify-center mb-4 text-primary">
+                  <span class="material-symbols-outlined text-[28px]">fingerprint</span>
+                </div>
+                <div class="inline-block px-2.5 py-0.5 rounded bg-surface-container-high text-primary text-[11px] font-bold mb-3">
+                  TRAZABILIDAD INSTITUCIONAL
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-on-surface mb-2">
+                  Data Science + Gobernanza
+                </h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  Modelos predictivos y análisis de padrones masivos con trazabilidad de auditoría inmutable mediante firmas criptográficas SHA-256 ante órganos fiscalizadores.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-surface-container-high/40 flex items-center gap-1.5 text-primary text-xs font-semibold">
+                <span class="material-symbols-outlined text-[16px]">lock_clock</span>
+                <span>Auditoría Cripto-Validada</span>
+              </div>
+            </div>
+
+            <div class="p-5 sm:p-6 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors shadow-lg flex flex-col justify-between border border-surface-container-high/30">
+              <div>
+                <div class="w-12 h-12 rounded bg-tertiary-container/20 flex items-center justify-center mb-4 text-tertiary">
+                  <span class="material-symbols-outlined text-[28px]">trending_up</span>
+                </div>
+                <div class="inline-block px-2.5 py-0.5 rounded bg-surface-container-high text-tertiary text-[11px] font-bold mb-3">
+                  RENTABILIDAD DINÁMICA
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-on-surface mb-2">
+                  E-Commerce + Arbitraje de Datos
+                </h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  Canales de venta directa automatizados mediante bots que extraen precios de insumos en subastas mayoristas, logrando 25% de ahorro en aprovisionamiento.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-surface-container-high/40 flex items-center gap-1.5 text-primary text-xs font-semibold">
+                <span class="material-symbols-outlined text-[16px]">price_check</span>
+                <span>+25% Margen por Automatización</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Inventario Técnico -->
+      <section class="w-full bg-surface-container-lowest py-12 sm:py-20">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
+            <div>
+              <span class="text-xs text-primary tracking-widest uppercase font-bold">ARSENAL TÉCNICO VERIFICADO</span>
+              <h2 class="text-xl sm:text-3xl font-bold font-display text-on-surface tracking-tight mt-1">
+                Inventario de Tecnologías y Estándares
+              </h2>
+            </div>
+            <div class="flex items-center gap-2 text-on-surface-variant text-xs">
+              <span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+              <span class="font-mono">ESTADO: PRODUCCIÓN ACTIVA</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Bloque 1 -->
+            <div class="bg-surface-container rounded-xl p-5 sm:p-6 shadow-md flex flex-col gap-3 border border-surface-container-high/30">
+              <div class="flex items-center justify-between pb-2 border-b border-surface-container-high/40">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-[20px]">code</span>
+                  <h3 class="font-bold text-sm sm:text-base text-on-surface">Lenguajes &amp; Core</h3>
+                </div>
+                <span class="text-[11px] text-on-surface-variant font-mono">01 // SISTEMAS BASE</span>
+              </div>
+              <p class="text-xs text-on-surface-variant">Sustrato de cómputo determinista y estructuras fuertemente tipadas.</p>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Python 3.11+
+                </span>
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>SQL (PostgreSQL / MariaDB)
+                </span>
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>JavaScript Vanilla (ES6+)
+                </span>
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>HTML5 &amp; Tailwind CSS
+                </span>
+              </div>
+            </div>
+
+            <!-- Bloque 2 -->
+            <div class="bg-surface-container rounded-xl p-5 sm:p-6 shadow-md flex flex-col gap-3 border border-surface-container-high/30">
+              <div class="flex items-center justify-between pb-2 border-b border-surface-container-high/40">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary text-[20px]">dns</span>
+                  <h3 class="font-bold text-sm sm:text-base text-on-surface">Frameworks &amp; Backend</h3>
+                </div>
+                <span class="text-[11px] text-on-surface-variant font-mono">02 // SERVIDORES &amp; COLA</span>
+              </div>
+              <p class="text-xs text-on-surface-variant">Arquitectura por capas con colas asíncronas de alto rendimiento.</p>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Django 4.2 / 5.0
+                </span>
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Django REST Framework
+                </span>
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Celery Workers
+                </span>
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Redis In-Memory Broker
+                </span>
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-outline"></span>WeasyPrint Engine
+                </span>
+              </div>
+            </div>
+
+            <!-- Bloque 3 -->
+            <div class="bg-surface-container rounded-xl p-5 sm:p-6 shadow-md flex flex-col gap-3 border border-surface-container-high/30">
+              <div class="flex items-center justify-between pb-2 border-b border-surface-container-high/40">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-tertiary text-[20px]">hub</span>
+                  <h3 class="font-bold text-sm sm:text-base text-on-surface">Data &amp; Machine Learning</h3>
+                </div>
+                <span class="text-[11px] text-on-surface-variant font-mono">03 // ANALÍTICA AVANZADA</span>
+              </div>
+              <p class="text-xs text-on-surface-variant">Procesamiento vectorial, entrenamiento predictivo y bots autónomos.</p>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Pandas &amp; NumPy
+                </span>
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Scikit-Learn Pipelines
+                </span>
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>XGBoost Classification
+                </span>
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Scrapy Framework
+                </span>
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Selenium Automation
+                </span>
+              </div>
+            </div>
+
+            <!-- Bloque 4 -->
+            <div class="bg-surface-container rounded-xl p-5 sm:p-6 shadow-md flex flex-col gap-3 border border-surface-container-high/30">
+              <div class="flex items-center justify-between pb-2 border-b border-surface-container-high/40">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-[20px]">security</span>
+                  <h3 class="font-bold text-sm sm:text-base text-on-surface">Gobernanza &amp; Métodos</h3>
+                </div>
+                <span class="text-[11px] text-on-surface-variant font-mono">04 // PROTOCOLO &amp; NORMA</span>
+              </div>
+              <p class="text-xs text-on-surface-variant">Trazabilidad jurídica, optimización física y normatividad tributaria.</p>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Auditoría Forense ASF/OIC
+                </span>
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>RBAC &amp; Row-Level Security
+                </span>
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Covering B-Tree Indexes
+                </span>
+                <span class="px-3 py-1.5 rounded bg-surface-container-lowest text-xs text-on-surface flex items-center gap-1.5 font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>CFDI 3.3/4.0 Anexo 20 SAT
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Llamada a la Acción -->
+      <section class="w-full bg-surface-container-low py-12 sm:py-20 relative overflow-hidden">
+        <div class="max-w-[1360px] mx-auto px-4 sm:px-6">
+          <div class="p-6 sm:p-12 rounded-xl bg-surface-container border border-surface-container-high/40 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+              <div class="flex flex-col gap-2 max-w-2xl">
+                <span class="text-xs text-primary uppercase font-bold tracking-widest">DIAGNÓSTICO ESTRATÉGICO &amp; DESPLIEGUE</span>
+                <h2 class="text-xl sm:text-3xl font-bold font-display text-on-surface tracking-tight">
+                  ¿Necesita un perfil que combine visión cuantitativa con ejecución técnica de alto nivel?
+                </h2>
+                <p class="text-xs sm:text-base text-on-surface-variant leading-relaxed">
+                  Disponible para liderar arquitectura de sistemas, diagnóstico financiero y desarrollo de plataformas de datos a la medida.
+                </p>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+                <a class="inline-flex items-center justify-center bg-primary hover:bg-primary-container text-on-primary text-xs sm:text-sm font-semibold px-5 py-3 rounded transition-all shadow-[0_0_16px_rgba(104,219,169,0.3)] text-center" href="https://calendar.app.google/v783oTm6qiuVw1sg7" target="_blank" rel="noreferrer">
+                  <span class="material-symbols-outlined text-[18px] mr-1.5">calendar_month</span>
+                  Agendar Diagnóstico Técnico (30 min)
+                </a>
+                <a class="inline-flex items-center justify-center bg-surface-container-high hover:bg-surface-bright text-on-surface text-xs sm:text-sm font-medium px-5 py-3 rounded transition-all text-center" href="https://parisramos.github.io/gobierno/">
+                  <span>Explorar Casos de Estudio</span>
+                  <span class="material-symbols-outlined text-[16px] ml-1.5">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="w-full bg-surface-container-lowest py-10 border-t border-surface-container-high/40">
+    <div class="max-w-[1360px] mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-surface-container-high/40">
+        <div class="md:col-span-6 flex flex-col gap-2">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-primary inline-block"></span>
+            <span class="font-bold text-base text-on-surface">Paris Alejandro Ramos de Cervantes</span>
+          </div>
+          <p class="text-xs sm:text-sm text-on-surface-variant max-w-xl leading-relaxed">
+            Arquitectura de sistemas complejos, ingeniería financiera y despliegue de gobernanza algorítmica para instituciones públicas y empresas estratégicas.
+          </p>
+        </div>
+        <div class="md:col-span-3 flex flex-col gap-2 text-xs">
+          <span class="text-primary uppercase font-bold tracking-wider mb-1">Navegación</span>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="https://parisramos.github.io/">Inicio</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="https://parisramos.github.io/gobierno/">Soluciones Gobierno</a>
+          <a class="text-on-surface-variant hover:text-on-surface transition-colors" href="https://parisramos.github.io/negocio/">Soluciones Negocio</a>
+        </div>
+        <div class="md:col-span-3 flex flex-col gap-2 text-xs">
+          <span class="text-primary uppercase font-bold tracking-wider mb-1">Contacto &amp; Redes</span>
+          <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://www.linkedin.com/in/parisramosarc" rel="noreferrer" target="_blank">LinkedIn Ejecutivo</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/ParisRamos" rel="noreferrer" target="_blank">GitHub Institucional</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors" href="https://calendar.app.google/v783oTm6qiuVw1sg7" target="_blank" rel="noreferrer">Agendar Diagnóstico (30 min)</a>
+        </div>
+      </div>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
+        <div>© 2026 Paris Alejandro Ramos de Cervantes. Todos los derechos reservados.</div>
+        <div class="flex items-center gap-3">
+          <span>Seguridad Operativa</span>
+          <span>•</span>
+          <span>Protocolo Defensivo</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT DE NAVEGACIÓN MÓVIL Y ACCESIBILIDAD -->
+  <script>
+    (function() {
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const closeBtn = document.getElementById('mobile-menu-close');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const links = document.querySelectorAll('.mobile-link');
+
+      function openMenu() {
+        if (!mobileMenu) return;
+        mobileMenu.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        if (!mobileMenu) return;
+        mobileMenu.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      if (menuBtn) menuBtn.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+
+      links.forEach(l => l.addEventListener('click', closeMenu));
+
+      if (mobileMenu) {
+        mobileMenu.addEventListener('click', function(e) {
+          if (e.target === mobileMenu) closeMenu();
+        });
+      }
+
+      window.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+          closeMenu();
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>
