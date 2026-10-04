@@ -258,64 +258,89 @@
                 Consultor e implementador con más de una década liderando modernización institucional en el Gobierno Federal, solvencia de auditorías ante OIC/ASF y modelos algorítmicos en el sector privado que resuelven tanto la escala pública como la rentabilidad comercial.
               </p>
 
-              <!-- BOTONES RESPONSIVOS CON EFECTOS HOVER Y GLOW -->
+              <!-- CTA PRINCIPAL DE CONVERSIÓN Y ANCLA -->
               <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
-                <a class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-on-primary text-sm font-semibold px-6 py-3.5 rounded-xl hover:bg-primary-container transition-all duration-200 shadow-[0_0_20px_rgba(104,219,169,0.3)] hover:shadow-[0_0_28px_rgba(104,219,169,0.5)] hover:scale-[1.02] text-center" href="https://parisramos.github.io/gobierno/">
-                  <span class="material-symbols-outlined text-[19px] mr-2">account_balance</span>
-                  Soluciones Gubernamentales
-                </a>
-                <a class="w-full sm:w-auto inline-flex items-center justify-center bg-surface-container-high/80 border border-surface-container-high text-on-surface text-sm font-medium px-6 py-3.5 rounded-xl hover:bg-surface-bright hover:border-primary/40 transition-all duration-200 backdrop-blur-md text-center" href="https://parisramos.github.io/negocio/">
-                  <span class="material-symbols-outlined text-[19px] mr-2">trending_up</span>
-                  Casos de Negocio Privado
-                </a>
-                <a class="w-full sm:w-auto inline-flex items-center justify-center bg-surface-container-low/90 border border-primary/40 text-primary text-sm font-semibold px-5 py-3.5 rounded-xl hover:bg-primary/10 hover:border-primary transition-all duration-200 text-center shadow-sm" href="https://calendar.app.google/v783oTm6qiuVw1sg7" target="_blank" rel="noreferrer">
+                <a class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-on-primary text-sm font-semibold px-6 py-3.5 rounded-xl hover:bg-primary-container transition-all duration-200 shadow-[0_0_20px_rgba(104,219,169,0.3)] hover:shadow-[0_0_28px_rgba(104,219,169,0.5)] hover:scale-[1.02] text-center" href="https://calendar.app.google/v783oTm6qiuVw1sg7" target="_blank" rel="noreferrer">
                   <span class="material-symbols-outlined text-[19px] mr-2">calendar_month</span>
                   Agendar Diagnóstico (30 min)
+                </a>
+                <a class="w-full sm:w-auto inline-flex items-center justify-center bg-surface-container-high/80 border border-surface-container-high text-on-surface text-sm font-medium px-5 py-3.5 rounded-xl hover:bg-surface-bright hover:border-primary/40 transition-all duration-200 backdrop-blur-md text-center" href="#metricas">
+                  <span class="material-symbols-outlined text-[19px] mr-2">query_stats</span>
+                  Ver Métricas de Impacto
                 </a>
               </div>
             </div>
 
-            <!-- Terminal / Widget Telemetría Ultra-Pulido -->
+            <!-- Selector Interactivo de Perfil -->
             <div class="lg:col-span-4 w-full mt-4 lg:mt-0">
               <div class="bg-surface-container-low/95 backdrop-blur-xl rounded-2xl p-5 sm:p-6 shadow-[0_20px_50px_rgba(0,0,0,0.6)] flex flex-col gap-4 border border-surface-container-high/60 relative overflow-hidden group hover:border-primary/40 transition-all duration-300">
-                <div class="absolute -top-12 -right-12 w-28 h-28 bg-primary/10 rounded-full blur-2xl"></div>
+                <div class="absolute -top-12 -right-12 w-28 h-28 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
                 
+                <!-- Encabezado del Widget -->
                 <div class="flex items-center justify-between pb-3 border-b border-surface-variant/40">
-                  <div class="flex items-center gap-1.5">
-                    <span class="w-3 h-3 rounded-full bg-error/90 inline-block shadow-[0_0_8px_rgba(255,180,171,0.5)]"></span>
-                    <span class="w-3 h-3 rounded-full bg-secondary/90 inline-block shadow-[0_0_8px_rgba(180,197,255,0.5)]"></span>
-                    <span class="w-3 h-3 rounded-full bg-primary/90 inline-block shadow-[0_0_8px_rgba(104,219,169,0.5)]"></span>
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(104,219,169,0.8)]"></span>
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-on-surface">¿Cuál es tu sector?</span>
                   </div>
-                  <div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-surface-container-high text-[10px] font-mono text-primary uppercase tracking-wider font-semibold">
-                    <span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
-                    <span>Telemetry Core v4.2</span>
-                  </div>
+                  <span class="text-[10px] font-mono text-outline uppercase tracking-wider bg-surface-container-high px-2 py-0.5 rounded">
+                    Diagnóstico
+                  </span>
                 </div>
 
-                <div class="bg-surface-container-lowest/90 p-4 rounded-xl font-mono text-xs leading-relaxed text-on-surface-variant flex flex-col gap-1.5 border border-surface-container-high/40 shadow-inner">
-                  <div class="text-primary flex items-center justify-between gap-2 font-semibold pb-1 border-b border-surface-variant/30">
-                    <span>&gt; STATUS: OPERATIONAL</span>
-                    <span class="text-tertiary bg-tertiary/10 px-2 py-0.5 rounded text-[10px] font-bold">ASF::CLEARED</span>
-                  </div>
-                  <div class="text-on-surface-variant/90">&gt; ARCH: Python 3.11 + Django ORM</div>
-                  <div class="text-on-surface-variant/90">&gt; DB: PostgreSQL High-Availability</div>
-                  <div class="text-on-surface-variant/90">&gt; PIPELINE: 5,000+ Prod. Automated Map</div>
-                  <div class="text-on-surface-variant/90">&gt; SAT: CFDI 4.0 Idempotent Engine</div>
-                  <div class="text-primary font-bold pt-1.5 border-t border-surface-variant/30 flex items-center justify-between">
-                    <span>&gt; SOLVENCY INDEX</span>
-                    <span class="text-xs text-primary-fixed bg-primary/10 px-2 py-0.5 rounded">100% CONFORMANCE</span>
-                  </div>
+                <!-- Tabs de Selección Accesibles -->
+                <div class="grid grid-cols-2 gap-1.5 p-1 bg-surface-container-lowest/90 rounded-xl border border-surface-container-high/50" role="tablist" aria-label="Selección de sector">
+                  <button id="tab-btn-gob" role="tab" aria-selected="true" aria-controls="panel-gob" tabindex="0" class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 bg-surface-container text-primary shadow-sm border border-primary/20">
+                    <span class="material-symbols-outlined text-[16px]">account_balance</span>
+                    <span>Público</span>
+                  </button>
+                  <button id="tab-btn-neg" role="tab" aria-selected="false" aria-controls="panel-neg" tabindex="-1" class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/50 border border-transparent">
+                    <span class="material-symbols-outlined text-[16px]">storefront</span>
+                    <span>Privado</span>
+                  </button>
                 </div>
 
-                <div class="bg-gradient-to-br from-surface-container to-surface-container-high/70 p-4 rounded-xl flex items-center justify-between border border-surface-container-high/50">
-                  <div>
-                    <span class="text-[11px] text-outline uppercase tracking-wider font-semibold block">Disponibilidad en Prod</span>
-                    <span class="text-2xl text-primary font-bold tracking-tight">99.85%</span>
+                <!-- Panel Sector Público -->
+                <div id="panel-gob" role="tabpanel" aria-labelledby="tab-btn-gob" class="flex flex-col gap-3 transition-opacity duration-200">
+                  <div class="bg-surface-container-lowest/80 p-3.5 rounded-xl border border-surface-container-high/40 flex flex-col gap-2">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[10px] font-bold text-primary uppercase tracking-wider">Enfoque Institucional</span>
+                      <span class="text-[10px] text-tertiary bg-tertiary/10 px-2 py-0.5 rounded font-mono font-semibold">OIC · ASF</span>
+                    </div>
+                    <p class="text-xs text-on-surface-variant leading-relaxed">
+                      Blindaje normativo, regularización de millones de registros históricos y automatización de trámites administrativos y de atención ciudadana.
+                    </p>
+                    <div class="pt-2 border-t border-surface-variant/30 flex items-center justify-between text-[11px]">
+                      <span class="text-outline">Solvencia comprobada:</span>
+                      <span class="font-bold text-primary">100% sin observaciones</span>
+                    </div>
                   </div>
-                  <svg class="w-28 h-9 text-primary drop-shadow-[0_0_8px_rgba(104,219,169,0.5)]" fill="none" viewBox="0 0 120 40">
-                    <path d="M0 32 L20 28 L40 35 L60 18 L80 22 L100 8 L120 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
-                  </svg>
+                  <a class="w-full inline-flex items-center justify-center bg-primary/10 border border-primary/40 text-primary text-xs font-semibold py-3 rounded-xl hover:bg-primary hover:text-on-primary transition-all duration-200 shadow-sm text-center" href="https://parisramos.github.io/gobierno/">
+                    <span>Ver Soluciones Gubernamentales</span>
+                    <span class="material-symbols-outlined text-[16px] ml-1.5">arrow_forward</span>
+                  </a>
                 </div>
+
+                <!-- Panel Sector Privado -->
+                <div id="panel-neg" role="tabpanel" aria-labelledby="tab-btn-neg" class="hidden flex flex-col gap-3 transition-opacity duration-200">
+                  <div class="bg-surface-container-lowest/80 p-3.5 rounded-xl border border-surface-container-high/40 flex flex-col gap-2">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[10px] font-bold text-secondary uppercase tracking-wider">Enfoque Rentabilidad</span>
+                      <span class="text-[10px] text-secondary bg-secondary/10 px-2 py-0.5 rounded font-mono font-semibold">D2C · ETL</span>
+                    </div>
+                    <p class="text-xs text-on-surface-variant leading-relaxed">
+                      Arbitraje algorítmico matutino (centrales de abasto), reducción de costos de compra e infraestructura e-commerce de alta conversión.
+                    </p>
+                    <div class="pt-2 border-t border-surface-variant/30 flex items-center justify-between text-[11px]">
+                      <span class="text-outline">Impacto medible:</span>
+                      <span class="font-bold text-secondary">-25% insumos · +$250k MXN</span>
+                    </div>
+                  </div>
+                  <a class="w-full inline-flex items-center justify-center bg-secondary/10 border border-secondary/40 text-secondary text-xs font-semibold py-3 rounded-xl hover:bg-secondary hover:text-on-secondary transition-all duration-200 shadow-sm text-center" href="https://parisramos.github.io/negocio/">
+                    <span>Ver Casos de Negocio Privado</span>
+                    <span class="material-symbols-outlined text-[16px] ml-1.5">arrow_forward</span>
+                  </a>
+                </div>
+
               </div>
             </div>
           </div>
@@ -329,7 +354,7 @@
           <div>
             <span class="text-xs text-primary uppercase font-bold tracking-widest flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-              Rendimiento Verificable
+              Rendimiento e Impacto
             </span>
             <h2 class="text-xl sm:text-3xl font-bold font-display text-on-surface mt-1">Métricas de Tracción e Impacto Institucional</h2>
           </div>
@@ -805,6 +830,63 @@
         // Fallback inmediato
         runAnimation();
       }
+    })();
+
+    // LÓGICA ACCESIBLE PARA SELECTOR INTERACTIVO DE PERFIL (WIDGET HERO)
+    (function() {
+      const tabGob = document.getElementById('tab-btn-gob');
+      const tabNeg = document.getElementById('tab-btn-neg');
+      const panelGob = document.getElementById('panel-gob');
+      const panelNeg = document.getElementById('panel-neg');
+
+      if (!tabGob || !tabNeg || !panelGob || !panelNeg) return;
+
+      const tabs = [tabGob, tabNeg];
+
+      function activateTab(activeTab, activePanel, inactiveTab, inactivePanel, activeThemeClass) {
+        // Actualizar atributos ARIA y tabindex
+        activeTab.setAttribute('aria-selected', 'true');
+        activeTab.setAttribute('tabindex', '0');
+        inactiveTab.setAttribute('aria-selected', 'false');
+        inactiveTab.setAttribute('tabindex', '-1');
+
+        // Estilos de pestaña activa
+        activeTab.className = `flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 bg-surface-container ${activeThemeClass} shadow-sm border border-primary/20`;
+        
+        // Estilos de pestaña inactiva
+        inactiveTab.className = 'flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/50 border border-transparent';
+
+        // Mostrar / ocultar paneles con transición
+        inactivePanel.classList.add('hidden');
+        activePanel.classList.remove('hidden');
+        activeTab.focus();
+      }
+
+      tabGob.addEventListener('click', () => {
+        activateTab(tabGob, panelGob, tabNeg, panelNeg, 'text-primary');
+      });
+
+      tabNeg.addEventListener('click', () => {
+        activateTab(tabNeg, panelNeg, tabGob, panelGob, 'text-secondary');
+      });
+
+      // Navegación por teclado según ARIA APG (Flechas izquierda/derecha)
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('keydown', (e) => {
+          let targetTab = null;
+          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+            e.preventDefault();
+            targetTab = tabs[(index + 1) % tabs.length];
+          } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+            e.preventDefault();
+            targetTab = tabs[(index - 1 + tabs.length) % tabs.length];
+          }
+
+          if (targetTab) {
+            targetTab.click();
+          }
+        });
+      });
     })();
   </script>
 </body>
