@@ -116,26 +116,78 @@
     };
   </script>
 
-  <!-- ==================== SCHEMA JSON-LD ==================== -->
+  <!-- ==================== SCHEMA JSON-LD ENRIQUECIDO (@GRAPH) ==================== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Paris Alejandro Ramos de Cervantes",
-    "url": "https://parisramos.github.io/",
-    "image": "https://parisramos.github.io/assets/preview.jpg",
-    "jobTitle": "Líder de Soluciones Tecnológicas Adaptadas",
-    "sameAs": [
-      "https://www.linkedin.com/in/parisramosarc"
-    ],
-    "knowsAbout": [
-      "Arquitectura Django",
-      "Python",
-      "Finanzas Corporativas",
-      "Auditorías ASF y Órganos Internos de Control",
-      "Ciencia de Datos",
-      "Facturación CFDI 4.0 SAT",
-      "E-Commerce & Scraping con Selenium"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://parisramos.github.io/#website",
+        "url": "https://parisramos.github.io/",
+        "name": "Paris Alejandro Ramos de Cervantes | Estrategia Normativa & Arquitectura de Software",
+        "description": "Modernización institucional en el Gobierno Federal, solvencia de auditorías OIC/ASF, conciliación masiva CFDI y modelos algorítmicos en el sector privado.",
+        "inLanguage": "es-MX",
+        "publisher": {
+          "@id": "https://parisramos.github.io/#person"
+        }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://parisramos.github.io/#profilepage",
+        "url": "https://parisramos.github.io/",
+        "name": "Perfil Profesional de Paris Alejandro Ramos de Cervantes",
+        "isPartOf": {
+          "@id": "https://parisramos.github.io/#website"
+        },
+        "mainEntity": {
+          "@id": "https://parisramos.github.io/#person"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://parisramos.github.io/#person",
+        "name": "Paris Alejandro Ramos de Cervantes",
+        "url": "https://parisramos.github.io/",
+        "image": "https://parisramos.github.io/assets/preview.jpg",
+        "jobTitle": "Consultor en Estrategia Normativa, Financiera y Arquitectura de Software",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Consultoría Independiente & Soluciones Tecnológicas Adaptadas"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ciudad de México",
+          "addressRegion": "CDMX",
+          "addressCountry": "MX"
+        },
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "Licenciatura en Economía"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "Maestría en Administración"
+          }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/parisramosarc",
+          "https://github.com/ParisRamos",
+          "https://floresyamores.mx"
+        ],
+        "knowsAbout": [
+          "Auditorías de la Auditoría Superior de la Federación (ASF)",
+          "Órganos Internos de Control (OIC)",
+          "Arquitectura Backend Python y Django ORM",
+          "PostgreSQL y Bases de Datos Relacionales de Alta Disponibilidad",
+          "Facturación Electrónica SAT CFDI 4.0 Idempotente",
+          "Web Scraping y Arbitraje Algorítmico con Scrapy y Selenium",
+          "E-Commerce Direct-to-Consumer (D2C)",
+          "Finanzas Públicas y Corporativas"
+        ],
+        "description": "Economista con Maestría en Administración y más de una década liderando modernización institucional en el Gobierno Federal, solvencia de auditorías OIC/ASF y modelos algorítmicos en el sector privado."
+      }
     ]
   }
   </script>
@@ -681,15 +733,23 @@
     </div>
   </main>
 
-  <!-- PIE DE PÁGINA -->
+  <!-- PIE DE PÁGINA CON NAVEGACIÓN SEMÁNTICA -->
   <footer class="w-full bg-surface-container-low border-t border-surface-container-high/40 py-8 px-4 sm:px-6">
-    <div class="w-full max-w-[1360px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant text-center sm:text-left">
-      <p>© 2026 Paris Alejandro Ramos de Cervantes. Todos los derechos reservados.</p>
-      <div class="flex items-center gap-4">
-        <span>Seguridad Operativa</span>
-        <span>Cifrado de Datos</span>
-        <span>Protocolo Estratégico</span>
+    <div class="w-full max-w-[1360px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant text-center md:text-left">
+      <div>
+        <p>© 2026 Paris Alejandro Ramos de Cervantes. Todos los derechos reservados.</p>
+        <p class="text-[11px] text-outline mt-0.5">Economista &amp; Mtro. en Administración · CDMX, México</p>
       </div>
+      <nav aria-label="Enlaces del pie de página" class="flex flex-wrap items-center justify-center md:justify-end gap-x-5 gap-y-2 text-xs">
+        <a class="hover:text-primary transition-colors" href="https://parisramos.github.io/gobierno/">Soluciones Gobierno</a>
+        <a class="hover:text-primary transition-colors" href="https://parisramos.github.io/negocio/">Soluciones Negocio</a>
+        <a class="hover:text-primary transition-colors" href="https://parisramos.github.io/capacidades/">Stack de Capacidades</a>
+        <a class="hover:text-primary transition-colors" href="https://parisramos.github.io/sitemap.xml">Mapa del Sitio</a>
+        <a class="hover:text-primary transition-colors font-mono text-[11px] px-2 py-0.5 rounded bg-surface-container-high border border-surface-container-high/60 text-primary flex items-center gap-1" href="https://parisramos.github.io/llms.txt" title="Documentación estructurada para buscadores de IA y LLMs">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+          <span>llms.txt</span>
+        </a>
+      </nav>
     </div>
   </footer>
 

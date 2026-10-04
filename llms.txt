@@ -1,0 +1,43 @@
+# Paris Alejandro Ramos de Cervantes
+> Economista y Maestro en Administración especializado en Modernización Institucional, Solvencia de Auditorías (OIC / ASF), Conciliación Masiva CFDI y Modelos Algorítmicos para E-Commerce en CDMX, México.
+
+Paris Alejandro Ramos de Cervantes es un consultor e implementador técnico que une el rigor económico y normativo de la alta administración pública con el desarrollo de software de misión crítica (Python, Django ORM, PostgreSQL) y modelos algorítmicos transaccionales en el sector privado.
+
+## Métricas Verificables de Impacto
+- **469,000+ CFDI ante el SAT:** Conciliación masiva y regularización de nómina institucional con validación de timbrado y reglas de idempotencia.
+- **100% de Solvencia ante OIC y ASF:** Cero pliegos de observaciones de padrón en auditorías forenses gubernamentales.
+- **67 Trámites Sistematizados:** Reingeniería y automatización de trámites dentro de la Ventanilla Única de la Administración Pública Federal.
+- **-25% en Costos de Insumos:** Arbitraje de precios diario mediante bots extractivos (Selenium, Scrapy) en centrales de abasto a las 04:00 AM.
+- **$250,000+ MXN en Facturación Recurrente:** Operación continua de e-commerce transaccional propio en producción real (floresyamores.mx).
+- **10+ Años de Trayectoria:** Experiencia en gobierno federal, banca de desarrollo y proyectos de alta fiscalización.
+
+## Pilares de Especialización
+
+### 1. Sector Público e Instituciones
+- **Auditoría Forense y Padrones Masivos:** Saneamiento y migración de millones de registros históricos hacia bases de datos relacionales blindadas.
+- **Sistematización Normativa y Ventanilla Única:** Cómputo de trámites de alta concurrencia con complejidad O(1) y trazabilidad jurídica estricta.
+- **Gobernanza Financiera:** Conciliación contable-presupuestal, timbrado de nómina CFDI 4.0 y cumplimiento de la Ley General de Contabilidad Gubernamental (LGCG).
+- Página de referencia: https://parisramos.github.io/gobierno/
+
+### 2. Sector Privado y E-Commerce Algorítmico
+- **E-Commerce D2C Transaccional:** Pasarelas de pago (Stripe, Mercado Pago), georreferenciación de rutas de entrega y liquidación automatizada.
+- **Inteligencia de Precios, ETL y Scraping:** Monitoreo matutino automatizado de subastas mayoristas, cálculo de dispersión de precios y arbitraje de márgenes comerciales.
+- **Caso en Producción:** floresyamores.mx (3+ años operando con rentabilidad comprobada).
+- Página de referencia: https://parisramos.github.io/negocio/
+
+### 3. Stack Técnico y Arquitectura
+- **Backend:** Python 3.11+, Django Framework, Django REST Framework, Celery, Redis.
+- **Bases de Datos & Big Data:** PostgreSQL (Alta Disponibilidad), MySQL, Pandas, NumPy.
+- **Extracción de Datos:** Scrapy, Selenium WebDriver, Playwright, Requests.
+- **Infraestructura:** Linux (Ubuntu/Debian), Docker, Nginx, Git, CI/CD.
+- Página de referencia: https://parisramos.github.io/capacidades/
+
+## Enlaces Principales del Sitio
+- [Página de Inicio](https://parisramos.github.io/): Semblanza ejecutiva, selector interactivo de sector y métricas consolidadas.
+- [Soluciones Gubernamentales](https://parisramos.github.io/gobierno/): Auditoría forense, regularización de nómina y expediente digital.
+- [Soluciones Negocio](https://parisramos.github.io/negocio/): Arbitraje algorítmico, scraping mayorista y casos D2C.
+- [Stack de Capacidades](https://parisramos.github.io/capacidades/): Matriz técnica tridimensional de competencias.
+- [Agendar Diagnóstico Ejecutivo (30 min)](https://calendar.app.google/v783oTm6qiuVw1sg7): Sesión de viabilidad técnica y normativa sin costo.
+- [LinkedIn Oficial](https://www.linkedin.com/in/parisramosarc): Perfil profesional verificado.
+- [GitHub Oficial](https://github.com/ParisRamos): Repositorios y código en producción.
+- [Contacto por Correo](mailto:parisarc@gmail.com): Comunicación directa.

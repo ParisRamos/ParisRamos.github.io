@@ -1,4 +1,25 @@
 User-agent: *
 Allow: /
 
+# Rastreadores e Indexadores de Inteligencia Artificial (AI Search Engines)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Recursos de Descubrimiento e Indexación
 Sitemap: https://parisramos.github.io/sitemap.xml
+LLMs: https://parisramos.github.io/llms.txt
