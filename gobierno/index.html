@@ -393,6 +393,62 @@
               </div>
 
               <div class="lg:col-span-5 flex flex-col gap-4">
+                <!-- Showcase Visual Interfaz Real SICA -->
+                <div class="bg-surface-container p-3 sm:p-3.5 rounded-lg shadow-sm border border-surface-container-high/40 group/card transition-all hover:border-primary/40">
+                  <div class="flex items-center justify-between pb-2 px-1 text-xs">
+                    <div class="flex items-center gap-1.5">
+                      <span class="w-2.5 h-2.5 rounded-full bg-error/70"></span>
+                      <span class="w-2.5 h-2.5 rounded-full bg-secondary/70"></span>
+                      <span class="w-2.5 h-2.5 rounded-full bg-primary/70"></span>
+                      <span class="ml-1.5 font-mono text-[10px] sm:text-[11px] text-on-surface-variant truncate max-w-[170px] sm:max-w-[220px]">
+                        sica.gob.mx / panel-asistencia
+                      </span>
+                    </div>
+                    <span class="inline-flex items-center gap-1 text-[10px] font-mono text-primary bg-primary/10 px-2 py-0.5 rounded border border-primary/20 font-semibold">
+                      <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                      EN PRODUCCIÓN
+                    </span>
+                  </div>
+
+                  <!-- Contenedor de la Imagen con Efecto Hover y Lightbox Trigger -->
+                  <div class="relative rounded-md overflow-hidden bg-surface-container-lowest aspect-[16/10] sm:aspect-[16/9] border border-surface-container-high/50 cursor-pointer group/img"
+                       onclick="toggleModal('modal-img-sica')"
+                       title="Haga clic para ampliar la captura del sistema SICA">
+                    <img src="../assets/Sistema%20de%20Control%20de%20Asistencia.jpg" 
+                         alt="Fotografía real del Sistema de Control de Asistencia SICA desplegado en laptop y tablet" 
+                         class="w-full h-full object-cover object-center group-hover/img:scale-105 transition-transform duration-500 ease-out"
+                         loading="lazy">
+                    
+                    <!-- Overlay interactivo al hover -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/30 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                      <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-lowest/95 text-primary border border-primary/40 text-xs font-semibold backdrop-blur-md shadow-xl transform translate-y-2 group-hover/img:translate-y-0 transition-transform duration-300">
+                        <span class="material-symbols-outlined text-[18px]">zoom_in</span>
+                        Ampliar Captura en HD
+                      </span>
+                    </div>
+
+                    <!-- Telemetría inferior sobre la imagen -->
+                    <div class="absolute bottom-2 left-2 right-2 pointer-events-none flex items-center justify-between text-[10px] font-mono text-on-surface-variant bg-surface-container-lowest/85 px-2.5 py-1 rounded backdrop-blur-md border border-surface-container-high/60 group-hover/img:opacity-0 transition-opacity duration-200">
+                      <span class="truncate flex items-center gap-1.5 text-on-surface">
+                        <span class="material-symbols-outlined text-[13px] text-primary">devices</span>
+                        Responsive: Laptop &amp; Tablet
+                      </span>
+                      <span class="text-outline hidden sm:inline">32 Representaciones</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center justify-between pt-2 px-1 text-[11px] text-on-surface-variant">
+                    <span class="flex items-center gap-1 text-[11px]">
+                      <span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+                      Interfaz Operativa Oficial SIG-PA
+                    </span>
+                    <button type="button" class="text-primary hover:underline font-medium inline-flex items-center gap-1 text-[11px]" onclick="toggleModal('modal-img-sica')">
+                      <span>Ver pantalla completa</span>
+                      <span class="material-symbols-outlined text-[14px]">fullscreen</span>
+                    </button>
+                  </div>
+                </div>
+
                 <div class="bg-surface-container p-4 rounded-lg shadow-sm">
                   <span class="text-xs text-outline uppercase tracking-wider block mb-3 font-semibold">Impacto Cuantificable</span>
                   <div class="grid grid-cols-2 gap-3">
@@ -434,7 +490,7 @@
                   AUDITORÍA FISCAL FORENSE &amp; CONCILIACIÓN SAT | CFDI
                 </span>
                 <span class="text-outline text-xs">•</span>
-                <span class="text-on-surface-variant text-xs font-medium">Procuraduría Agraria Federal</span>
+                <span class="text-on-surface-variant text-xs font-medium">Gobierno Federal</span>
               </div>
               <div class="flex items-center gap-1.5 text-outline text-xs">
                 <span class="material-symbols-outlined text-[16px] text-tertiary">data_thresholding</span>
@@ -485,6 +541,62 @@
               </div>
 
               <div class="lg:col-span-5 flex flex-col gap-4">
+                <!-- Showcase Visual Interfaz Real CFDI SAT -->
+                <div class="bg-surface-container p-3 sm:p-3.5 rounded-lg shadow-sm border border-surface-container-high/40 group/card transition-all hover:border-tertiary/40">
+                  <div class="flex items-center justify-between pb-2 px-1 text-xs">
+                    <div class="flex items-center gap-1.5">
+                      <span class="w-2.5 h-2.5 rounded-full bg-error/70"></span>
+                      <span class="w-2.5 h-2.5 rounded-full bg-secondary/70"></span>
+                      <span class="w-2.5 h-2.5 rounded-full bg-tertiary/70"></span>
+                      <span class="ml-1.5 font-mono text-[10px] sm:text-[11px] text-on-surface-variant truncate max-w-[170px] sm:max-w-[220px]">
+                        auditoria.sat / conciliacion-cfdi
+                      </span>
+                    </div>
+                    <span class="inline-flex items-center gap-1 text-[10px] font-mono text-tertiary bg-tertiary/10 px-2 py-0.5 rounded border border-tertiary/20 font-semibold">
+                      <span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+                      CONFRONTA ACTIVA
+                    </span>
+                  </div>
+
+                  <!-- Contenedor de la Imagen con Efecto Hover y Lightbox Trigger -->
+                  <div class="relative rounded-md overflow-hidden bg-surface-container-lowest aspect-[16/10] sm:aspect-[16/9] border border-surface-container-high/50 cursor-pointer group/img"
+                       onclick="toggleModal('modal-img-cfdi')"
+                       title="Haga clic para ampliar la captura de la plataforma CFDI / SAT">
+                    <img src="../assets/Sistema%20Planeaci%C3%B3n%20Financiera%20CFDi%201.jpg" 
+                         alt="Fotografía real de la Plataforma de Auditoría Forense Fiscal y Conciliación CFDI SAT en MacBook y tablet" 
+                         class="w-full h-full object-cover object-center group-hover/img:scale-105 transition-transform duration-500 ease-out"
+                         loading="lazy">
+                    
+                    <!-- Overlay interactivo al hover -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/30 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                      <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-lowest/95 text-tertiary border border-tertiary/40 text-xs font-semibold backdrop-blur-md shadow-xl transform translate-y-2 group-hover/img:translate-y-0 transition-transform duration-300">
+                        <span class="material-symbols-outlined text-[18px]">zoom_in</span>
+                        Ampliar Captura en HD
+                      </span>
+                    </div>
+
+                    <!-- Telemetría inferior sobre la imagen -->
+                    <div class="absolute bottom-2 left-2 right-2 pointer-events-none flex items-center justify-between text-[10px] font-mono text-on-surface-variant bg-surface-container-lowest/85 px-2.5 py-1 rounded backdrop-blur-md border border-surface-container-high/60 group-hover/img:opacity-0 transition-opacity duration-200">
+                      <span class="truncate flex items-center gap-1.5 text-on-surface">
+                        <span class="material-symbols-outlined text-[13px] text-tertiary">query_stats</span>
+                        Dashboard Fiscal &amp; Web Service SAT
+                      </span>
+                      <span class="text-outline hidden sm:inline">469,000+ CFDI</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center justify-between pt-2 px-1 text-[11px] text-on-surface-variant">
+                    <span class="flex items-center gap-1 text-[11px]">
+                      <span class="material-symbols-outlined text-[14px] text-tertiary">shield</span>
+                      Conciliación de Nómina vs Visor SAT
+                    </span>
+                    <button type="button" class="text-tertiary hover:underline font-medium inline-flex items-center gap-1 text-[11px]" onclick="toggleModal('modal-img-cfdi')">
+                      <span>Ver pantalla completa</span>
+                      <span class="material-symbols-outlined text-[14px]">fullscreen</span>
+                    </button>
+                  </div>
+                </div>
+
                 <div class="bg-surface-container p-4 rounded-lg shadow-sm">
                   <div class="flex items-center justify-between mb-2">
                     <span class="text-xs text-outline uppercase tracking-wider font-semibold">Benchmark Analítico</span>
@@ -587,7 +699,7 @@
   </main>
 
   <!-- MODALES DE ARQUITECTURA -->
-  <div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center p-4" id="modal-sica">
+  <div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center p-4" id="modal-sica" onclick="if(event.target === this) toggleModal('modal-sica')">
     <div class="bg-surface-container-low max-w-2xl w-full max-h-[85vh] overflow-y-auto rounded-xl p-6 shadow-2xl flex flex-col gap-4 border border-surface-container-high/50">
       <div class="flex items-center justify-between border-b border-surface-variant/40 pb-2">
         <span class="text-base font-bold text-primary">Arquitectura Detallada: SICA V3.0</span>
@@ -599,13 +711,17 @@
         <h4 class="font-bold text-on-surface">2. Calendario Institucional (`BusinessCalendar`)</h4>
         <p>Calcula automatizado para aclaraciones, solicitudes de días económicos o justificación de faltas .</p>
       </div>
-      <div class="flex justify-end pt-2">
+      <div class="flex justify-between items-center pt-2 border-t border-surface-variant/30">
+        <button class="text-xs text-primary hover:underline inline-flex items-center gap-1 font-semibold" onclick="toggleModal('modal-sica'); toggleModal('modal-img-sica');">
+          <span class="material-symbols-outlined text-[15px]">photo_library</span>
+          Ver Captura de Pantalla Real
+        </button>
         <button class="bg-surface-container-high text-on-surface px-4 py-2 rounded-lg text-xs font-semibold hover:bg-surface-bright transition-colors" onclick="toggleModal('modal-sica')">Cerrar</button>
       </div>
     </div>
   </div>
 
-  <div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center p-4" id="modal-cfdi">
+  <div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center p-4" id="modal-cfdi" onclick="if(event.target === this) toggleModal('modal-cfdi')">
     <div class="bg-surface-container-low max-w-2xl w-full max-h-[85vh] overflow-y-auto rounded-xl p-6 shadow-2xl flex flex-col gap-4 border border-surface-container-high/50">
       <div class="flex items-center justify-between border-b border-surface-variant/40 pb-2">
         <span class="text-base font-bold text-tertiary">Arquitectura Detallada: Auditoría CFDI SAT</span>
@@ -617,8 +733,104 @@
         <h4 class="font-bold text-on-surface">2. Índices Cubrientes B-Tree y Rollup Tables</h4>
         <p>Resumen mensual precalculado para resolver consultas complejas en menos de 20 ms.</p>
       </div>
-      <div class="flex justify-end pt-2">
+      <div class="flex justify-between items-center pt-2 border-t border-surface-variant/30">
+        <button class="text-xs text-tertiary hover:underline inline-flex items-center gap-1 font-semibold" onclick="toggleModal('modal-cfdi'); toggleModal('modal-img-cfdi');">
+          <span class="material-symbols-outlined text-[15px]">photo_library</span>
+          Ver Captura de Pantalla Real
+        </button>
         <button class="bg-surface-container-high text-on-surface px-4 py-2 rounded-lg text-xs font-semibold hover:bg-surface-bright transition-colors" onclick="toggleModal('modal-cfdi')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL LIGHTBOX: CAPTURA SICA HD -->
+  <div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6" id="modal-img-sica" onclick="if(event.target === this) toggleModal('modal-img-sica')">
+    <div class="bg-surface-container-low max-w-5xl w-full max-h-[92vh] overflow-y-auto rounded-2xl p-4 sm:p-6 shadow-2xl flex flex-col gap-4 border border-surface-container-high/60">
+      <div class="flex items-center justify-between border-b border-surface-variant/40 pb-3">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+            <span class="text-sm sm:text-base font-bold text-on-surface">SICA V3.0 — Sistema Integral de Control de Asistencia</span>
+          </div>
+          <span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-mono rounded font-semibold border border-primary/20 w-fit">
+            PRODUCCIÓN INSTITUCIONAL
+          </span>
+        </div>
+        <button class="text-on-surface-variant hover:text-on-surface p-1.5 rounded-lg hover:bg-surface-container-high transition-colors" onclick="toggleModal('modal-img-sica')" title="Cerrar ventana">
+          <span class="material-symbols-outlined text-[22px]">close</span>
+        </button>
+      </div>
+
+      <!-- Imagen en Alta Definición -->
+      <div class="relative rounded-xl overflow-hidden bg-surface-container-lowest border border-surface-container-high/50 shadow-inner">
+        <img src="../assets/Sistema%20de%20Control%20de%20Asistencia.jpg" 
+             alt="Fotografía completa en alta resolución del Sistema SICA en entorno multidispositivo" 
+             class="w-full h-auto max-h-[66vh] object-contain mx-auto">
+      </div>
+
+      <!-- Ficha descriptiva de la interfaz -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1 text-xs text-on-surface-variant border-t border-surface-variant/30">
+        <div class="flex items-start sm:items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5 sm:mt-0">info</span>
+          <p class="leading-relaxed">
+            <strong class="text-on-surface">Entorno en Producción:</strong> Despliegue nacional para más de 2,800 trabajadores en 32 representaciones federales. Interfaz adaptativa optimizada para laptops de enlaces y tablets directivas.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+          <a href="../assets/Sistema%20de%20Control%20de%20Asistencia.jpg" target="_blank" rel="noreferrer" class="inline-flex items-center gap-1 text-[11px] text-primary hover:underline font-medium">
+            <span>Abrir original</span>
+            <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+          </a>
+          <button class="bg-surface-container-high text-on-surface px-4 py-1.5 rounded-lg text-xs font-semibold hover:bg-surface-bright transition-colors" onclick="toggleModal('modal-img-sica')">
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL LIGHTBOX: CAPTURA CFDI SAT HD -->
+  <div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6" id="modal-img-cfdi" onclick="if(event.target === this) toggleModal('modal-img-cfdi')">
+    <div class="bg-surface-container-low max-w-5xl w-full max-h-[92vh] overflow-y-auto rounded-2xl p-4 sm:p-6 shadow-2xl flex flex-col gap-4 border border-surface-container-high/60">
+      <div class="flex items-center justify-between border-b border-surface-variant/40 pb-3">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+            <span class="text-sm sm:text-base font-bold text-on-surface">Auditoría Fiscal Forense &amp; Conciliación SAT</span>
+          </div>
+          <span class="px-2 py-0.5 bg-tertiary/10 text-tertiary text-[10px] font-mono rounded font-semibold border border-tertiary/20 w-fit">
+            DATA WAREHOUSE &amp; AST
+          </span>
+        </div>
+        <button class="text-on-surface-variant hover:text-on-surface p-1.5 rounded-lg hover:bg-surface-container-high transition-colors" onclick="toggleModal('modal-img-cfdi')" title="Cerrar ventana">
+          <span class="material-symbols-outlined text-[22px]">close</span>
+        </button>
+      </div>
+
+      <!-- Imagen en Alta Definición -->
+      <div class="relative rounded-xl overflow-hidden bg-surface-container-lowest border border-surface-container-high/50 shadow-inner">
+        <img src="../assets/Sistema%20Planeaci%C3%B3n%20Financiera%20CFDi%201.jpg" 
+             alt="Fotografía completa en alta resolución de la Plataforma de Conciliación CFDI SAT" 
+             class="w-full h-auto max-h-[66vh] object-contain mx-auto">
+      </div>
+
+      <!-- Ficha descriptiva de la interfaz -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1 text-xs text-on-surface-variant border-t border-surface-variant/30">
+        <div class="flex items-start sm:items-center gap-2">
+          <span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5 sm:mt-0">info</span>
+          <p class="leading-relaxed">
+            <strong class="text-on-surface">Consola de Control Fiscal:</strong> Auditoría sobre 469,000+ CFDI acumulados en 7 ejercicios fiscales. Telemetría de peticiones web service, balance de retenciones Art. 96 LISR y confronta automática contra Visor Patronal.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+          <a href="../assets/Sistema%20Planeaci%C3%B3n%20Financiera%20CFDi%201.jpg" target="_blank" rel="noreferrer" class="inline-flex items-center gap-1 text-[11px] text-tertiary hover:underline font-medium">
+            <span>Abrir original</span>
+            <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+          </a>
+          <button class="bg-surface-container-high text-on-surface px-4 py-1.5 rounded-lg text-xs font-semibold hover:bg-surface-bright transition-colors" onclick="toggleModal('modal-img-cfdi')">
+            Cerrar
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -714,8 +926,16 @@
       }
 
       window.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
-          closeMenu();
+        if (e.key === 'Escape') {
+          if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+            closeMenu();
+          }
+          ['modal-sica', 'modal-cfdi', 'modal-img-sica', 'modal-img-cfdi'].forEach(function(id) {
+            const m = document.getElementById(id);
+            if (m && !m.classList.contains('hidden')) {
+              toggleModal(id);
+            }
+          });
         }
       });
     })();
