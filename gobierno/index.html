@@ -318,15 +318,15 @@
           </div>
         </section>
 
-        <!-- Filtros interactivos -->
-        <div class="flex items-center gap-2 overflow-x-auto pb-3 mb-8">
-          <button class="filter-tab px-4 py-2 bg-primary text-on-primary text-xs sm:text-sm font-semibold rounded-lg shadow-sm whitespace-nowrap" id="btn-all" onclick="filterDossier('all')">
+        <!-- Filtros interactivos accesibles -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-3 mb-8" role="tablist" aria-label="Filtro de proyectos por categoría">
+          <button type="button" role="tab" aria-selected="true" class="filter-tab px-4 py-2 bg-primary text-on-primary text-xs sm:text-sm font-semibold rounded-lg shadow-sm whitespace-nowrap focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary" id="btn-all" onclick="filterDossier('all')">
             Todos los Proyectos Insignia (2)
           </button>
-          <button class="filter-tab px-4 py-2 bg-surface-container text-on-surface-variant hover:text-on-surface text-xs sm:text-sm rounded-lg transition-colors whitespace-nowrap" id="btn-sica" onclick="filterDossier('sica')">
+          <button type="button" role="tab" aria-selected="false" class="filter-tab px-4 py-2 bg-surface-container text-on-surface-variant hover:text-on-surface text-xs sm:text-sm rounded-lg transition-colors whitespace-nowrap focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary" id="btn-sica" onclick="filterDossier('sica')">
             Gobernanza &amp; Nómina Masiva (SICA V3.0)
           </button>
-          <button class="filter-tab px-4 py-2 bg-surface-container text-on-surface-variant hover:text-on-surface text-xs sm:text-sm rounded-lg transition-colors whitespace-nowrap" id="btn-cfdi" onclick="filterDossier('cfdi')">
+          <button type="button" role="tab" aria-selected="false" class="filter-tab px-4 py-2 bg-surface-container text-on-surface-variant hover:text-on-surface text-xs sm:text-sm rounded-lg transition-colors whitespace-nowrap focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary" id="btn-cfdi" onclick="filterDossier('cfdi')">
             Auditoría Fiscal Forense (CFDI SAT)
           </button>
         </div>
@@ -410,10 +410,12 @@
                     </span>
                   </div>
 
-                  <!-- Contenedor de la Imagen con Efecto Hover y Lightbox Trigger -->
-                  <div class="relative rounded-md overflow-hidden bg-surface-container-lowest aspect-[16/10] sm:aspect-[16/9] border border-surface-container-high/50 cursor-pointer group/img"
-                       onclick="toggleModal('modal-img-sica')"
-                       title="Haga clic para ampliar la captura del sistema SICA">
+                  <!-- Contenedor de la Imagen con Efecto Hover y Lightbox Trigger Accesible -->
+                  <button type="button" 
+                          class="relative w-full text-left rounded-md overflow-hidden bg-surface-container-lowest aspect-[16/10] sm:aspect-[16/9] border border-surface-container-high/50 cursor-pointer group/img focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary block"
+                          onclick="openDialog('modal-img-sica')"
+                          aria-haspopup="dialog"
+                          aria-label="Ampliar captura del sistema SICA en alta resolución">
                     <img src="../assets/Sistema%20de%20Control%20de%20Asistencia.jpg" 
                          alt="Fotografía real del Sistema de Control de Asistencia SICA desplegado en laptop y tablet" 
                          class="w-full h-full object-cover object-center group-hover/img:scale-105 transition-transform duration-500 ease-out"
@@ -435,14 +437,14 @@
                       </span>
                       <span class="text-outline hidden sm:inline">32 Representaciones</span>
                     </div>
-                  </div>
+                  </button>
 
                   <div class="flex items-center justify-between pt-2 px-1 text-[11px] text-on-surface-variant">
                     <span class="flex items-center gap-1 text-[11px]">
                       <span class="material-symbols-outlined text-[14px] text-primary">verified</span>
                       Interfaz Operativa Oficial SIG-PA
                     </span>
-                    <button type="button" class="text-primary hover:underline font-medium inline-flex items-center gap-1 text-[11px]" onclick="toggleModal('modal-img-sica')">
+                    <button type="button" class="text-primary hover:underline font-medium inline-flex items-center gap-1 text-[11px] focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary rounded" onclick="openDialog('modal-img-sica')" aria-haspopup="dialog">
                       <span>Ver pantalla completa</span>
                       <span class="material-symbols-outlined text-[14px]">fullscreen</span>
                     </button>
@@ -472,7 +474,7 @@
                 </div>
 
                 <div class="flex items-center justify-between pt-2">
-                  <button class="inline-flex items-center text-primary text-xs sm:text-sm font-semibold hover:underline gap-1.5" onclick="toggleModal('modal-sica')">
+                  <button type="button" class="inline-flex items-center text-primary text-xs sm:text-sm font-semibold hover:underline gap-1.5 focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary rounded" onclick="openDialog('modal-sica')" aria-haspopup="dialog">
                     <span>Ver Ficha Técnica de Arquitectura</span>
                     <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                   </button>
@@ -558,10 +560,12 @@
                     </span>
                   </div>
 
-                  <!-- Contenedor de la Imagen con Efecto Hover y Lightbox Trigger -->
-                  <div class="relative rounded-md overflow-hidden bg-surface-container-lowest aspect-[16/10] sm:aspect-[16/9] border border-surface-container-high/50 cursor-pointer group/img"
-                       onclick="toggleModal('modal-img-cfdi')"
-                       title="Haga clic para ampliar la captura de la plataforma CFDI / SAT">
+                  <!-- Contenedor de la Imagen con Efecto Hover y Lightbox Trigger Accesible -->
+                  <button type="button" 
+                          class="relative w-full text-left rounded-md overflow-hidden bg-surface-container-lowest aspect-[16/10] sm:aspect-[16/9] border border-surface-container-high/50 cursor-pointer group/img focus-visible:outline focus-visible:outline-2 focus-visible:outline-tertiary block"
+                          onclick="openDialog('modal-img-cfdi')"
+                          aria-haspopup="dialog"
+                          aria-label="Ampliar captura de la plataforma CFDI SAT en alta resolución">
                     <img src="../assets/Sistema%20Planeaci%C3%B3n%20Financiera%20CFDi%201.jpg" 
                          alt="Fotografía real de la Plataforma de Auditoría Forense Fiscal y Conciliación CFDI SAT en MacBook y tablet" 
                          class="w-full h-full object-cover object-center group-hover/img:scale-105 transition-transform duration-500 ease-out"
@@ -583,14 +587,14 @@
                       </span>
                       <span class="text-outline hidden sm:inline">469,000+ CFDI</span>
                     </div>
-                  </div>
+                  </button>
 
                   <div class="flex items-center justify-between pt-2 px-1 text-[11px] text-on-surface-variant">
                     <span class="flex items-center gap-1 text-[11px]">
                       <span class="material-symbols-outlined text-[14px] text-tertiary">shield</span>
                       Conciliación de Nómina vs Visor SAT
                     </span>
-                    <button type="button" class="text-tertiary hover:underline font-medium inline-flex items-center gap-1 text-[11px]" onclick="toggleModal('modal-img-cfdi')">
+                    <button type="button" class="text-tertiary hover:underline font-medium inline-flex items-center gap-1 text-[11px] focus-visible:outline focus-visible:outline-1 focus-visible:outline-tertiary rounded" onclick="openDialog('modal-img-cfdi')" aria-haspopup="dialog">
                       <span>Ver pantalla completa</span>
                       <span class="material-symbols-outlined text-[14px]">fullscreen</span>
                     </button>
@@ -623,7 +627,7 @@
                 </div>
 
                 <div class="flex items-center justify-between pt-2">
-                  <button class="inline-flex items-center text-tertiary text-xs sm:text-sm font-semibold hover:underline gap-1.5" onclick="toggleModal('modal-cfdi')">
+                  <button type="button" class="inline-flex items-center text-tertiary text-xs sm:text-sm font-semibold hover:underline gap-1.5 focus-visible:outline focus-visible:outline-1 focus-visible:outline-tertiary rounded" onclick="openDialog('modal-cfdi')" aria-haspopup="dialog">
                     <span>Ver Algoritmo AST y Estrategia Fiscal</span>
                     <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                   </button>
@@ -698,12 +702,14 @@
     </div>
   </main>
 
-  <!-- MODALES DE ARQUITECTURA -->
-  <div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center p-4" id="modal-sica" onclick="if(event.target === this) toggleModal('modal-sica')">
+  <!-- MODALES DE ARQUITECTURA ACCESIBLES (<dialog> WAI-ARIA ESTÁNDAR) -->
+  <dialog id="modal-sica" aria-labelledby="modal-sica-title" class="backdrop:bg-surface-container-lowest/80 backdrop:backdrop-blur-md bg-transparent p-4 max-w-2xl w-full m-auto rounded-xl border-0 text-on-surface shadow-2xl focus:outline-none">
     <div class="bg-surface-container-low max-w-2xl w-full max-h-[85vh] overflow-y-auto rounded-xl p-6 shadow-2xl flex flex-col gap-4 border border-surface-container-high/50">
       <div class="flex items-center justify-between border-b border-surface-variant/40 pb-2">
-        <span class="text-base font-bold text-primary">Arquitectura Detallada: SICA V3.0</span>
-        <button class="text-on-surface-variant hover:text-on-surface" onclick="toggleModal('modal-sica')"><span class="material-symbols-outlined">close</span></button>
+        <h3 id="modal-sica-title" class="text-base font-bold text-primary">Arquitectura Detallada: SICA V3.0</h3>
+        <button type="button" aria-label="Cerrar modal" class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary" onclick="closeDialog('modal-sica')">
+          <span class="material-symbols-outlined">close</span>
+        </button>
       </div>
       <div class="text-xs sm:text-sm text-on-surface-variant flex flex-col gap-3 leading-relaxed">
         <h4 class="font-bold text-on-surface">1. Motor de Reglas en Memoria (`MotorReglas`)</h4>
@@ -712,20 +718,22 @@
         <p>Calcula automatizado para aclaraciones, solicitudes de días económicos o justificación de faltas .</p>
       </div>
       <div class="flex justify-between items-center pt-2 border-t border-surface-variant/30">
-        <button class="text-xs text-primary hover:underline inline-flex items-center gap-1 font-semibold" onclick="toggleModal('modal-sica'); toggleModal('modal-img-sica');">
+        <button type="button" class="text-xs text-primary hover:underline inline-flex items-center gap-1 font-semibold focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary rounded" onclick="closeDialog('modal-sica'); openDialog('modal-img-sica');">
           <span class="material-symbols-outlined text-[15px]">photo_library</span>
           Ver Captura de Pantalla Real
         </button>
-        <button class="bg-surface-container-high text-on-surface px-4 py-2 rounded-lg text-xs font-semibold hover:bg-surface-bright transition-colors" onclick="toggleModal('modal-sica')">Cerrar</button>
+        <button type="button" class="bg-surface-container-high text-on-surface px-4 py-2 rounded-lg text-xs font-semibold hover:bg-surface-bright transition-colors focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary" onclick="closeDialog('modal-sica')">Cerrar</button>
       </div>
     </div>
-  </div>
+  </dialog>
 
-  <div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center p-4" id="modal-cfdi" onclick="if(event.target === this) toggleModal('modal-cfdi')">
+  <dialog id="modal-cfdi" aria-labelledby="modal-cfdi-title" class="backdrop:bg-surface-container-lowest/80 backdrop:backdrop-blur-md bg-transparent p-4 max-w-2xl w-full m-auto rounded-xl border-0 text-on-surface shadow-2xl focus:outline-none">
     <div class="bg-surface-container-low max-w-2xl w-full max-h-[85vh] overflow-y-auto rounded-xl p-6 shadow-2xl flex flex-col gap-4 border border-surface-container-high/50">
       <div class="flex items-center justify-between border-b border-surface-variant/40 pb-2">
-        <span class="text-base font-bold text-tertiary">Arquitectura Detallada: Auditoría CFDI SAT</span>
-        <button class="text-on-surface-variant hover:text-on-surface" onclick="toggleModal('modal-cfdi')"><span class="material-symbols-outlined">close</span></button>
+        <h3 id="modal-cfdi-title" class="text-base font-bold text-tertiary">Arquitectura Detallada: Auditoría CFDI SAT</h3>
+        <button type="button" aria-label="Cerrar modal" class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg focus-visible:outline focus-visible:outline-1 focus-visible:outline-tertiary" onclick="closeDialog('modal-cfdi')">
+          <span class="material-symbols-outlined">close</span>
+        </button>
       </div>
       <div class="text-xs sm:text-sm text-on-surface-variant flex flex-col gap-3 leading-relaxed">
         <h4 class="font-bold text-on-surface">1. Ingesta Polimórfica (CFDI 3.3 y 4.0)</h4>
@@ -734,29 +742,29 @@
         <p>Resumen mensual precalculado para resolver consultas complejas en menos de 20 ms.</p>
       </div>
       <div class="flex justify-between items-center pt-2 border-t border-surface-variant/30">
-        <button class="text-xs text-tertiary hover:underline inline-flex items-center gap-1 font-semibold" onclick="toggleModal('modal-cfdi'); toggleModal('modal-img-cfdi');">
+        <button type="button" class="text-xs text-tertiary hover:underline inline-flex items-center gap-1 font-semibold focus-visible:outline focus-visible:outline-1 focus-visible:outline-tertiary rounded" onclick="closeDialog('modal-cfdi'); openDialog('modal-img-cfdi');">
           <span class="material-symbols-outlined text-[15px]">photo_library</span>
           Ver Captura de Pantalla Real
         </button>
-        <button class="bg-surface-container-high text-on-surface px-4 py-2 rounded-lg text-xs font-semibold hover:bg-surface-bright transition-colors" onclick="toggleModal('modal-cfdi')">Cerrar</button>
+        <button type="button" class="bg-surface-container-high text-on-surface px-4 py-2 rounded-lg text-xs font-semibold hover:bg-surface-bright transition-colors focus-visible:outline focus-visible:outline-1 focus-visible:outline-tertiary" onclick="closeDialog('modal-cfdi')">Cerrar</button>
       </div>
     </div>
-  </div>
+  </dialog>
 
-  <!-- MODAL LIGHTBOX: CAPTURA SICA HD -->
-  <div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6" id="modal-img-sica" onclick="if(event.target === this) toggleModal('modal-img-sica')">
+  <!-- MODAL LIGHTBOX: CAPTURA SICA HD (<dialog>) -->
+  <dialog id="modal-img-sica" aria-labelledby="modal-img-sica-title" class="backdrop:bg-surface-container-lowest/85 backdrop:backdrop-blur-md bg-transparent p-3 sm:p-6 max-w-5xl w-full m-auto rounded-2xl border-0 text-on-surface shadow-2xl focus:outline-none">
     <div class="bg-surface-container-low max-w-5xl w-full max-h-[92vh] overflow-y-auto rounded-2xl p-4 sm:p-6 shadow-2xl flex flex-col gap-4 border border-surface-container-high/60">
       <div class="flex items-center justify-between border-b border-surface-variant/40 pb-3">
         <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
           <div class="flex items-center gap-2">
             <span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
-            <span class="text-sm sm:text-base font-bold text-on-surface">SICA V3.0 — Sistema Integral de Control de Asistencia</span>
+            <h3 id="modal-img-sica-title" class="text-sm sm:text-base font-bold text-on-surface">SICA V3.0 — Sistema Integral de Control de Asistencia</h3>
           </div>
           <span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-mono rounded font-semibold border border-primary/20 w-fit">
             PRODUCCIÓN INSTITUCIONAL
           </span>
         </div>
-        <button class="text-on-surface-variant hover:text-on-surface p-1.5 rounded-lg hover:bg-surface-container-high transition-colors" onclick="toggleModal('modal-img-sica')" title="Cerrar ventana">
+        <button type="button" class="text-on-surface-variant hover:text-on-surface p-1.5 rounded-lg hover:bg-surface-container-high transition-colors focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary" onclick="closeDialog('modal-img-sica')" title="Cerrar ventana" aria-label="Cerrar ventana">
           <span class="material-symbols-outlined text-[22px]">close</span>
         </button>
       </div>
@@ -781,28 +789,28 @@
             <span>Abrir original</span>
             <span class="material-symbols-outlined text-[14px]">open_in_new</span>
           </a>
-          <button class="bg-surface-container-high text-on-surface px-4 py-1.5 rounded-lg text-xs font-semibold hover:bg-surface-bright transition-colors" onclick="toggleModal('modal-img-sica')">
+          <button type="button" class="bg-surface-container-high text-on-surface px-4 py-1.5 rounded-lg text-xs font-semibold hover:bg-surface-bright transition-colors focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary" onclick="closeDialog('modal-img-sica')">
             Cerrar
           </button>
         </div>
       </div>
     </div>
-  </div>
+  </dialog>
 
-  <!-- MODAL LIGHTBOX: CAPTURA CFDI SAT HD -->
-  <div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6" id="modal-img-cfdi" onclick="if(event.target === this) toggleModal('modal-img-cfdi')">
+  <!-- MODAL LIGHTBOX: CAPTURA CFDI SAT HD (<dialog>) -->
+  <dialog id="modal-img-cfdi" aria-labelledby="modal-img-cfdi-title" class="backdrop:bg-surface-container-lowest/85 backdrop:backdrop-blur-md bg-transparent p-3 sm:p-6 max-w-5xl w-full m-auto rounded-2xl border-0 text-on-surface shadow-2xl focus:outline-none">
     <div class="bg-surface-container-low max-w-5xl w-full max-h-[92vh] overflow-y-auto rounded-2xl p-4 sm:p-6 shadow-2xl flex flex-col gap-4 border border-surface-container-high/60">
       <div class="flex items-center justify-between border-b border-surface-variant/40 pb-3">
         <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
           <div class="flex items-center gap-2">
             <span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
-            <span class="text-sm sm:text-base font-bold text-on-surface">Auditoría Fiscal Forense &amp; Conciliación SAT</span>
+            <h3 id="modal-img-cfdi-title" class="text-sm sm:text-base font-bold text-on-surface">Auditoría Fiscal Forense &amp; Conciliación SAT</h3>
           </div>
           <span class="px-2 py-0.5 bg-tertiary/10 text-tertiary text-[10px] font-mono rounded font-semibold border border-tertiary/20 w-fit">
             DATA WAREHOUSE &amp; AST
           </span>
         </div>
-        <button class="text-on-surface-variant hover:text-on-surface p-1.5 rounded-lg hover:bg-surface-container-high transition-colors" onclick="toggleModal('modal-img-cfdi')" title="Cerrar ventana">
+        <button type="button" class="text-on-surface-variant hover:text-on-surface p-1.5 rounded-lg hover:bg-surface-container-high transition-colors focus-visible:outline focus-visible:outline-1 focus-visible:outline-tertiary" onclick="closeDialog('modal-img-cfdi')" title="Cerrar ventana" aria-label="Cerrar ventana">
           <span class="material-symbols-outlined text-[22px]">close</span>
         </button>
       </div>
@@ -827,15 +835,15 @@
             <span>Abrir original</span>
             <span class="material-symbols-outlined text-[14px]">open_in_new</span>
           </a>
-          <button class="bg-surface-container-high text-on-surface px-4 py-1.5 rounded-lg text-xs font-semibold hover:bg-surface-bright transition-colors" onclick="toggleModal('modal-img-cfdi')">
+          <button type="button" class="bg-surface-container-high text-on-surface px-4 py-1.5 rounded-lg text-xs font-semibold hover:bg-surface-bright transition-colors focus-visible:outline focus-visible:outline-1 focus-visible:outline-tertiary" onclick="closeDialog('modal-img-cfdi')">
             Cerrar
           </button>
         </div>
       </div>
     </div>
-  </div>
+  </dialog>
 
-  <!-- SCRIPT DE FILTRADO Y MODALES -->
+  <!-- SCRIPT DE FILTRADO Y GESTIÓN DE DIÁLOGOS WAI-ARIA -->
   <script>
     function filterDossier(category) {
       const cards = {
@@ -851,12 +859,14 @@
 
       Object.keys(buttons).forEach(key => {
         if (buttons[key]) {
-          buttons[key].className = 'filter-tab px-4 py-2 bg-surface-container text-on-surface-variant hover:text-on-surface text-xs sm:text-sm rounded-lg transition-colors whitespace-nowrap';
+          buttons[key].className = 'filter-tab px-4 py-2 bg-surface-container text-on-surface-variant hover:text-on-surface text-xs sm:text-sm rounded-lg transition-colors whitespace-nowrap focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary';
+          buttons[key].setAttribute('aria-selected', 'false');
         }
       });
 
       if (buttons[category]) {
-        buttons[category].className = 'filter-tab px-4 py-2 bg-primary text-on-primary text-xs sm:text-sm font-semibold rounded-lg shadow-sm whitespace-nowrap';
+        buttons[category].className = 'filter-tab px-4 py-2 bg-primary text-on-primary text-xs sm:text-sm font-semibold rounded-lg shadow-sm whitespace-nowrap focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary';
+        buttons[category].setAttribute('aria-selected', 'true');
       }
 
       if (category === 'all') {
@@ -868,18 +878,53 @@
       }
     }
 
-    function toggleModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        if (modal.classList.contains('hidden')) {
-          modal.classList.remove('hidden');
-          document.body.style.overflow = 'hidden';
+    // GESTIÓN ACCESIBLE DE MODALES CON <dialog>
+    let lastActiveElement = null;
+
+    function openDialog(dialogId) {
+      const dlg = document.getElementById(dialogId);
+      if (dlg && typeof dlg.showModal === 'function') {
+        lastActiveElement = document.activeElement;
+        dlg.showModal();
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeDialog(dialogId) {
+      const dlg = document.getElementById(dialogId);
+      if (dlg && dlg.open) {
+        dlg.close();
+      }
+    }
+
+    // Compatibilidad para cualquier llamada existente a toggleModal
+    function toggleModal(id) {
+      const dlg = document.getElementById(id);
+      if (dlg) {
+        if (dlg.open) {
+          closeDialog(id);
         } else {
-          modal.classList.add('hidden');
-          document.body.style.overflow = '';
+          openDialog(id);
         }
       }
     }
+
+    // Configuración de eventos de cierre y restauración de foco
+    document.querySelectorAll('dialog').forEach(dlg => {
+      dlg.addEventListener('close', () => {
+        document.body.style.overflow = '';
+        if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
+          lastActiveElement.focus();
+        }
+      });
+
+      // Cierre al hacer clic en el backdrop fuera del contenedor de contenido
+      dlg.addEventListener('click', (e) => {
+        if (e.target === dlg) {
+          closeDialog(dlg.id);
+        }
+      });
+    });
   </script>
 
   <!-- PIE DE PÁGINA -->
