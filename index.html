@@ -40,6 +40,8 @@
       body { overscroll-behavior: none; }
       main > :first-child { margin-top: 0 !important; }
       main > :last-child { margin-bottom: 0 !important; }
+      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
     }
     ::-webkit-scrollbar { display: none; }
     html { scroll-behavior: smooth; }
@@ -202,11 +204,15 @@
       <!-- Contenedor del nombre con espacio flexible protegido -->
       <div class="flex-1 min-w-0 pr-2">
         <a class="flex flex-col text-left group" href="#inicio">
-          <span class="font-bold text-xs sm:text-base md:text-lg text-on-surface tracking-tight truncate group-hover:text-primary transition-colors">
-            Paris Alejandro Ramos de Cervantes
-          </span>
-          <span class="text-xs text-outline uppercase tracking-wider truncate">
-            Forward Deployed & Estratega de Datos
+          <div class="flex items-center gap-1.5 min-w-0">
+            <span class="font-bold text-sm sm:text-base md:text-lg text-on-surface tracking-tight truncate group-hover:text-primary transition-colors">
+              <span class="sm:hidden tracking-wider font-extrabold">PARIS RAMOS</span>
+              <span class="hidden sm:inline">Paris Alejandro Ramos de Cervantes</span>
+            </span>
+            <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shrink-0"></span>
+          </div>
+          <span class="text-[11px] sm:text-xs text-primary sm:text-outline uppercase tracking-wider truncate">
+            Forward Deployed &amp; Estratega de Datos
           </span>
         </a>
       </div>
@@ -271,10 +277,10 @@
     </div>
   </div>
 
-  <main class="w-full pt-16 sm:pt-20 bg-surface">
+  <main class="w-full pt-16 sm:pt-20 pb-20 lg:pb-0 bg-surface">
     <div class="flex flex-col w-full">
       <!-- HERO SECTION CON RESPLANDOR AMBIENTAL -->
-      <section id="inicio" class="relative w-full overflow-hidden bg-surface-container-lowest py-12 sm:py-20 lg:py-28">
+      <section id="inicio" class="relative w-full overflow-hidden bg-surface-container-lowest py-10 sm:py-16 lg:py-24">
         <!-- Luces ambientales de fondo -->
         <div class="absolute -top-36 right-1/4 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[130px] pointer-events-none"></div>
         <div class="absolute top-1/2 -left-28 w-[400px] h-[400px] rounded-full bg-secondary-container/15 blur-[120px] pointer-events-none"></div>
@@ -289,29 +295,132 @@
           
           <!-- Badge de Especialidad -->
           <div class="inline-flex items-center gap-2 self-start bg-surface-container/90 border border-surface-container-high/60 px-3.5 py-1.5 rounded-full shadow-lg backdrop-blur-md max-w-full">
-            <span class="w-2 h-2 rounded-full bg-primary animate-pulse flex-shrink-0 shadow-[0_0_8px_rgba(104,219,169,0.8)]"></span>
+            <span class="relative flex h-2 w-2 flex-shrink-0">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
             <span class="text-xs text-primary font-semibold uppercase tracking-wider truncate">
               Economista · Maestría en Administración · Modelos Algorítmicos · Arquitectura Django
             </span>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div class="lg:col-span-8 flex flex-col gap-4 sm:gap-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            <div class="lg:col-span-7 flex flex-col gap-4 sm:gap-6">
               
               <!-- H1 RESPONSIVO CON GRADIENTE PREMIUM -->
-              <h1 class="font-display text-[1.85rem] sm:text-3xl md:text-4xl lg:text-[3.35rem] font-bold text-on-surface leading-[1.15] lg:leading-[1.08] tracking-tight">
-                Estrategia Normativa y Financiera: Soluciones que
-                <span class="bg-gradient-to-r from-primary via-primary-fixed to-tertiary bg-clip-text text-transparent drop-shadow-sm">
-                  Operan, Ahorran y Facturan.
+              <h1 class="font-display text-[1.85rem] sm:text-3xl md:text-4xl lg:text-[3.25rem] font-bold text-on-surface leading-[1.15] lg:leading-[1.08] tracking-tight">
+                Estrategia Normativa y Financiera:
+                <span class="block bg-gradient-to-r from-primary via-primary-fixed to-tertiary bg-clip-text text-transparent drop-shadow-sm">
+                  Soluciones que Operan, Ahorran y Facturan.
                 </span>
               </h1>
 
+              <!-- Bajada sintética ágil para móvil y escritorio -->
               <p class="text-sm sm:text-base md:text-lg text-on-surface-variant max-w-2xl leading-relaxed text-left">
-                Consultor e implementador con enfoque forward deployed: me involucro en el terreno donde la normativa y los procesos colapsan para diseñar y desplegar soluciones de raíz. Combino más de una década en Sector Público - Privado, resolviendo auditorías críticas y modernización institucional con la implementación de modelos algorítmicos y soluciones tecnológicas, cerrando la brecha entre la estrategia directiva y el código en producción.
+                Arquitectura de datos y rigor técnico para blindar operaciones complejas y maximizar rendimientos institucionales.
               </p>
 
+              <!-- DIAGRAMA VISUAL INTERACTIVO: FORWARD DEPLOYED BRIDGE -->
+              <div class="w-full bg-surface-container-low/90 rounded-2xl p-4 sm:p-5 border border-surface-container-high/60 shadow-xl relative overflow-hidden group">
+                <!-- Ambient micro glow in card corner -->
+                <div class="absolute -top-12 -right-12 w-36 h-36 rounded-full bg-primary/10 blur-2xl pointer-events-none"></div>
+                
+                <div class="flex items-center justify-between mb-3.5">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-[18px]">alt_route</span>
+                    <span class="text-xs uppercase tracking-widest text-primary font-bold">Forward Deployed Bridge</span>
+                  </div>
+                  <span class="px-2 py-0.5 rounded bg-surface-container-high text-[10px] font-mono text-secondary font-medium tracking-wide border border-surface-variant/40">
+                    PIPELINE 01
+                  </span>
+                </div>
+
+                <!-- The 3 Nodes Architecture -->
+                <div class="flex flex-col gap-1 relative">
+                  
+                  <!-- Node 1: Strategy -->
+                  <a href="#soluciones" class="flex items-center gap-3.5 bg-surface-container/80 hover:bg-surface-container p-3 rounded-xl border border-surface-container-high/40 hover:border-primary/40 transition-all duration-200 group/node focus:outline-none focus:ring-1 focus:ring-primary/50">
+                    <div class="w-10 h-10 rounded-lg bg-surface-variant flex items-center justify-center shrink-0 text-secondary group-hover/node:scale-105 group-hover/node:text-primary transition-all">
+                      <span class="material-symbols-outlined text-[20px]">balance</span>
+                    </div>
+                    <div class="flex flex-col min-w-0 flex-1">
+                      <div class="flex items-center justify-between">
+                        <span class="text-sm font-semibold text-on-surface truncate leading-tight">Estrategia Directiva</span>
+                        <span class="text-[10px] text-outline font-mono opacity-0 group-hover/node:opacity-100 transition-opacity">Ver pilar →</span>
+                      </div>
+                      <span class="text-xs text-on-surface-variant truncate">Economía &amp; Normativa Fiscal (ASF · OIC · SAT)</span>
+                    </div>
+                  </a>
+
+                  <!-- Connector 1 -> 2 -->
+                  <div class="flex items-center justify-center py-0.5">
+                    <div class="flex flex-col items-center gap-0.5">
+                      <div class="w-0.5 h-2 bg-outline-variant"></div>
+                      <div class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(104,219,169,0.8)] animate-bounce"></div>
+                      <div class="w-0.5 h-2 bg-outline-variant"></div>
+                    </div>
+                  </div>
+
+                  <!-- Node 2: Forward Deployed (Hero Highlighted Node) -->
+                  <a href="#contacto" class="flex items-center justify-between bg-gradient-to-r from-primary-container/20 to-surface-container/90 hover:from-primary-container/30 hover:to-surface-container p-3 sm:p-3.5 rounded-xl border border-primary/40 shadow-lg relative overflow-hidden group/node focus:outline-none focus:ring-1 focus:ring-primary">
+                    <div class="absolute inset-y-0 left-0 w-1.5 bg-primary"></div>
+                    <div class="flex items-center gap-3.5 pl-1.5 min-w-0 flex-1">
+                      <div class="relative w-11 h-11 rounded-lg bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-lg shadow-primary/25 group-hover/node:scale-105 transition-transform">
+                        <span class="material-symbols-outlined text-[22px]">hub</span>
+                        <span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-tertiary shadow-sm"></span>
+                      </div>
+                      <div class="flex flex-col min-w-0">
+                        <div class="flex items-center gap-1.5">
+                          <span class="text-sm font-bold text-on-surface truncate">Forward Deployed</span>
+                          <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] bg-primary text-on-primary font-bold uppercase tracking-wider">CORE</span>
+                        </div>
+                        <span class="text-xs text-primary-fixed truncate font-medium">Paris Ramos · Pivote Técnico &amp; Algorítmico</span>
+                      </div>
+                    </div>
+                    <div class="flex items-center shrink-0 ml-2">
+                      <span class="flex h-3 w-3 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-60"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                      </span>
+                    </div>
+                  </a>
+
+                  <!-- Connector 2 -> 3 -->
+                  <div class="flex items-center justify-center py-0.5">
+                    <div class="flex flex-col items-center gap-0.5">
+                      <div class="w-0.5 h-2 bg-outline-variant"></div>
+                      <div class="w-1.5 h-1.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(180,197,255,0.8)]"></div>
+                      <div class="w-0.5 h-2 bg-outline-variant"></div>
+                    </div>
+                  </div>
+
+                  <!-- Node 3: Production Code -->
+                  <a href="https://parisramos.github.io/capacidades/" class="flex items-center gap-3.5 bg-surface-container/80 hover:bg-surface-container p-3 rounded-xl border border-surface-container-high/40 hover:border-primary/40 transition-all duration-200 group/node focus:outline-none focus:ring-1 focus:ring-primary/50">
+                    <div class="w-10 h-10 rounded-lg bg-surface-variant flex items-center justify-center shrink-0 text-primary group-hover/node:scale-105 transition-all">
+                      <span class="material-symbols-outlined text-[20px]">terminal</span>
+                    </div>
+                    <div class="flex flex-col min-w-0 flex-1">
+                      <div class="flex items-center justify-between">
+                        <span class="text-sm font-semibold text-on-surface truncate leading-tight">Código en Producción</span>
+                        <span class="text-[10px] text-outline font-mono opacity-0 group-hover/node:opacity-100 transition-opacity">Ver stack →</span>
+                      </div>
+                      <span class="text-xs text-on-surface-variant truncate">Django · PostgreSQL · ML · Backend Integrado</span>
+                    </div>
+                  </a>
+
+                </div>
+
+                <!-- Crisp Punchy Tagline -->
+                <div class="mt-3.5 pt-3 border-t border-surface-variant/30 flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-[17px] mt-0.5 shrink-0">check_circle</span>
+                  <p class="text-xs sm:text-sm text-on-surface font-medium leading-snug">
+                    Ingeniería y despliegue en el terreno donde la normativa y los procesos colapsan.
+                  </p>
+                </div>
+              </div>
+
               <!-- CTA PRINCIPAL DE CONVERSIÓN Y ANCLA -->
-              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-1">
                 <a class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-on-primary text-sm font-semibold px-6 py-3.5 rounded-xl hover:bg-primary-container transition-all duration-200 shadow-[0_0_20px_rgba(104,219,169,0.3)] hover:shadow-[0_0_28px_rgba(104,219,169,0.5)] hover:scale-[1.02] text-center" href="https://calendar.app.google/v783oTm6qiuVw1sg7" target="_blank" rel="noreferrer">
                   <span class="material-symbols-outlined text-[19px] mr-2">calendar_month</span>
                   Agendar Diagnóstico (30 min)
@@ -321,10 +430,41 @@
                   Ver Soluciones e Impacto
                 </a>
               </div>
+
+              <!-- ACORDEÓN DESPLEGABLE PARA TEXTO METODOLÓGICO Y PRESERVACIÓN SEO -->
+              <div class="w-full bg-surface-container-low/80 border border-surface-container-high/60 rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:border-primary/30">
+                <details class="group cursor-pointer">
+                  <summary class="list-none flex items-center justify-between p-3.5 sm:p-4 text-on-surface-variant hover:text-on-surface select-none transition-colors">
+                    <div class="flex items-center gap-2">
+                      <span class="material-symbols-outlined text-[18px] text-primary">description</span>
+                      <span class="text-xs sm:text-sm font-semibold tracking-wide text-on-surface">
+                        Ver enfoque metodológico completo y fundamentos directivos
+                      </span>
+                    </div>
+                    <span class="material-symbols-outlined text-[20px] transition-transform duration-300 group-open:rotate-180 text-primary">
+                      expand_more
+                    </span>
+                  </summary>
+                  <div class="px-3.5 sm:px-4 pb-4 pt-1 flex flex-col gap-2.5">
+                    <div class="p-3.5 rounded-lg bg-surface-container-lowest/90 border border-surface-container-high/40 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                      Consultor e implementador con enfoque forward deployed: me involucro en el terreno donde la normativa y los procesos colapsan para diseñar y desplegar soluciones de raíz. Combino más de una década en Sector Público - Privado, resolviendo auditorías críticas y modernización institucional con la implementación de modelos algorítmicos y soluciones tecnológicas, cerrando la brecha entre la estrategia directiva y el código en producción.
+                    </div>
+                    <!-- Indicador Schema.org / Verificación Técnica -->
+                    <div class="p-2 rounded bg-surface-container-lowest/60 border border-surface-container-high/30 flex items-center justify-between text-on-surface-variant">
+                      <div class="flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-[14px] text-tertiary">code</span>
+                        <span class="text-[11px] font-mono text-tertiary">Schema.org / ProfessionalService</span>
+                      </div>
+                      <span class="text-[10px] font-mono font-semibold text-primary px-2 py-0.5 rounded bg-primary/10 border border-primary/20">INDEXED_VERIFIED</span>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
             </div>
 
             <!-- Selector Interactivo de Perfil -->
-            <div class="lg:col-span-4 w-full mt-4 lg:mt-0">
+            <div class="lg:col-span-5 w-full mt-2 lg:mt-0">
               <div class="bg-surface-container-low/95 backdrop-blur-xl rounded-2xl p-5 sm:p-6 shadow-[0_20px_50px_rgba(0,0,0,0.6)] flex flex-col gap-4 border border-surface-container-high/60 relative overflow-hidden group hover:border-primary/40 transition-all duration-300">
                 <div class="absolute -top-12 -right-12 w-28 h-28 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
                 
@@ -334,62 +474,99 @@
                     <span class="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(104,219,169,0.8)]"></span>
                     <span class="text-xs font-bold uppercase tracking-wider text-on-surface">¿Cuál es tu sector?</span>
                   </div>
-                  <span class="text-xs font-mono text-outline uppercase tracking-wider bg-surface-container-high px-2 py-0.5 rounded">
-                    Diagnóstico
+                  <span class="text-[11px] font-mono text-secondary flex items-center gap-1 bg-surface-container-high px-2 py-0.5 rounded border border-surface-variant/30">
+                    Filtro activo <span class="material-symbols-outlined text-[13px]">tune</span>
                   </span>
                 </div>
 
                 <!-- Tabs de Selección Accesibles -->
                 <div class="grid grid-cols-2 gap-1.5 p-1 bg-surface-container-lowest/90 rounded-xl border border-surface-container-high/50" role="tablist" aria-label="Selección de sector">
-                  <button id="tab-btn-gob" type="button" role="tab" aria-selected="true" aria-controls="panel-gob" tabindex="0" class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 bg-surface-container text-primary shadow-sm border border-primary/20">
-                    <span class="material-symbols-outlined text-[16px]">account_balance</span>
+                  <button id="tab-btn-gob" type="button" role="tab" aria-selected="true" aria-controls="panel-gob" tabindex="0" class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg text-xs font-semibold transition-all duration-200 bg-surface-container text-primary shadow-sm border border-primary/20">
+                    <span class="material-symbols-outlined text-[18px]">account_balance</span>
                     <span>Público</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-primary ml-0.5"></span>
                   </button>
-                  <button id="tab-btn-neg" type="button" role="tab" aria-selected="false" aria-controls="panel-neg" tabindex="-1" class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/50 border border-transparent">
-                    <span class="material-symbols-outlined text-[16px]">storefront</span>
+                  <button id="tab-btn-neg" type="button" role="tab" aria-selected="false" aria-controls="panel-neg" tabindex="-1" class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg text-xs font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/50 border border-transparent">
+                    <span class="material-symbols-outlined text-[18px]">storefront</span>
                     <span>Privado</span>
                   </button>
                 </div>
 
                 <!-- Panel Sector Público -->
-                <div id="panel-gob" role="tabpanel" aria-labelledby="tab-btn-gob" class="flex flex-col gap-3 transition-opacity duration-200">
-                  <div class="bg-surface-container-lowest/80 p-3.5 rounded-xl border border-surface-container-high/40 flex flex-col gap-2">
+                <div id="panel-gob" role="tabpanel" aria-labelledby="tab-btn-gob" class="flex flex-col gap-3.5 transition-opacity duration-200">
+                  <div class="bg-surface-container-lowest/80 p-4 rounded-xl border border-surface-container-high/40 flex flex-col gap-2.5">
                     <div class="flex items-center justify-between">
-                      <span class="text-[10px] font-bold text-primary uppercase tracking-wider">Enfoque Institucional</span>
-                      <span class="text-[10px] text-tertiary bg-tertiary/10 px-2 py-0.5 rounded font-mono font-semibold">OIC · ASF</span>
+                      <span class="text-[10px] font-bold text-primary uppercase tracking-wider px-2 py-0.5 rounded bg-primary-container/20">
+                        GOBIERNO &amp; AUDITORÍA
+                      </span>
+                      <span class="text-[11px] font-mono text-on-surface-variant">Caso de éxito #04</span>
                     </div>
+                    
+                    <h3 class="text-sm sm:text-base font-semibold text-on-surface leading-snug">
+                      Solvencia Regulatoria y Modernización Presupuestaria
+                    </h3>
+                    
                     <p class="text-xs text-on-surface-variant leading-relaxed">
-                      Blindaje normativo, regularización de millones de registros históricos y automatización de trámites administrativos y de atención ciudadana.
+                      Especialización en fiscalización superior ante OIC/ASF, regularización de millones de registros de nómina y automatización de trámites ciudadanos.
                     </p>
-                    <div class="pt-2 border-t border-surface-variant/30 flex items-center justify-between text-[11px]">
-                      <span class="text-outline">Solvencia comprobada:</span>
-                      <span class="font-bold text-primary">100% sin observaciones</span>
+                    
+                    <!-- Bloques KPI cuantitativos grandes estilo Stitch -->
+                    <div class="grid grid-cols-2 gap-2.5 pt-1.5">
+                      <div class="flex flex-col p-2.5 sm:p-3 rounded-lg bg-surface-container border border-surface-container-high/30">
+                        <span class="text-xl sm:text-2xl font-bold font-display text-primary">100%</span>
+                        <span class="text-[11px] font-medium text-on-surface">Dictámenes solventados</span>
+                        <span class="text-[10px] text-outline">OIC y ASF sin faltas</span>
+                      </div>
+                      <div class="flex flex-col p-2.5 sm:p-3 rounded-lg bg-surface-container border border-surface-container-high/30">
+                        <span class="text-xl sm:text-2xl font-bold font-display text-secondary">469k+</span>
+                        <span class="text-[11px] font-medium text-on-surface">CFDI conciliados</span>
+                        <span class="text-[10px] text-outline">5k+ padrones limpios</span>
+                      </div>
                     </div>
                   </div>
-                  <a class="w-full inline-flex items-center justify-center bg-primary/10 border border-primary/40 text-primary text-xs font-semibold py-3 rounded-xl hover:bg-primary hover:text-on-primary transition-all duration-200 shadow-sm text-center" href="https://parisramos.github.io/gobierno/">
-                    <span>Ver Soluciones Gubernamentales</span>
-                    <span class="material-symbols-outlined text-[16px] ml-1.5">arrow_forward</span>
+                  
+                  <a class="w-full inline-flex items-center justify-between bg-primary/10 border border-primary/40 text-primary text-xs font-semibold py-3 px-4 rounded-xl hover:bg-primary hover:text-on-primary transition-all duration-200 shadow-sm" href="https://parisramos.github.io/gobierno/">
+                    <span>Explorar matriz de cumplimiento institucional</span>
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
                   </a>
                 </div>
 
                 <!-- Panel Sector Privado -->
-                <div id="panel-neg" role="tabpanel" aria-labelledby="tab-btn-neg" class="hidden flex flex-col gap-3 transition-opacity duration-200">
-                  <div class="bg-surface-container-lowest/80 p-3.5 rounded-xl border border-surface-container-high/40 flex flex-col gap-2">
+                <div id="panel-neg" role="tabpanel" aria-labelledby="tab-btn-neg" class="hidden flex flex-col gap-3.5 transition-opacity duration-200">
+                  <div class="bg-surface-container-lowest/80 p-4 rounded-xl border border-surface-container-high/40 flex flex-col gap-2.5">
                     <div class="flex items-center justify-between">
-                      <span class="text-[10px] font-bold text-secondary uppercase tracking-wider">Enfoque Rentabilidad</span>
-                      <span class="text-[10px] text-secondary bg-secondary/10 px-2 py-0.5 rounded font-mono font-semibold">D2C · ETL</span>
+                      <span class="text-[10px] font-bold text-secondary uppercase tracking-wider px-2 py-0.5 rounded bg-secondary-container/30">
+                        ENTERPRISE &amp; E-COMMERCE
+                      </span>
+                      <span class="text-[11px] font-mono text-on-surface-variant">Caso de éxito #09</span>
                     </div>
+                    
+                    <h3 class="text-sm sm:text-base font-semibold text-on-surface leading-snug">
+                      Algoritmos de Rentabilidad &amp; Reingeniería de Flujos
+                    </h3>
+                    
                     <p class="text-xs text-on-surface-variant leading-relaxed">
-                      Arbitraje algorítmico matutino (centrales de abasto), reducción de costos de compra e infraestructura e-commerce de alta conversión.
+                      Arbitraje algorítmico matutino (Central de Abasto 04:00 AM), automatización de compras e infraestructura e-commerce de alta conversión.
                     </p>
-                    <div class="pt-2 border-t border-surface-variant/30 flex items-center justify-between text-[11px]">
-                      <span class="text-outline">Impacto medible:</span>
-                      <span class="font-bold text-secondary">-25% insumos · +$250k MXN</span>
+                    
+                    <!-- Bloques KPI cuantitativos grandes estilo Stitch -->
+                    <div class="grid grid-cols-2 gap-2.5 pt-1.5">
+                      <div class="flex flex-col p-2.5 sm:p-3 rounded-lg bg-surface-container border border-surface-container-high/30">
+                        <span class="text-xl sm:text-2xl font-bold font-display text-primary">+$250k</span>
+                        <span class="text-[11px] font-medium text-on-surface">Ventas D2C MXN</span>
+                        <span class="text-[10px] text-outline">Rentabilidad neta directa</span>
+                      </div>
+                      <div class="flex flex-col p-2.5 sm:p-3 rounded-lg bg-surface-container border border-surface-container-high/30">
+                        <span class="text-xl sm:text-2xl font-bold font-display text-secondary">-25%</span>
+                        <span class="text-[11px] font-medium text-on-surface">Costos en insumos</span>
+                        <span class="text-[10px] text-outline">Arbitraje matutino diario</span>
+                      </div>
                     </div>
                   </div>
-                  <a class="w-full inline-flex items-center justify-center bg-secondary/10 border border-secondary/40 text-secondary text-xs font-semibold py-3 rounded-xl hover:bg-secondary hover:text-on-secondary transition-all duration-200 shadow-sm text-center" href="https://parisramos.github.io/negocio/">
-                    <span>Ver Casos de Negocio Privado</span>
-                    <span class="material-symbols-outlined text-[16px] ml-1.5">arrow_forward</span>
+                  
+                  <a class="w-full inline-flex items-center justify-between bg-secondary/10 border border-secondary/40 text-secondary text-xs font-semibold py-3 px-4 rounded-xl hover:bg-secondary hover:text-on-secondary transition-all duration-200 shadow-sm" href="https://parisramos.github.io/negocio/">
+                    <span>Explorar arquitectura financiera privada</span>
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
                   </a>
                 </div>
 
@@ -999,14 +1176,25 @@
 
       const tabs = [tabGob, tabNeg];
 
-      function activateTab(activeTab, activePanel, inactiveTab, inactivePanel, activeThemeClass, sector) {
+      function activateTab(activeTab, activePanel, inactiveTab, inactivePanel, sector) {
         activeTab.setAttribute('aria-selected', 'true');
         activeTab.setAttribute('tabindex', '0');
         inactiveTab.setAttribute('aria-selected', 'false');
         inactiveTab.setAttribute('tabindex', '-1');
 
-        activeTab.className = `flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 bg-surface-container ${activeThemeClass} shadow-sm border border-primary/20`;
-        inactiveTab.className = 'flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/50 border border-transparent';
+        if (sector === 'gob') {
+          activeTab.className = 'flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg text-xs font-semibold transition-all duration-200 bg-surface-container text-primary shadow-sm border border-primary/20';
+          activeTab.innerHTML = '<span class="material-symbols-outlined text-[18px]">account_balance</span><span>Público</span><span class="w-1.5 h-1.5 rounded-full bg-primary ml-0.5"></span>';
+          
+          inactiveTab.className = 'flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg text-xs font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/50 border border-transparent';
+          inactiveTab.innerHTML = '<span class="material-symbols-outlined text-[18px]">storefront</span><span>Privado</span>';
+        } else {
+          activeTab.className = 'flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg text-xs font-semibold transition-all duration-200 bg-surface-container text-secondary shadow-sm border border-secondary/20';
+          activeTab.innerHTML = '<span class="material-symbols-outlined text-[18px]">storefront</span><span>Privado</span><span class="w-1.5 h-1.5 rounded-full bg-secondary ml-0.5"></span>';
+          
+          inactiveTab.className = 'flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg text-xs font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container/50 border border-transparent';
+          inactiveTab.innerHTML = '<span class="material-symbols-outlined text-[18px]">account_balance</span><span>Público</span>';
+        }
 
         inactivePanel.classList.add('hidden');
         activePanel.classList.remove('hidden');
@@ -1017,11 +1205,11 @@
       }
 
       tabGob.addEventListener('click', () => {
-        activateTab(tabGob, panelGob, tabNeg, panelNeg, 'text-primary', 'gob');
+        activateTab(tabGob, panelGob, tabNeg, panelNeg, 'gob');
       });
 
       tabNeg.addEventListener('click', () => {
-        activateTab(tabNeg, panelNeg, tabGob, panelGob, 'text-secondary', 'neg');
+        activateTab(tabNeg, panelNeg, tabGob, panelGob, 'neg');
       });
 
       // Navegación por teclado según ARIA APG (Flechas izquierda/derecha)
@@ -1042,7 +1230,67 @@
         });
       });
     })();
+
+    // SEGUIMIENTO DE SECCIÓN ACTIVA EN LA BARRA INFERIOR MÓVIL
+    (function() {
+      const navItems = document.querySelectorAll('.bottom-nav-item');
+      const sections = ['inicio', 'soluciones', 'caso-estudio', 'contacto'].map(id => document.getElementById(id)).filter(Boolean);
+
+      if (navItems.length === 0 || sections.length === 0) return;
+
+      function setActiveNav(targetId) {
+        navItems.forEach(item => {
+          const match = item.getAttribute('data-nav-target') === targetId;
+          if (match) {
+            item.className = 'bottom-nav-item flex flex-col items-center justify-center min-w-[64px] h-12 transition-all duration-200 text-primary font-bold';
+          } else {
+            item.className = 'bottom-nav-item flex flex-col items-center justify-center min-w-[64px] h-12 transition-all duration-200 text-on-surface-variant hover:text-on-surface';
+          }
+        });
+      }
+
+      navItems.forEach(item => {
+        item.addEventListener('click', function() {
+          const target = this.getAttribute('data-nav-target');
+          if (target) setActiveNav(target);
+        });
+      });
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              setActiveNav(entry.target.id);
+            }
+          });
+        }, { threshold: 0.3, rootMargin: "-10% 0px -40% 0px" });
+
+        sections.forEach(sec => observer.observe(sec));
+      }
+    })();
   </script>
+
+  <!-- BARRA DE NAVEGACIÓN INFERIOR MÓVIL (BOTTOM TAB BAR) -->
+  <nav id="bottom-mobile-nav" aria-label="Navegación principal móvil" class="lg:hidden fixed bottom-0 left-0 w-full z-40 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl border-t border-surface-container-high/70 shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
+    <div class="flex justify-around items-center h-16 px-2">
+      <a href="#inicio" data-nav-target="inicio" class="bottom-nav-item flex flex-col items-center justify-center min-w-[64px] h-12 transition-all duration-200 text-primary font-bold">
+        <span class="material-symbols-outlined text-[20px]">terminal</span>
+        <span class="text-[10px] mt-0.5 tracking-tight font-medium">Inicio</span>
+      </a>
+      <a href="#soluciones" data-nav-target="soluciones" class="bottom-nav-item flex flex-col items-center justify-center min-w-[64px] h-12 transition-all duration-200 text-on-surface-variant hover:text-on-surface">
+        <span class="material-symbols-outlined text-[20px]">hub</span>
+        <span class="text-[10px] mt-0.5 tracking-tight font-medium">Soluciones</span>
+      </a>
+      <a href="#caso-estudio" data-nav-target="caso-estudio" class="bottom-nav-item flex flex-col items-center justify-center min-w-[64px] h-12 transition-all duration-200 text-on-surface-variant hover:text-on-surface">
+        <span class="material-symbols-outlined text-[20px]">query_stats</span>
+        <span class="text-[10px] mt-0.5 tracking-tight font-medium">Casos</span>
+      </a>
+      <a href="#contacto" data-nav-target="contacto" class="bottom-nav-item flex flex-col items-center justify-center min-w-[64px] h-12 transition-all duration-200 text-on-surface-variant hover:text-on-surface">
+        <span class="material-symbols-outlined text-[20px]">shield</span>
+        <span class="text-[10px] mt-0.5 tracking-tight font-medium">Contacto</span>
+      </a>
+    </div>
+  </nav>
 </body>
 
 </html>
